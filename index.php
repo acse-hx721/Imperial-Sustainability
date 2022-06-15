@@ -176,7 +176,7 @@
 										<div class="panel-heading" role="tab" id="headingOne">
 											<h4 class="panel-title">
 												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-													Collapsible Group Item #1
+													Electricity
 												</a>
 											</h4>
 										</div>
@@ -190,7 +190,7 @@
 										<div class="panel-heading" role="tab" id="headingTwo">
 											<h4 class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-													Collapsible Group Item #2
+													Water
 												</a>
 											</h4>
 										</div>
@@ -204,7 +204,7 @@
 										<div class="panel-heading" role="tab" id="headingThree">
 											<h4 class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-													Collapsible Group Item #3
+													Gas
 												</a>
 											</h4>
 										</div>
@@ -285,7 +285,7 @@
 
 			<!-- .subfooter start -->
 			<!-- ================ -->
-			<div class="subfooter">
+<!-- 			<div class="subfooter">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -293,7 +293,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- .subfooter end -->
 
 		</footer>
