@@ -237,12 +237,12 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam magnam natus tempora cumque, aliquam deleniti voluptatibus voluptas. Repellat vel, et itaque commodi iste ab, laudantium voluptas deserunt nobis.</p>
+								<p class="large">Imperial college focuses exclusively on science, technology, medicine, and business. The main campus is located in South Kensington, and there is an innovation campus in White City.</p>
 								<ul class="list-icons">
-									<li><i class="fa fa-map-marker pr-10"></i> One infinity loop, 54100</li>
-									<li><i class="fa fa-phone pr-10"></i> +00 1234567890</li>
-									<li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li>
-									<li><i class="fa fa-envelope-o pr-10"></i> your@email.com</li>
+									<li><i class="fa fa-map-marker pr-10"></i> Exhibition Rd, South Kensington, London SW7 2BX</li>
+									<li><i class="fa fa-phone pr-10"></i> +44 07419735154</li>
+									<li><i class="fa fa-fax pr-10"></i> +44 07419735154</li>
+									<li><i class="fa fa-envelope-o pr-10"></i> hongcheng21@imperial.ac.uk</li>
 								</ul>
 								<ul class="social-links">
 									<li class="facebook"><i class="fa fa-facebook"></i></li>
