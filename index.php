@@ -142,7 +142,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="about" class="title text-center">About Imperial College<span>Sustainability </span></h1>
+						<h1 id="about" class="title text-center">About Imperial College <span>Sustainability </span></h1>
 						<p class="lead text-center">The project aims to improve the sustainability of Imperial College London.</p>
 						<div class="space"></div>
 						<div class="row">

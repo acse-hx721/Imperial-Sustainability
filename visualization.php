@@ -94,7 +94,7 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li><a href="#banner">Home</a></li>
+												<li><a href="index.php">Home</a></li>
 												<li><a href="#about">About</a></li>
 												<li class="active"><a href="visualization.php">Visualization</a></li>
 												<li><a href="#portfolio">Download Data</a></li>
@@ -142,7 +142,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="about" class="title text-center">About Imperial College<span>Sustainability </span></h1>
+						<h1 id="about" class="title text-center">About Imperial College <span>Sustainability </span></h1>
 						<p class="lead text-center">The project aims to improve the sustainability of Imperial College London.</p>
 						<div class="space"></div>
 						<div class="row">
