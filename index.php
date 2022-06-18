@@ -58,7 +58,7 @@
 
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="#banner"><b>Imperial College London</b></a></div>
+								<div class="site-name"><a href="index.php"><b>Imperial College London</b></a></div>
 								<div class="site-slogan">Digital Twin for Sustainability</div>
 							</div>
 
@@ -94,7 +94,7 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="#banner">Home</a></li>
+												<li class="active"><a href="index.php">Home</a></li>
 												<li><a href="#about">About</a></li>
 												<li><a href="visualization.php">Visualization</a></li>
 												<li><a href="#portfolio">Download Data</a></li>

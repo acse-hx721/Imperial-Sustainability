@@ -58,7 +58,7 @@
 
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="#banner"><b>Imperial College London</b></a></div>
+								<div class="site-name"><a href="index.php"><b>Imperial College London</b></a></div>
 								<div class="site-slogan">Digital Twin for Sustainability</div>
 							</div>
 
