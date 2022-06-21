@@ -129,7 +129,7 @@
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">This page is for <span>Download Data</span></h1>
 							<p class="lead text-center">Select from data files to download the specific data.</p>
-							<h3 class="text-center"><a href="test_file.txt">Download test file</a></h3>
+							<h3 class="text-center"><a href="test_file.txt" download="test_file.txt">Download test file</a></h3>
 						</div>
 					</div>
 				</div>
