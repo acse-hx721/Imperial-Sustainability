@@ -152,13 +152,12 @@
 							</div>
 							<div class="col-md-6">
 								<p>The project aims to improve the sustainability of Imperial College London. Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ducimus explicabo quibusdam temporibus deserunt doloremque pariatur ea, animi a. Delectus similique atque eligendi, enim vel reiciendis deleniti neque aliquid, sit?</p>
+								
 								<ul class="list-unstyled">
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Reiciendis deleniti neque aliquid</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Ipsam fuga error commodi</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Dignissimos molestiae necessitatibus</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Water</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Electricity</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Gas</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Meal</li>
 								</ul>
 							</div>
 						</div>
