@@ -127,8 +127,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-							<h1 class="text-center">Imperial College London <span>Sustainability</span></h1>
-							<p class="lead text-center">The project aims to improve the sustainability of Imperial College London. Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
+							<h1 class="text-center">This page is for <span>Visualization</span></h1>
+							<p class="lead text-center">Selection of data type and time to show the specific data.</p>
 						</div>
 					</div>
 				</div>
