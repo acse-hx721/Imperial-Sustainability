@@ -94,10 +94,10 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="index.php">Home</a></li>
+												<li><a href="index.php">Home</a></li>
 												<li><a href="#about">About</a></li>
 												<li><a href="visualization.php">Visualization</a></li>
-												<li><a href="download_data.php">Download Data</a></li>
+												<li class="active"><a href="download_data.php">Download Data</a></li>
 												<!-- <li><a href="#clients">Clients</a></li> -->
 												<li><a href="#contact">Contact</a></li>
 											</ul>
@@ -127,8 +127,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-							<h1 class="text-center">Imperial College London <span>Sustainability</span></h1>
-							<p class="lead text-center">The project aims to improve the sustainability of Imperial College London. Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
+							<h1 class="text-center">This page is for <span>Download Data</span></h1>
+							<p class="lead text-center">Select from data files to download the specific data.</p>
+							<h3 class="text-center"><a href="test_file.txt">Download test file</a></h3>
 						</div>
 					</div>
 				</div>

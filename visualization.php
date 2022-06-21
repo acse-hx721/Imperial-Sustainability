@@ -97,7 +97,7 @@
 												<li><a href="index.php">Home</a></li>
 												<li><a href="#about">About</a></li>
 												<li class="active"><a href="visualization.php">Visualization</a></li>
-												<li><a href="#portfolio">Download Data</a></li>
+												<li><a href="download_data.php">Download Data</a></li>
 												<!-- <li><a href="#clients">Clients</a></li> -->
 												<li><a href="#contact">Contact</a></li>
 											</ul>
@@ -244,7 +244,7 @@
 									<li><i class="fa fa-fax pr-10"></i> +44 07419735154</li>
 									<li><i class="fa fa-envelope-o pr-10"></i> hongcheng21@imperial.ac.uk</li>
 								</ul>
-								<ul class="social-links">
+<!-- 								<ul class="social-links">
 									<li class="facebook"><i class="fa fa-facebook"></i></li>
 									<li class="twitter"><i class="fa fa-twitter"></i></li>
 									<li class="googleplus"><i class="fa fa-google-plus"></i></li>
@@ -253,7 +253,7 @@
 									<li class="youtube"><i class="fa fa-youtube"></i></li>
 									<li class="flickr"><i class="fa fa-flickr"></i></li>
 									<li class="pinterest"><i class="fa fa-pinterest"></i></li>
-								</ul>
+								</ul> -->
 							</div>
 						</div>
 						<div class="col-sm-6">
