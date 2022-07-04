@@ -33,6 +33,9 @@
 
 		<!-- Custom css --> 
 		<link href="css/custom.css" rel="stylesheet">
+
+		<!-- import echarts.js -->
+		<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 	</head>
 
 	<body class="no-trans">
@@ -135,6 +138,30 @@
 			</div>
 		</div>
 		<!-- banner end -->
+
+		<div id="main" style="width: 600px;height:400px;"></div>
+    	<script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var option = {
+			  xAxis: {
+			    type: 'category',
+			    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			  },
+			  yAxis: {
+			    type: 'value'
+			  },
+			  series: [
+			    {
+			      data: [150, 230, 224, 218, 135, 147, 260],
+			      type: 'line'
+			    }
+			  ]
+			};
+        myChart.setOption(option);
+
+    	</script>
+
 
 		<!-- section start -->
 		<!-- ================ -->
