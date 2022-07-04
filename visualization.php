@@ -139,7 +139,7 @@
 		</div>
 		<!-- banner end -->
 
-		<div id="main" style="width: 1000px; height:800px; float:right "></div>
+		<div id="main" style="width: 800px; height:500px; float:center; "></div>
     	<script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
 
