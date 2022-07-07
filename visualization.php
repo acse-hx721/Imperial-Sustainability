@@ -160,6 +160,7 @@
 		  },
 		  toolbox: {
 		    feature: {
+		      restore: {},
 		      saveAsImage: {}
 		    }
 		  },
@@ -186,7 +187,18 @@
 		      name: 'Fake 2021 electric Data',
 		      type: 'line',
 		      // stack: 'Total',
-		      areaStyle: {},
+		      areaStyle: {
+		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+		          {
+		            offset: 0,
+		            color: 'rgb(255, 158, 68)'
+		          },
+		          {
+		            offset: 1,
+		            color: 'rgb(255, 70, 131)'
+		          }
+		        ]),
+		      },
 		      emphasis: {
 		        focus: 'series'
 		      },
@@ -196,7 +208,19 @@
 		      name: 'Fake 2022 electric Data',
 		      type: 'line',
 		      // stack: 'Total',
-		      areaStyle: {},
+		      areaStyle: {
+		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+		          {
+		            offset: 0,
+		            color: 'rgb(123, 104, 238)'
+		          },
+		          {
+		            offset: 1,
+		            color: 'rgb(0, 191, 255)'
+		          }
+		        ]),
+		        opacity: 0.3
+		      },
 		      emphasis: {
 		        focus: 'series'
 		      },
@@ -331,6 +355,12 @@
 		  	x:'center',
         	y:'bottom',
           },
+          toolbox: {
+		    feature: {
+		      restore: {},
+		      saveAsImage: {}
+		    }
+		  },
 		  tooltip: {},
 		  title: {
 		    left: 'center',
