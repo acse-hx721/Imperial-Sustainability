@@ -262,7 +262,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'bottom',
+        	y:'top',
           },
 		  tooltip: {
 		    trigger: 'axis',
@@ -309,6 +309,7 @@
 		      type: 'line',
 		      symbol: 'none',
 		      sampling: 'lttb',
+		      stack: 'Total',
 		      itemStyle: {
 		        color: 'rgb(255, 70, 131)'
 		      },
@@ -331,6 +332,7 @@
 		      type: 'line',
 		      symbol: 'none',
 		      sampling: 'lttb',
+		      stack: 'Total',
 		      itemStyle: {
 		        color: 'rgb(30,144,255)'
 		      },
