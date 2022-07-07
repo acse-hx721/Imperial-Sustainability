@@ -248,11 +248,11 @@
     	<script type="text/javascript">
 
         var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
-    	let base = +new Date(2019, 9, 3);
+    	let base = +new Date(2020, 1, 1);
 		let oneDay = 24 * 3600 * 1000;
 		let date = [];
 		let data = [Math.random() * 200];
-		for (let i = 1; i < 1000; i++) {
+		for (let i = 1; i < 365; i++) {
 		  var now = new Date((base += oneDay));
 		  date.push([now.getMonth() + 1, now.getDate()].join('/'));
 		  data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
@@ -325,7 +325,8 @@
 		elecDateChart.setOption(option);
 
 		</script>
-
+		<br>
+		<br>
 		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
 
