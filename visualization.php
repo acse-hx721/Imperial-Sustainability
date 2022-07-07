@@ -346,8 +346,7 @@
 		            color: 'rgb(0, 191, 255)'
 		          }
 		        ]),
-		        shadowColor: '#F3F3F3',
-                shadowOffsetX: 1
+		        opacity: 0.5
 		      },
 		      data: data_2020
 		    }
