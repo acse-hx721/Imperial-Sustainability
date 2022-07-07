@@ -248,7 +248,7 @@
     	<script type="text/javascript">
 
         var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
-    	let base = +new Date(2020, 12, 1);
+    	let base = +new Date(2020, 12, 0);
 		let oneDay = 24 * 3600 * 1000;
 		let date = [];
 		let data_2020 = [Math.random() * 200];
