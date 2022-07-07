@@ -580,6 +580,12 @@
 					    return [item[1], item[0], item[2] || '-'];
 					});
 		option = {
+		  toolbox: {
+		    feature: {
+		      restore: {},
+		      saveAsImage: {}
+		    }
+		  },
 		  tooltip: {
 		    position: 'top'
 		  },
