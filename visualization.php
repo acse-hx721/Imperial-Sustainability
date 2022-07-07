@@ -166,7 +166,7 @@
 		<div id="datechart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
 
-        var myChart = echarts.init(document.getElementById('datechart'));
+        var dateChart = echarts.init(document.getElementById('datechart'));
     	let base = +new Date(2019, 9, 3);
 		let oneDay = 24 * 3600 * 1000;
 		let date = [];
@@ -241,6 +241,7 @@
 		    }
 		  ]
 		};
+		dateChart.setOption(option);
 
 		</script>
 
