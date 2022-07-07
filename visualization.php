@@ -524,7 +524,7 @@
 		];
 		// prettier-ignore
 		const days = [
-		    'Saturday','Sunday', 'Friday', 'Thursday',
+		    'Sunday', 'Saturday', 'Friday', 'Thursday',
 		    'Wednesday', 'Tuesday', 'Monday'
 		];
 		// prettier-ignore
@@ -593,7 +593,7 @@
 		    text: 'Electricity Week Heat Map'
 		  },
 		  grid: {
-		    height: '50%',
+		    height: '30%',
 		    top: '10%'
 		  },
 		  xAxis: {
