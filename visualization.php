@@ -524,8 +524,8 @@
 		];
 		// prettier-ignore
 		const days = [
-		    'Saturday', 'Friday', 'Thursday',
-		    'Wednesday', 'Tuesday', 'Monday', 'Sunday'
+		    'Saturday','Sunday', 'Friday', 'Thursday',
+		    'Wednesday', 'Tuesday', 'Monday'
 		];
 		// prettier-ignore
 		const data = [[0, 0, 5], [0, 1, 1], [0, 2, 0], [0, 3, 0], [0, 4, 0], [0, 5, 0], [0, 6, 0], [0, 7, 0], 
@@ -583,6 +583,9 @@
 		  tooltip: {
 		    position: 'top'
 		  },
+		  title: {
+		    text: 'Electricity Week Heat Map'
+		  },
 		  grid: {
 		    height: '50%',
 		    top: '10%'
@@ -607,7 +610,7 @@
 		    calculable: true,
 		    orient: 'horizontal',
 		    left: 'center',
-		    bottom: '10%'
+		    // bottom: '10%'
 		  },
 		  series: [
 		    {
