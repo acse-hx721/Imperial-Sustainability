@@ -139,41 +139,122 @@
 		</div>
 		<!-- banner end -->
 
-		<div id="main" style="width: 100%; height:500px; float:center; "></div>
+		<div id="elecWeekChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-        var myChart = echarts.init(document.getElementById('main'));
+        var elecWeekChart = echarts.init(document.getElementById('elecWeekChart'));
 
-        var option = {
-			  xAxis: {
-			    type: 'category',
-			    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-			  },
-			  yAxis: {
-			    type: 'value'
-			  },
-			  series: [
-			    {
-			      data: [150, 230, 224, 218, 135, 147, 260],
-			      type: 'line'
-			    }
-			  ]
-			};
-        myChart.setOption(option);
+        option = {
+		  title: {
+		    text: 'Electricity Week Chart'
+		  },
+		  tooltip: {
+		    trigger: 'axis',
+		    axisPointer: {
+		      type: 'cross',
+		      label: {
+		        backgroundColor: '#6a7985'
+		      }
+		    }
+		  },
+		  legend: {
+		    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+		  },
+		  toolbox: {
+		    feature: {
+		      saveAsImage: {}
+		    }
+		  },
+		  grid: {
+		    left: '3%',
+		    right: '4%',
+		    bottom: '3%',
+		    containLabel: true
+		  },
+		  xAxis: [
+		    {
+		      type: 'category',
+		      boundaryGap: false,
+		      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+		    }
+		  ],
+		  yAxis: [
+		    {
+		      type: 'value'
+		    }
+		  ],
+		  series: [
+		    {
+		      name: 'Email',
+		      type: 'line',
+		      stack: 'Total',
+		      areaStyle: {},
+		      emphasis: {
+		        focus: 'series'
+		      },
+		      data: [120, 132, 101, 134, 90, 230, 210]
+		    },
+		    {
+		      name: 'Union Ads',
+		      type: 'line',
+		      stack: 'Total',
+		      areaStyle: {},
+		      emphasis: {
+		        focus: 'series'
+		      },
+		      data: [220, 182, 191, 234, 290, 330, 310]
+		    },
+		    {
+		      name: 'Video Ads',
+		      type: 'line',
+		      stack: 'Total',
+		      areaStyle: {},
+		      emphasis: {
+		        focus: 'series'
+		      },
+		      data: [150, 232, 201, 154, 190, 330, 410]
+		    },
+		    {
+		      name: 'Direct',
+		      type: 'line',
+		      stack: 'Total',
+		      areaStyle: {},
+		      emphasis: {
+		        focus: 'series'
+		      },
+		      data: [320, 332, 301, 334, 390, 330, 320]
+		    },
+		    {
+		      name: 'Search Engine',
+		      type: 'line',
+		      stack: 'Total',
+		      label: {
+		        show: true,
+		        position: 'top'
+		      },
+		      areaStyle: {},
+		      emphasis: {
+		        focus: 'series'
+		      },
+		      data: [820, 932, 901, 934, 1290, 1330, 1320]
+		    }
+		  ]
+		};
+        elecWeekChart.setOption(option);
 
     	</script>
 
 
-		<div id="datechart" style="width: 100%; height:500px; float:center; "></div>
+		<div id="elecDateChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
 
-        var dateChart = echarts.init(document.getElementById('datechart'));
+        var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
     	let base = +new Date(2019, 9, 3);
 		let oneDay = 24 * 3600 * 1000;
 		let date = [];
 		let data = [Math.random() * 200];
 		for (let i = 1; i < 1000; i++) {
 		  var now = new Date((base += oneDay));
-		  date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
+		  date.push([now.getMonth() + 1, now.getDate()].join('/'));
 		  data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
 		}
 		option = {
@@ -185,7 +266,7 @@
 		  },
 		  title: {
 		    left: 'center',
-		    text: 'Large Area Chart'
+		    text: 'Electricity Data Chart'
 		  },
 		  toolbox: {
 		    feature: {
@@ -218,7 +299,7 @@
 		  ],
 		  series: [
 		    {
-		      name: 'Fake Data',
+		      name: 'Fake electric Data',
 		      type: 'line',
 		      symbol: 'none',
 		      sampling: 'lttb',
@@ -241,9 +322,47 @@
 		    }
 		  ]
 		};
-		dateChart.setOption(option);
+		elecDateChart.setOption(option);
 
 		</script>
+
+		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
+    	<script type="text/javascript">
+
+        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
+		option = {
+		  legend: {},
+		  tooltip: {},
+		  title: {
+		    left: 'center',
+		    text: 'Electricity Year Comparison'
+		  },
+		  dataset: {
+		    source: [
+		      ['product', '2019', '2020', '2021'],
+		      ['January', 43.3, 85.8, 93.7],
+		      ['Feburary', 83.1, 73.4, 55.1],
+		      ['March', 86.4, 65.2, 82.5],
+		      ['April', 72.4, 53.9, 39.1],
+		      ['May', 43.3, 85.8, 93.7],
+		      ['June', 83.1, 73.4, 55.1],
+		      ['July', 86.4, 65.2, 82.5],
+		      ['August', 72.4, 53.9, 39.1],
+		      ['September', 43.3, 85.8, 93.7],
+		      ['October', 83.1, 73.4, 55.1],
+		      ['November', 86.4, 65.2, 82.5],
+		      ['December', 72.4, 53.9, 39.1]
+		    ]
+		  },
+		  xAxis: { type: 'category' },
+		  yAxis: {},
+		  // Declare several bar series, each will be mapped
+		  // to a column of dataset.source by default.
+		  series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
+		};
+		elecBarChart.setOption(option);
+		</script>
+
 
 		<!-- footer start -->
 		<!-- ================ -->
