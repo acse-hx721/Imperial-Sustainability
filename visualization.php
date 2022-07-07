@@ -256,12 +256,12 @@
 		for (let i = 1; i < 366; i++) {
 		  var now = new Date((base += oneDay));
 		  date.push([now.getMonth() + 1, now.getDate()].join('/'));
-		  data_2020.push(Math.round((Math.random() - 0.5) * 20 + data_2020[i - 1]));
-		  data_2021.push(Math.round((Math.random() - 0.5) * 10 + data_2021[i - 1]));
+		  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
+		  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
 		}
 		option = {
 		  legend: {
-		  	x:'center',
+		  	x:'right',
         	y:'top',
           },
 		  tooltip: {
@@ -309,7 +309,6 @@
 		      type: 'line',
 		      symbol: 'none',
 		      sampling: 'lttb',
-		      stack: 'Total',
 		      itemStyle: {
 		        color: 'rgb(255, 70, 131)'
 		      },
@@ -325,14 +324,13 @@
 		          }
 		        ])
 		      },
-		      data: data_2020
+		      data: data_2021
 		    },
 		    {
 		      name: 'Fake 2021 electric Data',
 		      type: 'line',
 		      symbol: 'none',
 		      sampling: 'lttb',
-		      stack: 'Total',
 		      itemStyle: {
 		        color: 'rgb(30,144,255)'
 		      },
@@ -348,7 +346,7 @@
 		          }
 		        ])
 		      },
-		      data: data_2021
+		      data: data_2020
 		    }
 		  ]
 		};
