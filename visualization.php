@@ -157,7 +157,6 @@
 		    }
 		  },
 		  legend: {
-		    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
 		  },
 		  toolbox: {
 		    feature: {
@@ -184,9 +183,9 @@
 		  ],
 		  series: [
 		    {
-		      name: 'Email',
+		      name: 'Fake 2021 electric Data',
 		      type: 'line',
-		      stack: 'Total',
+		      // stack: 'Total',
 		      areaStyle: {},
 		      emphasis: {
 		        focus: 'series'
@@ -194,48 +193,14 @@
 		      data: [120, 132, 101, 134, 90, 230, 210]
 		    },
 		    {
-		      name: 'Union Ads',
+		      name: 'Fake 2022 electric Data',
 		      type: 'line',
-		      stack: 'Total',
+		      // stack: 'Total',
 		      areaStyle: {},
 		      emphasis: {
 		        focus: 'series'
 		      },
 		      data: [220, 182, 191, 234, 290, 330, 310]
-		    },
-		    {
-		      name: 'Video Ads',
-		      type: 'line',
-		      stack: 'Total',
-		      areaStyle: {},
-		      emphasis: {
-		        focus: 'series'
-		      },
-		      data: [150, 232, 201, 154, 190, 330, 410]
-		    },
-		    {
-		      name: 'Direct',
-		      type: 'line',
-		      stack: 'Total',
-		      areaStyle: {},
-		      emphasis: {
-		        focus: 'series'
-		      },
-		      data: [320, 332, 301, 334, 390, 330, 320]
-		    },
-		    {
-		      name: 'Search Engine',
-		      type: 'line',
-		      stack: 'Total',
-		      label: {
-		        show: true,
-		        position: 'top'
-		      },
-		      areaStyle: {},
-		      emphasis: {
-		        focus: 'series'
-		      },
-		      data: [820, 932, 901, 934, 1290, 1330, 1320]
 		    }
 		  ]
 		};
@@ -261,7 +226,7 @@
 		}
 		option = {
 		  legend: {
-		  	x:'left',
+		  	x:'center',
         	y:'top',
           },
 		  tooltip: {
@@ -271,7 +236,6 @@
 		    }
 		  },
 		  title: {
-		    left: 'center',
 		    text: 'Electricity Data Chart'
 		  },
 		  toolbox: {
@@ -345,7 +309,7 @@
 		            color: 'rgb(0, 191, 255)'
 		          }
 		        ]),
-		        opacity: 0.8
+		        opacity: 0.3
 		      },
 		      data: data_2020
 		    }
