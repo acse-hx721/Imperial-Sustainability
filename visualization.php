@@ -241,7 +241,7 @@
 		let dateWeek = [];
 		let data_2020_week = [Math.random() * 200];
 		let data_2021_week = [Math.random() * 150];
-		for (let i = 1; i < 49 * 7; i++) {
+		for (let i = 1; i < 48 * 7 + 2; i++) {
 		  var now = new Date((baseTime += halfHour));
 		  dateWeek.push([now.getMonth() + 1, now.getDate()].join('/') + " " +now.getHours() +":"+now.getMinutes());
 		  data_2020_week.push(Math.round((Math.random() - 0.5) * 10 + data_2020_week[i - 1]));
