@@ -250,7 +250,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'bottom',
+        	y:'top',
           },
 		  tooltip: {
 		    trigger: 'axis',
@@ -365,7 +365,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'bottom',
+        	y:'top',
           },
 		  tooltip: {
 		    trigger: 'axis',
