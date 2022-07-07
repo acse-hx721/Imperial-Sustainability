@@ -250,7 +250,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'top',
+        	y:'bottom',
           },
 		  tooltip: {
 		    trigger: 'axis',
@@ -365,7 +365,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'top',
+        	y:'bottom',
           },
 		  tooltip: {
 		    trigger: 'axis',
@@ -467,7 +467,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'top',
+        	y:'bottom',
           },
           toolbox: {
 		    feature: {
@@ -616,7 +616,7 @@
 		    calculable: true,
 		    orient: 'horizontal',
 		    left: 'center',
-		    top: '0%'
+		    bottom: '0%'
 		  },
 		  series: [
 		    {
