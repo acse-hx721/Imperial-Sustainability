@@ -238,12 +238,12 @@
         var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
     	let baseTime = +new Date(2022, 6, 3, 23, 30);
 		let halfHour = 0.5 * 3600 * 1000;
-		let date = [];
+		let dateWeek = [];
 		let data_2020_week = [Math.random() * 200];
 		let data_2021_week = [Math.random() * 150];
 		for (let i = 1; i < 49 * 7; i++) {
 		  var now = new Date((baseTime += halfHour));
-		  date.push([now.getMonth() + 1, now.getDate()].join('/') + " " +now.getHours() +":"+now.getMinutes());
+		  dateWeek.push([now.getMonth() + 1, now.getDate()].join('/') + " " +now.getHours() +":"+now.getMinutes());
 		  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
 		  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
 		}
@@ -273,7 +273,7 @@
 		  xAxis: {
 		    type: 'category',
 		    boundaryGap: false,
-		    data: date
+		    data: dateWeek
 		  },
 		  yAxis: {
 		    type: 'value',
