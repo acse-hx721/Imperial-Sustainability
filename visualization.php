@@ -244,8 +244,8 @@
 		for (let i = 1; i < 49 * 7; i++) {
 		  var now = new Date((baseTime += halfHour));
 		  dateWeek.push([now.getMonth() + 1, now.getDate()].join('/') + " " +now.getHours() +":"+now.getMinutes());
-		  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
-		  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
+		  data_2020_week.push(Math.round((Math.random() - 0.5) * 10 + data_2020_week[i - 1]));
+		  data_2021_week.push(Math.round((Math.random() - 0.5) * 20 + data_2021_week[i - 1]));
 		}
 		option = {
 		  legend: {
