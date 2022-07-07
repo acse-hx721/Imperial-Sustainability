@@ -259,7 +259,7 @@
 		    }
 		  },
 		  title: {
-		    text: 'Electricity Week Data Chart'
+		    text: 'Electricity Week Data Chart (Same week last year)'
 		  },
 		  toolbox: {
 		    feature: {
@@ -477,7 +477,7 @@
 		  },
 		  tooltip: {},
 		  title: {
-		    text: 'Electricity Year Comparison'
+		    text: 'Electricity Years Comparison by Month'
 		  },
 		  dataset: {
 		    source: [
@@ -590,10 +590,10 @@
 		    position: 'top'
 		  },
 		  title: {
-		    text: 'Electricity Week Heat Map'
+		    text: 'Electricity Week Heat Map (30 mins interval)'
 		  },
 		  grid: {
-		    height: '30%',
+		    height: '60%',
 		    top: '10%'
 		  },
 		  xAxis: {
