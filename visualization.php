@@ -260,7 +260,10 @@
 		  data_2021.push(Math.round((Math.random() - 0.5) * 10 + data_2021[i - 1]));
 		}
 		option = {
-		  legend: {},
+		  legend: {
+		  	x:'center',
+        	y:'bottom',
+          },
 		  tooltip: {
 		    trigger: 'axis',
 		    position: function (pt) {
