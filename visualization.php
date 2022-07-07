@@ -610,7 +610,7 @@
 		    calculable: true,
 		    orient: 'horizontal',
 		    left: 'center',
-		    // bottom: '10%'
+		    top: '0%'
 		  },
 		  series: [
 		    {
