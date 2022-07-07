@@ -236,14 +236,13 @@
     	<script type="text/javascript">
 
         var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
-    	let base = +new Date(2022, 7, 3, 23, 30);
-		let oneDay = 24 * 3600 * 1000;
+    	let baseTime = +new Date(2022, 6, 3, 23, 30);
 		let halfHour = 0.5 * 3600 * 1000;
 		let date = [];
-		let data_2020 = [Math.random() * 200];
-		let data_2021 = [Math.random() * 150];
+		let data_2020_week = [Math.random() * 200];
+		let data_2021_week = [Math.random() * 150];
 		for (let i = 1; i < 49 * 7; i++) {
-		  var now = new Date((base += halfHour));
+		  var now = new Date((baseTime += halfHour));
 		  date.push([now.getMonth() + 1, now.getDate()].join('/') + " " +now.getHours() +":"+now.getMinutes());
 		  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
 		  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
@@ -260,7 +259,7 @@
 		    }
 		  },
 		  title: {
-		    text: 'Electricity Data Chart'
+		    text: 'Electricity Week Data Chart'
 		  },
 		  toolbox: {
 		    feature: {
@@ -312,7 +311,7 @@
 		          }
 		        ]),
 		      },
-		      data: data_2021
+		      data: data_2021_week
 		    },
 		    {
 		      name: 'Fake 2020 electric Data',
@@ -335,7 +334,7 @@
 		        ]),
 		        opacity: 0.3
 		      },
-		      data: data_2020
+		      data: data_2020_week
 		    }
 		  ]
 		};
