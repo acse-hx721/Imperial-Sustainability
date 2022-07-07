@@ -248,16 +248,19 @@
     	<script type="text/javascript">
 
         var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
-    	let base = +new Date(2020, 12, 1);
+    	let base = +new Date(2020, 11, 30);
 		let oneDay = 24 * 3600 * 1000;
 		let date = [];
-		let data = [Math.random() * 200];
-		for (let i = 1; i < 365; i++) {
+		let data_2020 = [Math.random() * 200];
+		let data_2021 = [Math.random() * 150];
+		for (let i = 1; i < 366; i++) {
 		  var now = new Date((base += oneDay));
 		  date.push([now.getMonth() + 1, now.getDate()].join('/'));
-		  data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+		  data_2020.push(Math.round((Math.random() - 0.5) * 20 + data_2020[i - 1]));
+		  data_2021.push(Math.round((Math.random() - 0.5) * 10 + data_2021[i - 1]));
 		}
 		option = {
+		  legend: {},
 		  tooltip: {
 		    trigger: 'axis',
 		    position: function (pt) {
@@ -299,7 +302,7 @@
 		  ],
 		  series: [
 		    {
-		      name: 'Fake electric Data',
+		      name: 'Fake 2020 electric Data',
 		      type: 'line',
 		      symbol: 'none',
 		      sampling: 'lttb',
@@ -318,7 +321,29 @@
 		          }
 		        ])
 		      },
-		      data: data
+		      data: data_2020
+		    },
+		    {
+		      name: 'Fake 2021 electric Data',
+		      type: 'line',
+		      symbol: 'none',
+		      sampling: 'lttb',
+		      itemStyle: {
+		        color: 'rgb(30,144,255)'
+		      },
+		      areaStyle: {
+		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+		          {
+		            offset: 0,
+		            color: 'rgb(123, 104, 238)'
+		          },
+		          {
+		            offset: 1,
+		            color: 'rgb(0, 191, 255)'
+		          }
+		        ])
+		      },
+		      data: data_2021
 		    }
 		  ]
 		};
@@ -334,7 +359,10 @@
 
         var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
 		option = {
-		  legend: {},
+		  legend: {
+		  	x:'center',
+        	y:'bottom',
+          },
 		  tooltip: {},
 		  title: {
 		    left: 'center',
