@@ -139,7 +139,7 @@
 		</div>
 		<!-- banner end -->
 
-		<div id="elecWeekChart" style="width: 100%; height:500px; float:center; "></div>
+		<!-- <div id="elecWeekChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
         var elecWeekChart = echarts.init(document.getElementById('elecWeekChart'));
 
@@ -230,7 +230,7 @@
 		};
         elecWeekChart.setOption(option);
 
-    	</script>
+    	</script> -->
 
     	<div id="elecWeeksChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
@@ -341,7 +341,10 @@
 		elecWeeksChart.setOption(option);
 
 		</script>
-
+		<br/>
+		<br/>
+		<br/>
+		<br/>
 
 
 		<div id="elecDateChart" style="width: 100%; height:500px; float:center; "></div>
@@ -464,7 +467,7 @@
 		option = {
 		  legend: {
 		  	x:'center',
-        	y:'bottom',
+        	y:'top',
           },
           toolbox: {
 		    feature: {
@@ -474,7 +477,6 @@
 		  },
 		  tooltip: {},
 		  title: {
-		    left: 'center',
 		    text: 'Electricity Year Comparison'
 		  },
 		  dataset: {
