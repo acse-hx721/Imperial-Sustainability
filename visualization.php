@@ -98,7 +98,7 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li><a href="index.php">Home</a></li>
-												<li><a href="#about">About</a></li>
+												<li><a href="index.php">About</a></li>
 												<li class="active"><a href="visualization.php">Visualization</a></li>
 												<li><a href="download_data.php">Download Data</a></li>
 												<!-- <li><a href="#clients">Clients</a></li> -->
