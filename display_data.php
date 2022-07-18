@@ -124,7 +124,7 @@
 
 		<!-- banner start -->
 		<!-- ================ -->
-		<!-- <div id="banner" class="banner"> -->
+		<div id="banner" height=50%>
 <!-- 			<div class="banner-image"></div>
 			<div class="banner-caption">
 				<div class="container">
@@ -136,7 +136,7 @@
 					</div>
 				</div> -->
 			<!-- </div> -->
-		<!-- </div> -->
+		</div>
 		<!-- banner end -->
 
 		<script type="text/javascript">
