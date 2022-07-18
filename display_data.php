@@ -125,16 +125,16 @@
 		<!-- banner start -->
 		<!-- ================ -->
 		<div id="banner" class="banner">
-			<div class="banner-image"></div>
+<!-- 			<div class="banner-image"></div>
 			<div class="banner-caption">
 				<div class="container">
-					<div class="row">
+					<div class="row"> -->
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">This page is for <span>Visualization</span></h1>
 							<p class="lead text-center">Selection of data type and time to show the specific data.</p>
-						</div>
+<!-- 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<!-- banner end -->
@@ -144,7 +144,7 @@
 		 
 		 
 		 
-		console.log("id:"+a['id']) //打印出传过来的id
+		// console.log("id:"+a['id']) //打印出传过来的id
 		 
 		 
 		 
@@ -161,10 +161,10 @@
 		   return theRequest;
 		}
 		</script>
-		<p id="demo">我的第一个段落</p>
+		<h1 class="text-center" id="demo"></span></h1>
 
 		<script>
-		document.getElementById("demo").innerHTML = "id:"+a['id'];
+		document.getElementById("demo").innerHTML = a['id'] + "Data Charts";
 		</script>
 
 

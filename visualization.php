@@ -138,8 +138,17 @@
 			</div>
 		</div>
 		<!-- banner end -->
-
-		<a href="display_data.php?id=1">id: 1</a>
+		<table border="1" align="center">
+		    <tr>
+		        <td><a href="display_data.php?id=1">id: 1</a></td>
+		        <td><a href="display_data.php?id=2">id: 2</td>
+		    </tr>
+		    <tr>
+		        <td><a href="display_data.php?id=3">id: 3</td>
+		        <td><a href="display_data.php?id=4">id: 4</td>
+		    </tr>
+		</table>
+		
 
 		<!-- footer start -->
 		<!-- ================ -->
