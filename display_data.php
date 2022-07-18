@@ -131,8 +131,7 @@
 					<div class="row"> -->
 						<!-- <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn"> -->
 							<br><br><br><br><br><br><br>
-							<h1 class="text-center">This page is for <span>Visualization</span></h1>
-							<p class="lead text-center">Selection of data type and time to show the specific data.</p>
+							<h1 class="text-center">Data Visualization</h1>
 <!-- 						</div>
 					</div>
 				</div> -->
@@ -273,7 +272,7 @@
 		let data_2021_week = [Math.random() * 150];
 		for (let i = 1; i < 48 * 7 + 2; i++) {
 		  var now = new Date((baseTime += halfHour));
-		  dateWeek.push([now.getMonth() + 1, now.getDate()].join('/') + " " +now.getHours() +":"+now.getMinutes());
+		  dateWeek.push([now.getDate(), now.getMonth() + 1].join('/') + " " +now.getHours() +":"+now.getMinutes());
 		  data_2020_week.push(Math.round((Math.random() - 0.5) * 10 + data_2020_week[i - 1]));
 		  data_2021_week.push(Math.round((Math.random() - 0.5) * 20 + data_2021_week[i - 1]));
 		}
@@ -307,7 +306,12 @@
 		  },
 		  yAxis: {
 		    type: 'value',
-		    boundaryGap: [0, '100%']
+		    boundaryGap: [0, '100%'],
+		    axisLabel: 
+		    {
+                formatter:'{value} kWh'
+            }
+
 		  },
 		  dataZoom: [
 		    {
@@ -388,7 +392,7 @@
 		let data_2021 = [Math.random() * 150];
 		for (let i = 1; i < 366; i++) {
 		  var now = new Date((base += oneDay));
-		  date.push([now.getMonth() + 1, now.getDate()].join('/'));
+		  date.push([now.getDate(), now.getMonth() + 1].join('/'));
 		  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
 		  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
 		}
@@ -422,7 +426,11 @@
 		  },
 		  yAxis: {
 		    type: 'value',
-		    boundaryGap: [0, '100%']
+		    boundaryGap: [0, '100%'],
+		    axisLabel: 
+		    {
+                formatter:'{value} kWh'
+            }
 		  },
 		  dataZoom: [
 		    {
@@ -527,7 +535,12 @@
 		    ]
 		  },
 		  xAxis: { type: 'category' },
-		  yAxis: {},
+		  yAxis: {		    
+		  	axisLabel: 
+		    {
+                formatter:'{value} kWh'
+            }
+          },
 		  // Declare several bar series, each will be mapped
 		  // to a column of dataset.source by default.
 		  series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
