@@ -124,19 +124,19 @@
 
 		<!-- banner start -->
 		<!-- ================ -->
-		<div id="banner" class="banner">
+		<!-- <div id="banner" class="banner"> -->
 <!-- 			<div class="banner-image"></div>
 			<div class="banner-caption">
 				<div class="container">
 					<div class="row"> -->
-						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+						<!-- <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn"> -->
 							<h1 class="text-center">This page is for <span>Visualization</span></h1>
 							<p class="lead text-center">Selection of data type and time to show the specific data.</p>
 <!-- 						</div>
 					</div>
 				</div> -->
-			</div>
-		</div>
+			<!-- </div> -->
+		<!-- </div> -->
 		<!-- banner end -->
 
 		<script type="text/javascript">
