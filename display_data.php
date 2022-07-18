@@ -124,7 +124,7 @@
 
 		<!-- banner start -->
 		<!-- ================ -->
-		<div id="banner" height=50%>
+		<div id="banner" class="banner">
 <!-- 			<div class="banner-image"></div>
 			<div class="banner-caption">
 				<div class="container">
