@@ -164,7 +164,7 @@
 		<h1 class="text-center" id="demo"></span></h1>
 
 		<script>
-		document.getElementById("demo").innerHTML = a['id'] + "Data Charts";
+		document.getElementById("demo").innerHTML = a['id'] + " Data Charts";
 		</script>
 
 
