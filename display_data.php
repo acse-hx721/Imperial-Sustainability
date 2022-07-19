@@ -788,13 +788,20 @@
 		var elec_data;
 		var elec_data_file = new File(["elec"], "data/all_elec_data.csv");
 
-		Papa.parse(elec_data_file, {
-		  header: true,
-		  complete: function(results) {
-		    console.log(results);
-		    elec_data = results.data;
-		  }
-		});
+		var csvfile = "data/data.csv";
+
+		$.get(csvfile, function (data) {
+	        var csvdata = Papa.parse(data);
+	        console.log(csvdata);
+    	});
+
+		// Papa.parse(elec_data_file, {
+		//   header: true,
+		//   complete: function(results) {
+		//     console.log(results);
+		//     elec_data = results.data;
+		//   }
+		// });
 		// Papa.parse("data/all_elec_data.csv", {
 		//   header: true,
 		//   download: true,
