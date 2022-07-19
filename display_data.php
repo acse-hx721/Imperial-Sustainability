@@ -797,6 +797,7 @@
 		//   }
 		// });
 		Papa.parse("data/all_elec_data.csv", {
+		  header: true,
 		  download: true,
 		  complete: function(results) {
 		    console.log(results);
