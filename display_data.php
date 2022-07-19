@@ -786,11 +786,20 @@
 
 		<script type="text/javascript">
 		var elec_data;
-		var elec_data_file = new File(["elec_data_file"], "data/all_elec_data.csv");
+		// var elec_data_file = new File(["elec_data_file"], "data/all_elec_data.csv");
 
-		Papa.parse(elec_data_file, {
+		// Papa.parse(elec_data_file, {
+		//   header: true,
+		//   dynamicTyping: true,
+		//   complete: function(results) {
+		//     console.log(results);
+		//     elec_data = results.data;
+		//   }
+		// });
+		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  dynamicTyping: true,
+		  download: true,
 		  complete: function(results) {
 		    console.log(results);
 		    elec_data = results.data;
