@@ -785,14 +785,14 @@
 		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 		<script type="text/javascript">
-		var data;
+		var elec_data;
 
 		Papa.parse('data/all_elec_data.csv', {
 		  header: true,
 		  dynamicTyping: true,
 		  complete: function(results) {
 		    console.log(results);
-		    data = results.data;
+		    elec_data = results.data;
 		  }
 		});
 		</script>
