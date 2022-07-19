@@ -782,16 +782,19 @@
 		<script type="text/javascript" src="js/custom.js"></script>
 
 
-		<script type="text/javascript" src="plugins/jquery.csv.js"></script>
+		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 		<script type="text/javascript">
-		  // sent a GET request to retrieve the CSV file contents
-		    $.get("data/all_elec_data.csv", function(elec_csv_data) {
-		    // CSVdata is populated with the file contents...
-		    // ...ready to be converted into an Array
-		    elec_data = $.csv.toArray(elec_csv_data);
-		    console.log(elec_data)
-		  });
+		var data;
+
+		Papa.parse('data/all_elec_data.csv', {
+		  header: true,
+		  dynamicTyping: true,
+		  complete: function(results) {
+		    console.log(results);
+		    data = results.data;
+		  }
+		});
 		</script>
 
 	</body>
