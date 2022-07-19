@@ -785,31 +785,26 @@
 		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 		<script type="text/javascript">
-
-		var fs = require('fs');
-		var Papa = require('papaparse');
-		var elec_data_file = "data/all_elec_data.csv";
 		var elec_data;
-
 		// var elec_data_file = new File(["elec_data_file"], "data/all_elec_data.csv");
-		var elec_data_content = fs.readFileSync(elec_data_file, "utf8");
-		Papa.parse(elec_data_content, {
-		  header: true,
-		  dynamicTyping: true,
-		  complete: function(results) {
-		    console.log(results);
-		    elec_data = results.data;
-		  }
-		});
-		// Papa.parse("data/all_elec_data.csv", {
+
+		// Papa.parse(elec_data_file, {
 		//   header: true,
 		//   dynamicTyping: true,
-		//   download: true,
 		//   complete: function(results) {
 		//     console.log(results);
 		//     elec_data = results.data;
 		//   }
 		// });
+		Papa.parse("data/all_elec_data.csv", {
+		  header: true,
+		  dynamicTyping: true,
+		  download: true,
+		  complete: function(results) {
+		    console.log(results);
+		    elec_data = results.data;
+		  }
+		});
 		</script>
 
 	</body>
