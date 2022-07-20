@@ -829,6 +829,8 @@
 				Value: elem[meter_id],
 			};
 			all_year_data.push(a_meter_data);
+			all_year_data.push(elem[Date]);
+			all_year_data.push(elem[meter_id]);
 		}
 
 		// console.log(elec_data);
