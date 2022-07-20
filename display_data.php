@@ -784,6 +784,30 @@
 		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 		<script type="text/javascript">
+		function GetDay(today_time, day){
+		    function doHandleMonth(month){
+		    　　var m = month;
+		    　　if(month.toString().length == 1){
+		    　　　　m = "0" + month;
+		    　　}
+		    　　return m;
+		    };
+		    var today = new Date(today_time);
+		    var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
+		    today.setTime(targetday_milliseconds); //注意，这行是关键代码
+		    // var tYear = today.getFullYear();
+		    // var tMonth = today.getMonth();
+		    // var tDate = today.getDate();
+		    // tMonth = doHandleMonth(tMonth + 1);
+		    // tDate = doHandleMonth(tDate);
+		    return new Date(targetday_milliseconds);
+		};
+		</script>
+
+
+
+
+		<script type="text/javascript">
 		var elec_data = new Array();
 		// var elec_data_file = new File(["elec"], "data/all_elec_data.csv");
 
@@ -841,24 +865,7 @@
 
 		// console.log(elec_data);
 
-		function GetDay(today_time, day){
-		    function doHandleMonth(month){
-		    　　var m = month;
-		    　　if(month.toString().length == 1){
-		    　　　　m = "0" + month;
-		    　　}
-		    　　return m;
-		    };
-		    var today = new Date(today_time);
-		    var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
-		    today.setTime(targetday_milliseconds); //注意，这行是关键代码
-		    // var tYear = today.getFullYear();
-		    // var tMonth = today.getMonth();
-		    // var tDate = today.getDate();
-		    // tMonth = doHandleMonth(tMonth + 1);
-		    // tDate = doHandleMonth(tDate);
-		    return new Date(targetday_milliseconds);
-		};
+
 
 
 
