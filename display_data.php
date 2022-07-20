@@ -817,13 +817,11 @@
 				const elem = elec_data[index];
 				console.log(index, elem);
 				var a_meter_data = {
-					Date: elem[Date],
-					Time: elem[Time],
+					Date: elem['Date'],
+					Time: elem['Time'],
 					Value: elem[meter_id],
 			};
 			all_year_data.push(a_meter_data);
-			all_year_data.push(elem[Date]);
-			all_year_data.push(elem[meter_id]);
 		}
 		  },
 		});
