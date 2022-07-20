@@ -805,7 +805,7 @@
 	 //        console.log(csvdata);
 	 //    });
 
-
+	 	const all_year_data = [];
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
@@ -813,24 +813,25 @@
 		    console.log(results);
 		    elec_data = results.data;
 		    document.getElementById("loading").innerHTML = "Data loading completed";
-		  },
-		});
-
-
-		const all_year_data = [];
-
-		for (var index=0; index < elec_data.length; index++) {
-			const elem = elec_data[index];
-			console.log(index, elem);
-			var a_meter_data = {
-				Date: elem[Date],
-				Time: elem[Time],
-				Value: elem[meter_id],
+		    for (var index=0; index < elec_data.length; index++) {
+				const elem = elec_data[index];
+				console.log(index, elem);
+				var a_meter_data = {
+					Date: elem[Date],
+					Time: elem[Time],
+					Value: elem[meter_id],
 			};
 			all_year_data.push(a_meter_data);
 			all_year_data.push(elem[Date]);
 			all_year_data.push(elem[meter_id]);
 		}
+		  },
+		});
+
+
+
+
+
 
 		// console.log(elec_data);
 		</script>
