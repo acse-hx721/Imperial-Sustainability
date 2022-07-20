@@ -267,9 +267,10 @@
 	    	let baseTime = +new Date(this_year_week_datetime);
 			let halfHour = 0.5 * 3600 * 1000;
 			let dateWeek = [];
+			var now = new Date(baseTime);
 			for (let i = 1; i < 48 * 7 + 2; i++) {
-			  var now = new Date((baseTime += halfHour));
 			  dateWeek.push([now.getDate(), now.getMonth() + 1].join('/') + " " +now.getHours() +":"+now.getMinutes());
+			  now = new Date((baseTime += halfHour));
 			}
 			option = {
 			  legend: {
