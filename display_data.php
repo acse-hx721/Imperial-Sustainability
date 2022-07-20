@@ -264,7 +264,7 @@
     	<script type="text/javascript">
     	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data){
 	        var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
-	    	let baseTime = new Date(this_year_week_datetime);
+	    	let baseTime = +new Date(this_year_week_datetime);
 			let halfHour = 0.5 * 3600 * 1000;
 			let dateWeek = [];
 			for (let i = 1; i < 48 * 7 + 2; i++) {
