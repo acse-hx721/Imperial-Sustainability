@@ -819,8 +819,9 @@
 
 		var all_year_data = new Array();
 
-		for (const [index, elem] of elec_data.entries()) {
-			console.log(index, elem);
+		for (let index=0; index < arr.length; index++) {
+			const elem = arr[index];
+			// console.log(index, elem);
 			var a_meter_data = {};
 			a_meter_data = {
 				Date: elem['Date'],
@@ -828,7 +829,6 @@
 				Value: elem[meter_id],
 			};
 			all_year_data.push(a_meter_data);
-
 		}
 
 		// console.log(elec_data);
