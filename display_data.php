@@ -163,7 +163,7 @@
 
 		<script>
 		var meter_id = a['id'];
-		document.getElementById("demo").innerHTML = meter_id + " Data Charts";
+		document.getElementById("demo").innerHTML = meter_id;
 		</script>
 
 
@@ -823,8 +823,8 @@
 			console.log(index, elem);
 			var a_meter_data = {};
 			a_meter_data = {
-				Date: elem[Date],
-				Time: elem[Time],
+				Date: elem['Date'],
+				Time: elem['Time'],
 				Value: elem[meter_id],
 			};
 			all_year_data.push(a_meter_data);
