@@ -796,22 +796,22 @@
 		//   }
 		// });
 
-		var csvfile = "data/all_elec_data.csv";
+		// var csvfile = "data/all_elec_data.csv";
 
-	    $.get(csvfile, function (data) {
-	        var csvdata = Papa.parse(data);
-	        console.log(csvdata);
-	    });
+	 //    $.get(csvfile, function (data) {
+	 //        var csvdata = Papa.parse(data);
+	 //        console.log(csvdata);
+	 //    });
 
 
-		// Papa.parse("data/all_elec_data.csv", {
-		//   header: true,
-		//   download: true,
-		//   complete: function(results) {
-		//     console.log(results);
-		//     elec_data = results.data;
-		//   }
-		// });
+		Papa.parse("data/all_elec_data.csv", {
+		  header: true,
+		  download: true,
+		  complete: function(results) {
+		    console.log(results);
+		    elec_data = results.data;
+		  }
+		});
 
 		// console.log(elec_data);
 		</script>
