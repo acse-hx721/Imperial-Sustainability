@@ -807,6 +807,8 @@
 
 	 	const all_data = [];
 	 	var last_datetime;
+	 	var this_year_week_datetime;
+	 	var previous_year_week_datetime;
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
@@ -825,7 +827,10 @@
 				all_data.push(a_meter_data);
 			}
 			last_datetime = '20' + all_data[all_data.length-1]['Date'] + " " + all_data[all_data.length-1]['Time']
-			console.log(getDay(last_datetime, -7)) // 7 days before
+			console.log(getDay(last_datetime, -7)); // 7 days before
+
+			this_year_week_datetime = getDay(last_datetime, -7);
+			previous_year_week_datetime = getDay(this_year_week_datetime, -365);
 		  },
 		});
 
@@ -847,12 +852,12 @@
 		    var today = new Date(today_time);
 		    var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
 		    today.setTime(targetday_milliseconds); //注意，这行是关键代码
-		    var tYear = today.getFullYear();
-		    var tMonth = today.getMonth();
-		    var tDate = today.getDate();
-		    tMonth = doHandleMonth(tMonth + 1);
-		    tDate = doHandleMonth(tDate);
-		    return tYear+"-"+tMonth+"-"+tDate;
+		    // var tYear = today.getFullYear();
+		    // var tMonth = today.getMonth();
+		    // var tDate = today.getDate();
+		    // tMonth = doHandleMonth(tMonth + 1);
+		    // tDate = doHandleMonth(tDate);
+		    return new Date(targetday_milliseconds);
 		};
 
 
