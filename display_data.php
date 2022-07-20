@@ -833,6 +833,11 @@
 	 	var last_datetime;
 	 	var this_year_week_datetime;
 	 	var previous_year_week_datetime;
+
+	 	const this_year_week_data = [];
+	 	const previous_year_week_data = [];
+
+
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
@@ -840,6 +845,12 @@
 		    console.log(results);
 		    elec_data = results.data;
 		    document.getElementById("loading").innerHTML = "Data loading completed";
+		    last_datetime = '20' + elec_data[elec_data.length-2]['Date'] + " " + elec_data[elec_data.length-2]['Time'];
+			console.log(getDay(last_datetime, -7)); // 7 days before
+
+			this_year_week_datetime = getDay(last_datetime, -7);
+			previous_year_week_datetime = getDay(this_year_week_datetime, -365);
+
 		    for (var index=0; index < elec_data.length; index++) {
 				const elem = elec_data[index];
 				// console.log(index, elem);
@@ -848,13 +859,18 @@
 					Time: elem['Time'],
 					Value: elem[meter_id],
 				};
+				// Calculate data of latest week for this year and previous year
+				var current_datetime_str = '20' + elec_data[index]['Date'] + " " + elec_data[index]['Time'];
+				var current_datetime = new Date(current_datetime_str);
+				if (current_datetime >= previous_year_week_datetime && previous_year_week_data.length < 48 * 7){
+					previous_year_week_data.push(elem[meter_id]);
+				}
+				if (current_datetime >= this_year_week_datetime && this_year_week_data.length < 48 * 7){
+					this_year_week_data.push(elem[meter_id]);
+				}
 				all_data.push(a_meter_data);
 			}
-			last_datetime = '20' + all_data[all_data.length-2]['Date'] + " " + all_data[all_data.length-2]['Time'];
-			console.log(getDay(last_datetime, -7)); // 7 days before
-
-			this_year_week_datetime = getDay(last_datetime, -7);
-			previous_year_week_datetime = getDay(this_year_week_datetime, -365);
+			
 		  },
 		});
 
