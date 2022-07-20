@@ -784,7 +784,7 @@
 		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 		<script type="text/javascript">
-		var elec_data;
+		var elec_data = new Array();
 		// var elec_data_file = new File(["elec"], "data/all_elec_data.csv");
 
 		// Papa.parse(elec_data_file, {
