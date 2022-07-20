@@ -819,13 +819,13 @@
 
 		var all_year_data = new Array();
 
-		for (let index=0; index < arr.length; index++) {
-			const elem = arr[index];
+		for (let index=0; index < elec_data.length; index++) {
+			const elem = elec_data[index];
 			// console.log(index, elem);
 			var a_meter_data = {};
 			a_meter_data = {
-				Date: elem['Date'],
-				Time: elem['Time'],
+				Date: elem[Date],
+				Time: elem[Time],
 				Value: elem[meter_id],
 			};
 			all_year_data.push(a_meter_data);
