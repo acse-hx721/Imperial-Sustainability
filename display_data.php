@@ -262,116 +262,113 @@
 
     	<div id="elecWeeksChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+    	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data){
+	        var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
+	    	let baseTime = new Date(this_year_week_datetime);
+			let halfHour = 0.5 * 3600 * 1000;
+			let dateWeek = [];
+			for (let i = 1; i < 48 * 7 + 2; i++) {
+			  var now = new Date((baseTime += halfHour));
+			  dateWeek.push([now.getDate(), now.getMonth() + 1].join('/') + " " +now.getHours() +":"+now.getMinutes());
+			}
+			option = {
+			  legend: {
+			  	x:'center',
+	        	y:'top',
+	          },
+			  tooltip: {
+			    trigger: 'axis',
+			    position: function (pt) {
+			      return [pt[0], '10%'];
+			    }
+			  },
+			  title: {
+			    text: 'Electricity Week Data Chart (Same week last year)'
+			  },
+			  toolbox: {
+			    feature: {
+			      dataZoom: {
+			        yAxisIndex: 'none'
+			      },
+			      restore: {},
+			      saveAsImage: {}
+			    }
+			  },
+			  xAxis: {
+			    type: 'category',
+			    boundaryGap: false,
+			    data: dateWeek
+			  },
+			  yAxis: {
+			    type: 'value',
+			    boundaryGap: [0, '100%'],
+			    axisLabel: 
+			    {
+	                formatter:'{value} kWh'
+	            }
 
-        var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
-    	let baseTime = +new Date(2022, 6, 3, 23, 30);
-		let halfHour = 0.5 * 3600 * 1000;
-		let dateWeek = [];
-		let data_2020_week = [Math.random() * 200];
-		let data_2021_week = [Math.random() * 150];
-		for (let i = 1; i < 48 * 7 + 2; i++) {
-		  var now = new Date((baseTime += halfHour));
-		  dateWeek.push([now.getDate(), now.getMonth() + 1].join('/') + " " +now.getHours() +":"+now.getMinutes());
-		  data_2020_week.push(Math.round((Math.random() - 0.5) * 10 + data_2020_week[i - 1]));
-		  data_2021_week.push(Math.round((Math.random() - 0.5) * 20 + data_2021_week[i - 1]));
+			  },
+			  dataZoom: [
+			    {
+			      type: 'inside',
+			      start: 0,
+			      end: 10
+			    },
+			    {
+			      start: 0,
+			      end: 10
+			    }
+			  ],
+			  series: [
+			    {
+			      name: 'This Year Data',
+			      type: 'line',
+			      symbol: 'none',
+			      sampling: 'lttb',
+			      itemStyle: {
+			        color: 'rgb(255, 70, 131)'
+			      },
+			      areaStyle: {
+			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+			          {
+			            offset: 0,
+			            color: 'rgb(255, 158, 68)'
+			          },
+			          {
+			            offset: 1,
+			            color: 'rgb(255, 70, 131)'
+			          }
+			        ]),
+			      },
+			      data: this_year_data
+			    },
+			    {
+			      name: 'Previous Year Data',
+			      type: 'line',
+			      symbol: 'none',
+			      sampling: 'lttb',
+			      itemStyle: {
+			        color: 'rgb(30,144,255)'
+			      },
+			      areaStyle: {
+			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+			          {
+			            offset: 0,
+			            color: 'rgb(123, 104, 238)'
+			          },
+			          {
+			            offset: 1,
+			            color: 'rgb(0, 191, 255)'
+			          }
+			        ]),
+			        opacity: 0.3
+			      },
+			      data: previous_year_data
+			    }
+			  ]
+			};
+			elecWeeksChart.setOption(option);
 		}
-		option = {
-		  legend: {
-		  	x:'center',
-        	y:'top',
-          },
-		  tooltip: {
-		    trigger: 'axis',
-		    position: function (pt) {
-		      return [pt[0], '10%'];
-		    }
-		  },
-		  title: {
-		    text: 'Electricity Week Data Chart (Same week last year)'
-		  },
-		  toolbox: {
-		    feature: {
-		      dataZoom: {
-		        yAxisIndex: 'none'
-		      },
-		      restore: {},
-		      saveAsImage: {}
-		    }
-		  },
-		  xAxis: {
-		    type: 'category',
-		    boundaryGap: false,
-		    data: dateWeek
-		  },
-		  yAxis: {
-		    type: 'value',
-		    boundaryGap: [0, '100%'],
-		    axisLabel: 
-		    {
-                formatter:'{value} kWh'
-            }
-
-		  },
-		  dataZoom: [
-		    {
-		      type: 'inside',
-		      start: 0,
-		      end: 10
-		    },
-		    {
-		      start: 0,
-		      end: 10
-		    }
-		  ],
-		  series: [
-		    {
-		      name: 'Fake 2021 electric Data',
-		      type: 'line',
-		      symbol: 'none',
-		      sampling: 'lttb',
-		      itemStyle: {
-		        color: 'rgb(255, 70, 131)'
-		      },
-		      areaStyle: {
-		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-		          {
-		            offset: 0,
-		            color: 'rgb(255, 158, 68)'
-		          },
-		          {
-		            offset: 1,
-		            color: 'rgb(255, 70, 131)'
-		          }
-		        ]),
-		      },
-		      data: data_2021_week
-		    },
-		    {
-		      name: 'Fake 2020 electric Data',
-		      type: 'line',
-		      symbol: 'none',
-		      sampling: 'lttb',
-		      itemStyle: {
-		        color: 'rgb(30,144,255)'
-		      },
-		      areaStyle: {
-		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-		          {
-		            offset: 0,
-		            color: 'rgb(123, 104, 238)'
-		          },
-		          {
-		            offset: 1,
-		            color: 'rgb(0, 191, 255)'
-		          }
-		        ]),
-		        opacity: 0.3
-		      },
-		      data: data_2020_week
-		    }
-		  ]
-		};
-		elecWeeksChart.setOption(option);
 
 		</script>
 		<br/>
@@ -841,6 +838,7 @@
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
+		  // Do things after reading data
 		  complete: function(results) {
 		    console.log(results);
 		    elec_data = results.data;
@@ -870,7 +868,7 @@
 				}
 				all_data.push(a_meter_data);
 			}
-			
+			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data);
 		  },
 		});
 
