@@ -799,7 +799,10 @@
 		// var csvfile = "data/all_elec_data.csv";
 
 	 //    $.get(csvfile, function (data) {
-	 //        var csvdata = Papa.parse(data);
+	 //        var csvdata = Papa.parse(data, {
+	 			// header: true,
+
+	 	});
 	 //        console.log(csvdata);
 	 //    });
 
@@ -810,7 +813,8 @@
 		  complete: function(results) {
 		    console.log(results);
 		    elec_data = results.data;
-		  }
+		  },
+		  delimiter: ",",
 		});
 
 		// console.log(elec_data);
