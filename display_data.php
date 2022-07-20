@@ -810,7 +810,6 @@
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
-		  delimiter: ",",
 		  complete: function(results) {
 		    console.log(results);
 		    elec_data = results.data;
