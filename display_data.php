@@ -905,19 +905,20 @@
 				heat_map_days.push(datetime_str);
 				datetime1 = getDay(datetime1, 1);
 			}
-			
+
 			heat_map_days.reverse();
 
-			var datetime2 = this_year_week_datetime;
+			let baseTime = +new Date(this_year_week_datetime);
+			var datetime2 = new Date(baseTime);
 			let halfHour = 0.5 * 3600 * 1000;
 			for (let i = 0; i < 48; i++) {
 			    heat_map_times.push(datetime2.getHours() + ":" + datetime2.getMinutes());
-			    datetime2 = new Date((datetime2 += halfHour));
+			    datetime2 = new Date((baseTime += halfHour));
 			}
 
 
 			for (var i = 0; i < 48 * 7; i++) {
-				var heat_map_element = [6 - i/48, i%48, this_year_week_data[i]];
+				var heat_map_element = [6 - parseInt(i/48), i%48, this_year_week_data[i]];
 				heat_map_data.push(heat_map_element);
 			} 
 
