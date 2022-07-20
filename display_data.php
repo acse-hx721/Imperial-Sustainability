@@ -819,7 +819,7 @@
 
 		var all_year_data = new Array();
 
-		for (let index=0; index < elec_data.length; index++) {
+		for (var index=0; index < elec_data.length; index++) {
 			const elem = elec_data[index];
 			// console.log(index, elem);
 			var a_meter_data = {};
