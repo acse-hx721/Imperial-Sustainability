@@ -131,7 +131,7 @@
 					<div class="row"> -->
 						<!-- <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn"> -->
 							<br><br><br><br><br><br><br>
-							<h1 class="text-center">Data Visualization</h1>
+							<h1 class="text-center" id="loading">Loading, please wait...</h1>
 <!-- 						</div>
 					</div>
 				</div> -->
@@ -813,6 +813,7 @@
 		  complete: function(results) {
 		    console.log(results);
 		    elec_data = results.data;
+		    document.getElementById("loading").innerHTML = "Data loading completed";
 		  },
 		});
 
