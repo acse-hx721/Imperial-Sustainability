@@ -850,7 +850,7 @@
 				};
 				all_data.push(a_meter_data);
 			}
-			last_datetime = '20' + all_data[all_data.length-1]['Date'] + " " + all_data[all_data.length-1]['Time'];
+			last_datetime = '20' + all_data[all_data.length-2]['Date'] + " " + all_data[all_data.length-2]['Time'];
 			console.log(getDay(last_datetime, -7)); // 7 days before
 
 			this_year_week_datetime = getDay(last_datetime, -7);
