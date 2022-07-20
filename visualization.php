@@ -140,12 +140,12 @@
 		<!-- banner end -->
 		<table border="1" align="center">
 		    <tr>
-		        <td><a href="display_data.php?id=meter1">Meter 1</a></td>
-		        <td><a href="display_data.php?id=meter2">Meter 2</td>
+		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
+		        <td><a href="display_data.php?id=1200010050250">1200010050250</td>
 		    </tr>
 		    <tr>
-		        <td><a href="display_data.php?id=meter3">Meter 3</td>
-		        <td><a href="display_data.php?id=meter4">Meter 4</td>
+		        <td><a href="display_data.php?id=1200010081620">1200010081620</td>
+		        <td><a href="display_data.php?id=1200010081630">1200010081630</td>
 		    </tr>
 		</table>
 		

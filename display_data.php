@@ -142,8 +142,6 @@
 		<script type="text/javascript">
 		var a=GetRequest();
 		 
-		 
-		 
 		// console.log("id:"+a['id']) //打印出传过来的id
 		 
 		 
@@ -164,7 +162,8 @@
 		<h1 class="text-center" id="demo"></span></h1>
 
 		<script>
-		document.getElementById("demo").innerHTML = a['id'] + " Data Charts";
+		var meter_id = a['id'];
+		document.getElementById("demo").innerHTML = meter_id + " Data Charts";
 		</script>
 
 
@@ -816,6 +815,21 @@
 		    document.getElementById("loading").innerHTML = "Data loading completed";
 		  },
 		});
+
+
+		var all_year_data = new Array();
+
+		for (const [index, elem] of elec_data.entries()) {
+			console.log(index, elem);
+			var a_meter_data = {};
+			a_meter_data = {
+				Date: elem[Date],
+				Time: elem[Time],
+				Value: elem[meter_id],
+			};
+			all_year_data.push(a_meter_data);
+
+		}
 
 		// console.log(elec_data);
 		</script>
