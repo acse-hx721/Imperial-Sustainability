@@ -805,7 +805,8 @@
 	 //        console.log(csvdata);
 	 //    });
 
-	 	const all_year_data = [];
+	 	const all_data = [];
+	 	var last_datetime;
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
@@ -815,14 +816,16 @@
 		    document.getElementById("loading").innerHTML = "Data loading completed";
 		    for (var index=0; index < elec_data.length; index++) {
 				const elem = elec_data[index];
-				console.log(index, elem);
+				// console.log(index, elem);
 				var a_meter_data = {
 					Date: elem['Date'],
 					Time: elem['Time'],
 					Value: elem[meter_id],
-			};
-			all_year_data.push(a_meter_data);
-		}
+				};
+				all_data.push(a_meter_data);
+			}
+			last_datetime = '20' + all_data[all_data.length-1]['Date'] + " " + all_data[all_data.length-1]['Time']
+			console.log(getDay(last_datetime, -7)) // 7 days before
 		  },
 		});
 
@@ -832,6 +835,30 @@
 
 
 		// console.log(elec_data);
+
+		function GetDay(today_time, day){
+		    function doHandleMonth(month){
+		    　　var m = month;
+		    　　if(month.toString().length == 1){
+		    　　　　m = "0" + month;
+		    　　}
+		    　　return m;
+		    };
+		    var today = new Date(today_time);
+		    var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
+		    today.setTime(targetday_milliseconds); //注意，这行是关键代码
+		    var tYear = today.getFullYear();
+		    var tMonth = today.getMonth();
+		    var tDate = today.getDate();
+		    tMonth = doHandleMonth(tMonth + 1);
+		    tDate = doHandleMonth(tDate);
+		    return tYear+"-"+tMonth+"-"+tDate;
+		};
+
+
+
+
+
 		</script>
 
 	</body>
