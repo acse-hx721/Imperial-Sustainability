@@ -817,13 +817,12 @@
 		});
 
 
-		var all_year_data = new Array();
+		const all_year_data = [];
 
 		for (var index=0; index < elec_data.length; index++) {
 			const elem = elec_data[index];
-			// console.log(index, elem);
-			var a_meter_data = {};
-			a_meter_data = {
+			console.log(index, elem);
+			var a_meter_data = {
 				Date: elem[Date],
 				Time: elem[Time],
 				Value: elem[meter_id],
