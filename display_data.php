@@ -784,7 +784,7 @@
 		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 		<script type="text/javascript">
-		function GetDay(today_time, day){
+		function getDay(today_time, day){
 		    function doHandleMonth(month){
 		    　　var m = month;
 		    　　if(month.toString().length == 1){
