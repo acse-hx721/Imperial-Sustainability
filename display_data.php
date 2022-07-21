@@ -268,6 +268,11 @@
 			let halfHour = 0.5 * 3600 * 1000;
 			let dateWeek = [];
 			var now = new Date(baseTime);
+
+			// Number of the year
+			var this_year = this_year_week_datetime.getFullYear();
+			var previous_year = this_year_week_datetime.getFullYear() - 1;
+
 			for (let i = 0; i < 48 * 7 + 1; i++) {
 			  dateWeek.push([now.getDate(), now.getMonth() + 1].join('/') + " " +now.getHours() +":"+now.getMinutes());
 			  now = new Date((baseTime += halfHour));
@@ -322,7 +327,7 @@
 			  ],
 			  series: [
 			    {
-			      name: 'This Year Data',
+			      name: this_year + ' Data',
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -344,7 +349,7 @@
 			      data: this_year_data
 			    },
 			    {
-			      name: 'Previous Year Data',
+			      name: previous_year + ' Data',
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -783,12 +788,17 @@
 	 	var this_year_week_datetime;
 	 	var previous_year_week_datetime;
 
+	 	// Week data of this year and previous year
 	 	const this_year_week_data = [];
 	 	const previous_year_week_data = [];
 
 	 	var heat_map_data = [];
 	 	var heat_map_days= [];
 	 	var heat_map_times= [];
+
+	 	// the date of last year and the year befor last year
+	 	var start_of_last_last_year;
+	 	var start_of_last_year;
 
 
 		Papa.parse("data/all_elec_data.csv", {
@@ -804,6 +814,8 @@
 
 			this_year_week_datetime = getDay(last_datetime, -7);
 			previous_year_week_datetime = getDay(this_year_week_datetime, -365);
+
+
 
 		    for (var index=0; index < elec_data.length; index++) {
 				const elem = elec_data[index];
