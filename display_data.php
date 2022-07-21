@@ -386,114 +386,116 @@
 		<div id="elecDateChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
 
-        var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
-    	let base = +new Date(2020, 12, 0);
-		let oneDay = 24 * 3600 * 1000;
-		let date = [];
-		let data_2020 = [Math.random() * 200];
-		let data_2021 = [Math.random() * 150];
-		for (let i = 1; i < 366; i++) {
-		  var now = new Date((base += oneDay));
-		  date.push([now.getDate(), now.getMonth() + 1].join('/'));
-		  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
-		  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
+    	function drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data){
+	        var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
+	    	let base = +new Date(2020, 12, 0);
+			let oneDay = 24 * 3600 * 1000;
+			let date = [];
+			let data_2020 = [Math.random() * 200];
+			let data_2021 = [Math.random() * 150];
+			for (let i = 1; i < 366; i++) {
+			  var now = new Date((base += oneDay));
+			  date.push([now.getDate(), now.getMonth() + 1].join('/'));
+			  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
+			  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
+			}
+			option = {
+			  legend: {
+			  	x:'center',
+	        	y:'top',
+	          },
+			  tooltip: {
+			    trigger: 'axis',
+			    position: function (pt) {
+			      return [pt[0], '10%'];
+			    }
+			  },
+			  title: {
+			    text: 'Electricity Data Chart'
+			  },
+			  toolbox: {
+			    feature: {
+			      dataZoom: {
+			        yAxisIndex: 'none'
+			      },
+			      restore: {},
+			      saveAsImage: {}
+			    }
+			  },
+			  xAxis: {
+			    type: 'category',
+			    boundaryGap: false,
+			    data: date
+			  },
+			  yAxis: {
+			    type: 'value',
+			    boundaryGap: [0, '100%'],
+			    axisLabel: 
+			    {
+	                formatter:'{value} kWh'
+	            }
+			  },
+			  dataZoom: [
+			    {
+			      type: 'inside',
+			      start: 0,
+			      end: 10
+			    },
+			    {
+			      start: 0,
+			      end: 10
+			    }
+			  ],
+			  series: [
+			    {
+			      name: last_year + ' Data',
+			      type: 'line',
+			      symbol: 'none',
+			      sampling: 'lttb',
+			      itemStyle: {
+			        color: 'rgb(255, 70, 131)'
+			      },
+			      areaStyle: {
+			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+			          {
+			            offset: 0,
+			            color: 'rgb(255, 158, 68)'
+			          },
+			          {
+			            offset: 1,
+			            color: 'rgb(255, 70, 131)'
+			          }
+			        ]),
+			      },
+			      data: last_year_data
+			    },
+			    {
+			      name: last_last_year + ' Data',
+			      type: 'line',
+			      symbol: 'none',
+			      sampling: 'lttb',
+			      itemStyle: {
+			        color: 'rgb(30,144,255)'
+			      },
+			      areaStyle: {
+			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+			          {
+			            offset: 0,
+			            color: 'rgb(123, 104, 238)'
+			          },
+			          {
+			            offset: 1,
+			            color: 'rgb(0, 191, 255)'
+			          }
+			        ]),
+			        opacity: 0.3
+			      },
+			      data: last_last_year_data
+			    }
+			  ]
+			};
+			elecDateChart.setOption(option);
 		}
-		option = {
-		  legend: {
-		  	x:'center',
-        	y:'top',
-          },
-		  tooltip: {
-		    trigger: 'axis',
-		    position: function (pt) {
-		      return [pt[0], '10%'];
-		    }
-		  },
-		  title: {
-		    text: 'Electricity Data Chart'
-		  },
-		  toolbox: {
-		    feature: {
-		      dataZoom: {
-		        yAxisIndex: 'none'
-		      },
-		      restore: {},
-		      saveAsImage: {}
-		    }
-		  },
-		  xAxis: {
-		    type: 'category',
-		    boundaryGap: false,
-		    data: date
-		  },
-		  yAxis: {
-		    type: 'value',
-		    boundaryGap: [0, '100%'],
-		    axisLabel: 
-		    {
-                formatter:'{value} kWh'
-            }
-		  },
-		  dataZoom: [
-		    {
-		      type: 'inside',
-		      start: 0,
-		      end: 10
-		    },
-		    {
-		      start: 0,
-		      end: 10
-		    }
-		  ],
-		  series: [
-		    {
-		      name: 'Fake 2021 electric Data',
-		      type: 'line',
-		      symbol: 'none',
-		      sampling: 'lttb',
-		      itemStyle: {
-		        color: 'rgb(255, 70, 131)'
-		      },
-		      areaStyle: {
-		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-		          {
-		            offset: 0,
-		            color: 'rgb(255, 158, 68)'
-		          },
-		          {
-		            offset: 1,
-		            color: 'rgb(255, 70, 131)'
-		          }
-		        ]),
-		      },
-		      data: data_2021
-		    },
-		    {
-		      name: 'Fake 2020 electric Data',
-		      type: 'line',
-		      symbol: 'none',
-		      sampling: 'lttb',
-		      itemStyle: {
-		        color: 'rgb(30,144,255)'
-		      },
-		      areaStyle: {
-		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-		          {
-		            offset: 0,
-		            color: 'rgb(123, 104, 238)'
-		          },
-		          {
-		            offset: 1,
-		            color: 'rgb(0, 191, 255)'
-		          }
-		        ]),
-		        opacity: 0.3
-		      },
-		      data: data_2020
-		    }
-		  ]
-		};
-		elecDateChart.setOption(option);
 
 		</script>
 		<br/>
@@ -756,6 +758,28 @@
 		    // tDate = doHandleMonth(tDate);
 		    return new Date(targetday_milliseconds);
 		};
+
+
+		function getDaysOfYear(t) {
+            if (t==null)
+            {
+                var Year = new Date().getFullYear(), s = 0, d;
+                for (var i = 1; i < 13; i++) {
+                    d = new Date(Year, i, 0);//get days of a month
+                    s += d.getDate();
+                };
+                return s;
+        	} else if(t >= 1970) {
+                var Year = new Date().getFullYear(), s = 0, d;
+                for (var i = 1; i < 13; i++) {
+                    d = new Date(t, i, 0);
+                    s += d.getDate();
+                };
+                return s;
+        	} else {
+            	return "wrong year number!";
+        	} 
+        }
 		</script>
 
 
@@ -800,6 +824,17 @@
 	 	var start_of_last_last_year;
 	 	var start_of_last_year;
 
+	 	var last_year_data = [];
+	 	var last_last_year_data = [];
+
+	 	// var last_year_day_data = [];
+	 	// var last_last_year_day_data = [];
+
+	 	var last_year_day_counter = 0;
+	 	var last_year_day_sum = 0;
+
+	 	var last_last_year_day_counter = 0;
+
 
 		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
@@ -814,6 +849,20 @@
 
 			this_year_week_datetime = getDay(last_datetime, -7);
 			previous_year_week_datetime = getDay(this_year_week_datetime, -365);
+
+
+			// Calculate the start of 2 year
+			var last_year = new Date(last_datetime) - 1;
+			var last_last_year = new Date(last_datetime) - 2;
+
+			start_of_last_year = last_year + "/1/1";
+			start_of_last_last_year = last_last_year + "/1/1";
+
+			start_of_last_year = new Date(start_of_last_year);
+			start_of_last_last_year = new Date(start_of_last_last_year);
+
+			var days_last_year = getDaysOfYear(last_year);
+			var days_last_last_year = getDaysOfYear(last_last_year);
 
 
 
@@ -834,9 +883,33 @@
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
 					this_year_week_data.push(elem[meter_id]);
 				}
+
+				// Store each day data of last year and last last year
+				if (current_datetime >= start_of_last_year && last_year_day_counter < 48 && last_year_data.length < days_last_year){
+					last_year_day_sum = last_year_day_sum + elem[meter_id];
+					last_year_day_counter = last_year_day_counter + 1;
+
+					if (last_year_day_counter == 48){
+						last_year_data.push(last_year_day_sum);
+						last_year_day_sum = 0;
+						last_year_day_counter = 0;
+					}
+				}
+				if (current_datetime >= start_of_last_last_year && last_year_day_counter < 48 && last_last_year_data.length < days_last_last_year){
+					last_year_day_sum = last_year_day_sum + elem[meter_id];
+					last_year_day_counter = last_year_day_counter + 1;
+
+					if (last_year_day_counter == 48){
+						last_year_data.push(last_year_day_sum);
+						last_year_day_sum = 0;
+						last_year_day_counter = 0;
+					}
+				}
 				all_data.push(a_meter_data);
 			}
 			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data);
+
+			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data);
 
 			// Draw the heat map
 			var datetime1 = this_year_week_datetime;
