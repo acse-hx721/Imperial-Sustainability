@@ -830,6 +830,7 @@
 	 	var last_year_day_sum = 0;
 
 	 	var last_last_year_day_counter = 0;
+	 	var last_last_year_day_sum = 0;
 
 
 		Papa.parse("data/all_elec_data.csv", {
@@ -881,7 +882,7 @@
 				}
 
 				// Store each day data of last year and last last year
-				if (current_datetime >= start_of_last_year && last_year_day_counter < 48 && last_year_data.length < days_last_year){
+				if (current_datetime >= start_of_last_year && last_year_data.length < days_last_year){
 					last_year_day_sum = last_year_day_sum + elem[meter_id];
 					last_year_day_counter = last_year_day_counter + 1;
 
@@ -891,14 +892,14 @@
 						last_year_day_counter = 0;
 					}
 				}
-				if (current_datetime >= start_of_last_last_year && last_year_day_counter < 48 && last_last_year_data.length < days_last_last_year){
-					last_year_day_sum = last_year_day_sum + elem[meter_id];
-					last_year_day_counter = last_year_day_counter + 1;
+				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < days_last_last_year){
+					last_last_year_day_sum = last_last_year_day_sum + elem[meter_id];
+					last_last_year_day_counter = last_last_year_day_counter + 1;
 
-					if (last_year_day_counter == 48){
-						last_year_data.push(last_year_day_sum);
-						last_year_day_sum = 0;
-						last_year_day_counter = 0;
+					if (last_last_year_day_counter == 48){
+						last_last_year_data.push(last_last_year_day_sum);
+						last_last_year_day_sum = 0;
+						last_last_year_day_counter = 0;
 					}
 				}
 				all_data.push(a_meter_data);
