@@ -407,7 +407,7 @@
 			    }
 			  },
 			  title: {
-			    text: 'Electricity Data Chart'
+			    text: 'Electricity Year Data Chart'
 			  },
 			  toolbox: {
 			    feature: {
@@ -491,7 +491,7 @@
 			  ]
 			};
 			elecDateChart.setOption(option);
-		}
+		};
 
 		</script>
 		<br/>
