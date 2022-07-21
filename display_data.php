@@ -836,8 +836,11 @@
 	 	var last_year_month_sum = 0;
 	 	var last_last_year_month_sum = 0;
 
-	 	var current_month = 0;
-	 	var month_last_loop = 0;
+	 	var current_month1 = 0;
+	 	var month_last_loop1 = 0;
+
+	 	var current_month2 = 0;
+	 	var month_last_loop2 = 0;
 
 	 	var flag = 0;
 
@@ -913,11 +916,12 @@
 				}
 
 				// Month bar chart
-				current_month = current_datetime.getMonth();
+				current_month1 = current_datetime.getMonth();
+				current_month2 = current_datetime.getMonth();
 
 				if (current_datetime >= start_of_last_year && last_year_month_data.length < 12){
 					flag = 1;
-					if (current_month == month_last_loop){
+					if (current_month1 == month_last_loop1){
 						last_year_month_sum = last_year_month_sum + parseFloat(elem[meter_id]);
 					}
 					else {
@@ -927,16 +931,17 @@
 							flag = 0;
 						}
 					}
+					month_last_loop1 = current_month1;
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
-					flag = 1;
 					if (flag ==0){
 						console.log(current_datetime);
 						console.log(current_month);
 						console.log(month_last_loop);
 
 					}
-					if (current_month == month_last_loop){
+					flag = 1;
+					if (current_month2 == month_last_loop2){
 						last_last_year_month_sum = last_last_year_month_sum + parseFloat(elem[meter_id]);
 					}
 					else {
@@ -946,9 +951,7 @@
 							flag = 0;
 						}
 					}
-				}
-				if(flag==1){
-					month_last_loop = current_month;
+					month_last_loop2 = current_month2;
 				}
 				
 
