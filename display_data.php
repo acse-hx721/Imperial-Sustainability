@@ -560,7 +560,7 @@
                     ]
 			};
 			elecBarChart.setOption(option);
-		}
+		};
 		</script>
 		<br/>
 		<br/>
