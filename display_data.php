@@ -882,7 +882,7 @@
 				}
 
 				// Store each day data of last year and last last year
-				if (current_datetime >= start_of_last_year && last_year_data.length < days_last_year){
+				if (current_datetime >= start_of_last_year && last_year_data.length < 365){
 					last_year_day_sum = last_year_day_sum + elem[meter_id];
 					last_year_day_counter = last_year_day_counter + 1;
 
@@ -892,7 +892,7 @@
 						last_year_day_counter = 0;
 					}
 				}
-				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < days_last_last_year){
+				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
 					last_last_year_day_sum = last_last_year_day_sum + elem[meter_id];
 					last_last_year_day_counter = last_last_year_day_counter + 1;
 
