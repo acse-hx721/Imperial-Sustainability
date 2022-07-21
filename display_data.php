@@ -932,8 +932,9 @@
 						last_last_year_month_data.push(last_last_year_month_sum);
 						last_last_year_month_sum = 0;
 					}
+					month_last_loop = current_month;
 				}
-				month_last_loop = current_month;
+				
 
 				all_data.push(a_meter_data);
 			}
