@@ -391,13 +391,9 @@
 	    	let base = +new Date(2020, 12, 0);
 			let oneDay = 24 * 3600 * 1000;
 			let date = [];
-			let data_2020 = [Math.random() * 200];
-			let data_2021 = [Math.random() * 150];
 			for (let i = 1; i < 366; i++) {
 			  var now = new Date((base += oneDay));
 			  date.push([now.getDate(), now.getMonth() + 1].join('/'));
-			  data_2020.push(Math.round((Math.random() - 0.5) * 10 + data_2020[i - 1]));
-			  data_2021.push(Math.round((Math.random() - 0.5) * 20 + data_2021[i - 1]));
 			}
 			option = {
 			  legend: {
@@ -852,8 +848,8 @@
 
 
 			// Calculate the start of 2 year
-			var last_year = new Date(last_datetime) - 1;
-			var last_last_year = new Date(last_datetime) - 2;
+			var last_year = last_datetime.getFullYear() - 1;
+			var last_last_year = last_datetime.getFullYear() - 2;
 
 			start_of_last_year = last_year + "/1/1";
 			start_of_last_last_year = last_last_year + "/1/1";
