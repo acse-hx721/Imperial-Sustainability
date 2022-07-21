@@ -500,6 +500,7 @@
 		<br/>
 		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+
     	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
 	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
 			option = {
@@ -517,23 +518,6 @@
 			  title: {
 			    text: 'Electricity Years Comparison by Month'
 			  },
-			  // dataset: {
-			  //   source: [
-			  //     ['product', '2019', '2020', '2021'],
-			  //     ['January', 43.3, 85.8, 93.7],
-			  //     ['Feburary', 83.1, 73.4, 55.1],
-			  //     ['March', 86.4, 65.2, 82.5],
-			  //     ['April', 72.4, 53.9, 39.1],
-			  //     ['May', 43.3, 85.8, 93.7],
-			  //     ['June', 83.1, 73.4, 55.1],
-			  //     ['July', 86.4, 65.2, 82.5],
-			  //     ['August', 72.4, 53.9, 39.1],
-			  //     ['September', 43.3, 85.8, 93.7],
-			  //     ['October', 83.1, 73.4, 55.1],
-			  //     ['November', 86.4, 65.2, 82.5],
-			  //     ['December', 72.4, 53.9, 39.1]
-			  //   ]
-			  // },
 			  xAxis: {
 			  	type: 'category',
 			  	data: ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',]
