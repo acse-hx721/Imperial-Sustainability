@@ -500,52 +500,67 @@
 		<br/>
 		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-
-        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
-		option = {
-		  legend: {
-		  	x:'center',
-        	y:'bottom',
-          },
-          toolbox: {
-		    feature: {
-		      restore: {},
-		      saveAsImage: {}
-		    }
-		  },
-		  tooltip: {},
-		  title: {
-		    text: 'Electricity Years Comparison by Month'
-		  },
-		  dataset: {
-		    source: [
-		      ['product', '2019', '2020', '2021'],
-		      ['January', 43.3, 85.8, 93.7],
-		      ['Feburary', 83.1, 73.4, 55.1],
-		      ['March', 86.4, 65.2, 82.5],
-		      ['April', 72.4, 53.9, 39.1],
-		      ['May', 43.3, 85.8, 93.7],
-		      ['June', 83.1, 73.4, 55.1],
-		      ['July', 86.4, 65.2, 82.5],
-		      ['August', 72.4, 53.9, 39.1],
-		      ['September', 43.3, 85.8, 93.7],
-		      ['October', 83.1, 73.4, 55.1],
-		      ['November', 86.4, 65.2, 82.5],
-		      ['December', 72.4, 53.9, 39.1]
-		    ]
-		  },
-		  xAxis: { type: 'category' },
-		  yAxis: {		    
-		  	axisLabel: 
-		    {
-                formatter:'{value} kWh'
-            }
-          },
-		  // Declare several bar series, each will be mapped
-		  // to a column of dataset.source by default.
-		  series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
-		};
-		elecBarChart.setOption(option);
+    	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
+	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
+			option = {
+			  legend: {
+			  	x:'center',
+	        	y:'bottom',
+	          },
+	          toolbox: {
+			    feature: {
+			      restore: {},
+			      saveAsImage: {}
+			    }
+			  },
+			  tooltip: {},
+			  title: {
+			    text: 'Electricity Years Comparison by Month'
+			  },
+			  // dataset: {
+			  //   source: [
+			  //     ['product', '2019', '2020', '2021'],
+			  //     ['January', 43.3, 85.8, 93.7],
+			  //     ['Feburary', 83.1, 73.4, 55.1],
+			  //     ['March', 86.4, 65.2, 82.5],
+			  //     ['April', 72.4, 53.9, 39.1],
+			  //     ['May', 43.3, 85.8, 93.7],
+			  //     ['June', 83.1, 73.4, 55.1],
+			  //     ['July', 86.4, 65.2, 82.5],
+			  //     ['August', 72.4, 53.9, 39.1],
+			  //     ['September', 43.3, 85.8, 93.7],
+			  //     ['October', 83.1, 73.4, 55.1],
+			  //     ['November', 86.4, 65.2, 82.5],
+			  //     ['December', 72.4, 53.9, 39.1]
+			  //   ]
+			  // },
+			  xAxis: {
+			  	type: 'category',
+			  	data: ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',]
+			  },
+			  yAxis: {		    
+			  	axisLabel: 
+			    {
+	                formatter:'{value} kWh'
+	            }
+	          },
+			  // Declare several bar series, each will be mapped
+			  // to a column of dataset.source by default.
+			  series: series: [
+                        {
+                            name: last_last_year + ' Data',
+                            type: 'bar',
+                            data: last_last_year_month_data
+                        },
+                        {
+                            name: last_year + ' Data',
+                            type: 'bar',
+                            data: last_year_month_data
+                        }
+                    ]
+			};
+			elecBarChart.setOption(option);
+		}
 		</script>
 		<br/>
 		<br/>
@@ -823,14 +838,23 @@
 	 	var last_year_data = [];
 	 	var last_last_year_data = [];
 
-	 	// var last_year_day_data = [];
-	 	// var last_last_year_day_data = [];
-
 	 	var last_year_day_counter = 0;
 	 	var last_year_day_sum = 0;
 
 	 	var last_last_year_day_counter = 0;
 	 	var last_last_year_day_sum = 0;
+
+	 	// the variable used for month bar chart
+	 	var last_year_month_data = [];
+	 	var last_last_year_month_data = [];
+
+	 	var last_year_month_sum = 0;
+	 	var last_last_year_month_sum = 0;
+
+	 	var current_month = 0;
+	 	var month_last_loop = 0;
+
+
 
 
 		Papa.parse("data/all_elec_data.csv", {
@@ -902,11 +926,37 @@
 						last_last_year_day_counter = 0;
 					}
 				}
+
+				// Month bar chart
+				current_month = current_datetime.getMonth();
+
+				if (current_datetime >= start_of_last_year && last_year_month_data.length < 12){
+					if (current_month == month_last_loop){
+						last_year_month_sum = last_year_month_sum + parseFloat(elem[meter_id]);
+					}
+					else {
+						last_year_month_data.push(last_year_month_sum);
+						last_year_month_sum = 0;
+					}
+				}
+				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
+					if (current_month == month_last_loop){
+						last_last_year_month_sum = last_last_year_month_sum + parseFloat(elem[meter_id]);
+					}
+					else {
+						last_last_year_month_data.push(last_last_year_month_sum);
+						last_last_year_month_sum = 0;
+					}
+				}
+				month_last_loop = current_month;
+
 				all_data.push(a_meter_data);
 			}
 			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data);
 
 			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data);
+
+			drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data);
 
 			// Draw the heat map
 			var datetime1 = this_year_week_datetime;
@@ -954,16 +1004,7 @@
 		});
 
 
-
-
-
-
 		// console.log(elec_data);
-
-
-
-
-
 
 
 		</script>
