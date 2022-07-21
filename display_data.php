@@ -500,7 +500,52 @@
 		<br/>
 		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
 
-    	
+    	<script>
+
+    	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
+	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
+			option = {
+			  legend: {
+			  	x:'center',
+	        	y:'bottom',
+	          },
+	          toolbox: {
+			    feature: {
+			      restore: {},
+			      saveAsImage: {}
+			    }
+			  },
+			  tooltip: {},
+			  title: {
+			    text: 'Electricity Years Comparison by Month'
+			  },
+			  xAxis: {
+			  	type: 'category',
+			  	data: ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',]
+			  },
+			  yAxis: {		    
+			  	axisLabel: 
+			    {
+	                formatter:'{value} kWh'
+	            }
+	          },
+			  // Declare several bar series, each will be mapped
+			  // to a column of dataset.source by default.
+			  series: series: [
+                        {
+                            name: last_last_year + ' Data',
+                            type: 'bar',
+                            data: last_last_year_month_data
+                        },
+                        {
+                            name: last_year + ' Data',
+                            type: 'bar',
+                            data: last_year_month_data
+                        }
+                    ]
+			};
+			elecBarChart.setOption(option);
+		};
 		</script>
 		<br/>
 		<br/>
@@ -731,53 +776,6 @@
             	return "wrong year number!";
         	} 
         }
-
-        <script type="text/javascript">
-
-    	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
-	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
-			option = {
-			  legend: {
-			  	x:'center',
-	        	y:'bottom',
-	          },
-	          toolbox: {
-			    feature: {
-			      restore: {},
-			      saveAsImage: {}
-			    }
-			  },
-			  tooltip: {},
-			  title: {
-			    text: 'Electricity Years Comparison by Month'
-			  },
-			  xAxis: {
-			  	type: 'category',
-			  	data: ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',]
-			  },
-			  yAxis: {		    
-			  	axisLabel: 
-			    {
-	                formatter:'{value} kWh'
-	            }
-	          },
-			  // Declare several bar series, each will be mapped
-			  // to a column of dataset.source by default.
-			  series: series: [
-                        {
-                            name: last_last_year + ' Data',
-                            type: 'bar',
-                            data: last_last_year_month_data
-                        },
-                        {
-                            name: last_year + ' Data',
-                            type: 'bar',
-                            data: last_year_month_data
-                        }
-                    ]
-			};
-			elecBarChart.setOption(option);
-		};
 		</script>
 
 
