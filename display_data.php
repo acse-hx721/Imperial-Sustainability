@@ -839,7 +839,7 @@
 	 	var current_month = 0;
 	 	var month_last_loop = 0;
 
-	 	var flag = 1;
+	 	var flag = 0;
 
 
 		Papa.parse("data/all_elec_data.csv", {
