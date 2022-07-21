@@ -839,7 +839,7 @@
 	 	var current_month = 0;
 	 	var month_last_loop = 0;
 
-
+	 	var flag = 1;
 
 
 		Papa.parse("data/all_elec_data.csv", {
@@ -916,6 +916,7 @@
 				current_month = current_datetime.getMonth();
 
 				if (current_datetime >= start_of_last_year && last_year_month_data.length < 12){
+					flag = 1;
 					if (current_month == month_last_loop){
 						last_year_month_sum = last_year_month_sum + parseFloat(elem[meter_id]);
 					}
@@ -923,9 +924,9 @@
 						last_year_month_data.push(last_year_month_sum);
 						last_year_month_sum = 0;
 					}
-					month_last_loop = current_month;
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
+					flag = 1;
 					if (current_month == month_last_loop){
 						last_last_year_month_sum = last_last_year_month_sum + parseFloat(elem[meter_id]);
 					}
@@ -933,6 +934,8 @@
 						last_last_year_month_data.push(last_last_year_month_sum);
 						last_last_year_month_sum = 0;
 					}
+				}
+				if(flag=1){
 					month_last_loop = current_month;
 				}
 				
