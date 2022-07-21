@@ -500,7 +500,7 @@
 		<br/>
 		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
 
-    	<script>
+    	<script type="text/javascript">
 
     	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
 	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
@@ -531,7 +531,7 @@
 	          },
 			  // Declare several bar series, each will be mapped
 			  // to a column of dataset.source by default.
-			  series: series: [
+			  series: [
                         {
                             name: last_last_year + ' Data',
                             type: 'bar',
