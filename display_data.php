@@ -923,6 +923,7 @@
 						last_year_month_data.push(last_year_month_sum);
 						last_year_month_sum = 0;
 					}
+					month_last_loop = current_month;
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
 					if (current_month == month_last_loop){
