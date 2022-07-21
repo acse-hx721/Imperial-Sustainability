@@ -848,8 +848,8 @@
 
 
 			// Calculate the start of 2 year
-			var last_year = last_datetime.getFullYear() - 1;
-			var last_last_year = last_datetime.getFullYear() - 2;
+			var last_year = new Date(last_datetime).getFullYear() - 1;
+			var last_last_year = new Date(last_datetime).getFullYear() - 2;
 
 			start_of_last_year = last_year + "/1/1";
 			start_of_last_last_year = last_last_year + "/1/1";
