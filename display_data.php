@@ -934,12 +934,12 @@
 					month_last_loop1 = current_month1;
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
-					if (flag ==0){
-						console.log(current_datetime);
-						console.log(current_month);
-						console.log(month_last_loop);
+					// if (flag ==0){
+					// 	console.log(current_datetime);
+					// 	console.log(current_month);
+					// 	console.log(month_last_loop);
 
-					}
+					// }
 					flag = 1;
 					if (current_month2 == month_last_loop2){
 						last_last_year_month_sum = last_last_year_month_sum + parseFloat(elem[meter_id]);
