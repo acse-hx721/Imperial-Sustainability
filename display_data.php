@@ -391,13 +391,9 @@
 	    	let base = +new Date(2020, 12, 0);
 			let oneDay = 24 * 3600 * 1000;
 			let date = [];
-			var data1 = [];
-			var data2 = [];
 			for (let i = 1; i < 366; i++) {
 			  var now = new Date((base += oneDay));
 			  date.push([now.getDate(), now.getMonth() + 1].join('/'));
-			  data1.push(1);
-			  data2.push(2);
 			}
 			option = {
 			  legend: {
@@ -467,7 +463,7 @@
 			          }
 			        ]),
 			      },
-			      data: data1
+			      data: last_year_data
 			    },
 			    {
 			      name: last_last_year + ' Data',
@@ -490,7 +486,7 @@
 			        ]),
 			        opacity: 0.3
 			      },
-			      data: data2
+			      data: last_last_year_data
 			    }
 			  ]
 			};
@@ -887,7 +883,7 @@
 
 				// Store each day data of last year and last last year
 				if (current_datetime >= start_of_last_year && last_year_data.length < 365){
-					last_year_day_sum = last_year_day_sum + elem[meter_id];
+					last_year_day_sum = last_year_day_sum + parseFloat(elem[meter_id]);
 					last_year_day_counter = last_year_day_counter + 1;
 
 					if (last_year_day_counter == 48){
@@ -897,7 +893,7 @@
 					}
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
-					last_last_year_day_sum = last_last_year_day_sum + elem[meter_id];
+					last_last_year_day_sum = last_last_year_day_sum + parseFloat(elem[meter_id]);
 					last_last_year_day_counter = last_last_year_day_counter + 1;
 
 					if (last_last_year_day_counter == 48){
