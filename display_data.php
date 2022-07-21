@@ -611,7 +611,7 @@
 			  },
 			  series: [
 			    {
-			      name: 'Electricity comsumption',
+			      name: 'Electricity comsumption (Unit:kWh)',
 			      type: 'heatmap',
 			      data: data,
 			      label: {
