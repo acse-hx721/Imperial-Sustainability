@@ -391,9 +391,13 @@
 	    	let base = +new Date(2020, 12, 0);
 			let oneDay = 24 * 3600 * 1000;
 			let date = [];
+			var data1 = [];
+			var data2 = [];
 			for (let i = 1; i < 366; i++) {
 			  var now = new Date((base += oneDay));
 			  date.push([now.getDate(), now.getMonth() + 1].join('/'));
+			  data1.push(1);
+			  data2.push(2);
 			}
 			option = {
 			  legend: {
@@ -463,7 +467,7 @@
 			          }
 			        ]),
 			      },
-			      data: last_year_data
+			      data: data1
 			    },
 			    {
 			      name: last_last_year + ' Data',
@@ -486,7 +490,7 @@
 			        ]),
 			        opacity: 0.3
 			      },
-			      data: last_last_year_data
+			      data: data2
 			    }
 			  ]
 			};
