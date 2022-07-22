@@ -745,7 +745,7 @@ textarea {
 }
 
 /* 当下拉内容显示后修改下拉按钮的背景颜色 */
-.dropdown:hover .dropbtn {
+/*.dropdown:hover .dropbtn {
     background-color: #3e8e41;
-}
+}*/
 
