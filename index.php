@@ -96,16 +96,7 @@
 											<ul class="nav navbar-nav navbar-right">
 												<li class="active"><a href="index.php">Home</a></li>
 												<li><a href="#about">About</a></li>
-												<li>
-													<div class="dropdown">
-														<a href="visualization.php" class="dropbtn">Visualization</a>
-														  <div class="dropdown-content">
-														    <a href="#">菜鸟教程 1</a>
-														    <a href="#">菜鸟教程 2</a>
-														    <a href="#">菜鸟教程 3</a>
-														  </div>
-													</div>
-												</li>
+												<li><a href="visualization.php">Visualization</a></li>
 												<li><a href="download_data.php">Download Data</a></li>
 												<!-- <li><a href="#clients">Clients</a></li> -->
 												<li><a href="#contact">Contact</a></li>
