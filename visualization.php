@@ -201,18 +201,7 @@
 		    </tr>
 		</table>
 
-		<script>
-			
-			$("#electricity").hide();
-			$("#water").hide();
 
-			if (meter_type == "electricity") {
-				$("#electricity").show();
-			}
-			else if(meter_type == "water"){
-				$("#water").show();
-			}
-		</script>
 
 		<!-- footer start -->
 		<!-- ================ -->
@@ -312,6 +301,20 @@
 
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="js/custom.js"></script>
+
+		<!-- Control which to show -->
+		<script>
+			
+			$("#electricity").hide();
+			$("#water").hide();
+
+			if (meter_type == "electricity") {
+				$("#electricity").show();
+			}
+			else if(meter_type == "water"){
+				$("#water").show();
+			}
+		</script>
 
 	</body>
 </html>
