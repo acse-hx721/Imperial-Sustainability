@@ -166,14 +166,17 @@
 		   }
 		   return theRequest;
 		}
-		
+
+		</script>
+
+		<h1 class="text-center" id="meter_type_title"></span></h1>
+
+		<script>
 		var a=GetRequest();
 		var meter_type = a['type'];
 		document.getElementById("meter_type_title").innerHTML = meter_type;
 		</script>
-		</script>
 
-		<h1 class="text-center" id="meter_type_title"></span></h1>
 		<table border="1" align="center">
 		    <tr>
 		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
