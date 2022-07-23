@@ -168,7 +168,7 @@
 		}
 
 		var meter_type = a['type'];
-		document.getElementById("meter_type_title").innerHTML = meter_type + " data";
+		document.getElementById("meter_type_title").innerHTML = meter_type;
 		</script>
 		</script>
 
