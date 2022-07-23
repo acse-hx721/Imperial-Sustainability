@@ -150,7 +150,7 @@
 		<!-- banner end -->
 
 		<script type="text/javascript">
-		var a=GetRequest();
+
 		 
 		// console.log("id:"+a['id']) //打印出传过来的id
 		 
@@ -166,7 +166,8 @@
 		   }
 		   return theRequest;
 		}
-
+		
+		var a=GetRequest();
 		var meter_type = a['type'];
 		document.getElementById("meter_type_title").innerHTML = meter_type;
 		</script>
