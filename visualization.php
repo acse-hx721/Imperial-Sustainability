@@ -177,7 +177,8 @@
 		document.getElementById("meter_type_title").innerHTML = meter_type;
 		</script>
 
-		<table border="1" align="center">
+		<!-- electricity -->
+		<table id="electricity" border="1" align="center">
 		    <tr>
 		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
 		        <td><a href="display_data.php?id=1200010050250">1200010050250</td>
@@ -187,7 +188,31 @@
 		        <td><a href="display_data.php?id=1200010081630">1200010081630</td>
 		    </tr>
 		</table>
-		
+
+		<!-- water -->
+		<table id="water" border="1" align="center">
+		    <tr>
+		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">Device_1</a></td>
+		        <td><a href="display_data.php?id=1200010050250">250</td>
+		    </tr>
+		    <tr>
+		        <td><a href="display_data.php?id=1200010081620">620</td>
+		        <td><a href="display_data.php?id=1200010081630">630</td>
+		    </tr>
+		</table>
+
+		<script>
+			
+			$("#electricity").hide();
+			$("#water").hide();
+
+			if (meter_type == "electricity") {
+				$("#electricity").show();
+			}
+			else if(meter_type == "water"){
+				$("#water").show();
+			}
+		</script>
 
 		<!-- footer start -->
 		<!-- ================ -->
