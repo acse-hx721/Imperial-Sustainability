@@ -98,7 +98,7 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li><a href="index.php">Home</a></li>
-												<li><a href="#about">About</a></li>
+												<li><a href="index.php#about">About</a></li>
 												<li class="dropdown">
 													<a class="dropbtn">
 														Visualization
