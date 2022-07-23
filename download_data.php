@@ -97,7 +97,7 @@
 												<li><a href="index.php">Home</a></li>
 												<li><a href="#about">About</a></li>
 												<li class="dropdown">
-													<a class="dropbtn" href="visualization.php">
+													<a class="dropbtn">
 														Visualization
 													</a>
 													  <div class="dropdown-content">
