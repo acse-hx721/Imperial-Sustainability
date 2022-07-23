@@ -154,8 +154,6 @@
 		 
 		// console.log("id:"+a['id']) //打印出传过来的id
 		 
-		 
-		 
 		function GetRequest() {
 		var url = location.search; //获取url中"?"符后的字串
 		var theRequest = new Object();

@@ -98,8 +98,18 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li><a href="index.php">Home</a></li>
-												<li><a href="index.php">About</a></li>
-												<li class="active"><a href="visualization.php">Visualization</a></li>
+												<li><a href="#about">About</a></li>
+												<li class="dropdown">
+													<a class="dropbtn" href="visualization.php">
+														Visualization
+													</a>
+													  <div class="dropdown-content">
+													    <a href="visualization.php?type=electricity">Electricity</a>
+													    <a href="visualization.php?type=water">Water</a>
+													    <!-- <a href="visualization.php?type=electricity">Electricity</a> -->
+													  </div>
+
+												</li>
 												<li><a href="download_data.php">Download Data</a></li>
 												<!-- <li><a href="#clients">Clients</a></li> -->
 												<li><a href="#contact">Contact</a></li>
@@ -138,6 +148,32 @@
 			</div>
 		</div>
 		<!-- banner end -->
+
+		<script type="text/javascript">
+		var a=GetRequest();
+		 
+		// console.log("id:"+a['id']) //打印出传过来的id
+		 
+		function GetRequest() {
+		var url = location.search; //获取url中"?"符后的字串
+		var theRequest = new Object();
+		 if (url.indexOf("?") != -1) {
+		       var str = url.substr(1);
+		       strs = str.split("&");
+		       for (var i = 0; i < strs.length; i++) {
+		           theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1]);
+		       }
+		   }
+		   return theRequest;
+		}
+
+		<script>
+		var meter_type = a['type'];
+		document.getElementById("meter_type_title").innerHTML = meter_type + " data";
+		</script>
+		</script>
+
+		<h1 class="text-center" id="meter_type_title"></span></h1>
 		<table border="1" align="center">
 		    <tr>
 		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
