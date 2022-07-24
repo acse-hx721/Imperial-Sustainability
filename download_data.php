@@ -102,7 +102,7 @@
 													</a>
 													  <div class="dropdown-content">
 													    <a href="visualization.php?type=electricity">Electricity</a>
-													    <a href="visualization.php?type=water">Water</a>
+													    <a href="visualization.php?type=gas">Gas</a>
 													    <!-- <a href="visualization.php?type=electricity">Electricity</a> -->
 													  </div>
 

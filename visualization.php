@@ -105,7 +105,7 @@
 													</a>
 													  <div class="dropdown-content">
 													    <a href="visualization.php?type=electricity">Electricity</a>
-													    <a href="visualization.php?type=water">Water</a>
+													    <a href="visualization.php?type=gas">Gas</a>
 													    <!-- <a href="visualization.php?type=electricity">Electricity</a> -->
 													  </div>
 
@@ -180,24 +180,24 @@
 		<!-- electricity -->
 		<table id="electricity" border="1" align="center">
 		    <tr>
-		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
-		        <td><a href="display_data.php?id=1200010050250">1200010050250</td>
+		        <td><a href="display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
+		        <td><a href="display_data.php?id=electricity,1200010050250">1200010050250</td>
 		    </tr>
 		    <tr>
-		        <td><a href="display_data.php?id=1200010081620">1200010081620</td>
-		        <td><a href="display_data.php?id=1200010081630">1200010081630</td>
+		        <td><a href="display_data.php?id=electricity,1200010081620">1200010081620</td>
+		        <td><a href="display_data.php?id=electricity,1200010081630">1200010081630</td>
 		    </tr>
 		</table>
 
-		<!-- water -->
-		<table id="water" border="1" align="center">
+		<!-- gas -->
+		<table id="gas" border="1" align="center">
 		    <tr>
-		        <td><a href="display_data.php?id=sk-ele-101-sip1.ad.ic.ac.uk_Device_1">Device_1</a></td>
-		        <td><a href="display_data.php?id=1200010050250">250</td>
+		        <td><a href="display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">sk-58pg-101-sip1.ad.ic.ac.uk_Device_3</a></td>
+		        <td><a href="display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_2">sk-58pg-101-sip1.ad.ic.ac.uk_Device_2</td>
 		    </tr>
 		    <tr>
-		        <td><a href="display_data.php?id=1200010081620">620</td>
-		        <td><a href="display_data.php?id=1200010081630">630</td>
+		        <td><a href="display_data.php?id=gas,sk-ec-101-sip1.ad.ic.ac.uk_Device_27">sk-ec-101-sip1.ad.ic.ac.uk_Device_27</td>
+		        <td><a href="display_data.php?id=gas,sk-est-102-sip1.ad.ic.ac.uk_Device_1">sk-est-102-sip1.ad.ic.ac.uk_Device_1</td>
 		    </tr>
 		</table>
 
@@ -306,13 +306,13 @@
 		<script>
 			
 			$("#electricity").hide();
-			$("#water").hide();
+			$("#gas").hide();
 
 			if (meter_type == "electricity") {
 				$("#electricity").show();
 			}
-			else if(meter_type == "water"){
-				$("#water").show();
+			else if(meter_type == "gas"){
+				$("#gas").show();
 			}
 		</script>
 
