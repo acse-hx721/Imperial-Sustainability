@@ -311,7 +311,7 @@
 			    boundaryGap: [0, '100%'],
 			    axisLabel: 
 			    {
-	                formatter:'{value} kWh'
+	                formatter:'{value} '+ unit
 	            }
 
 			  },
@@ -408,7 +408,7 @@
 			    }
 			  },
 			  title: {
-			    text: 'Electricity Year Data Chart'
+			    text: 'Year Data Chart'
 			  },
 			  toolbox: {
 			    feature: {
@@ -429,7 +429,7 @@
 			    boundaryGap: [0, '100%'],
 			    axisLabel: 
 			    {
-	                formatter:'{value} kWh'
+	                formatter:'{value} '+ unit
 	            }
 			  },
 			  dataZoom: [
@@ -518,7 +518,7 @@
 			  },
 			  tooltip: {},
 			  title: {
-			    text: 'Electricity Years Comparison by Month'
+			    text: 'Years Comparison by Month'
 			  },
 			  xAxis: {
 			  	type: 'category',
@@ -527,7 +527,7 @@
 			  yAxis: {		    
 			  	axisLabel: 
 			    {
-	                formatter:'{value} kWh'
+	                formatter:'{value} '+ unit
 	            }
 	          },
 			  // Declare several bar series, each will be mapped
@@ -585,7 +585,7 @@
 			    position: 'top'
 			  },
 			  title: {
-			    text: 'Electricity Week Heat Map (30 mins interval)'
+			    text: 'Week Heat Map (30 mins interval)'
 			  },
 			  grid: {
 			    height: '60%',
@@ -615,7 +615,7 @@
 			  },
 			  series: [
 			    {
-			      name: 'Electricity comsumption (kWh)',
+			      name: unit,
 			      type: 'heatmap',
 			      data: data,
 			      label: {
@@ -855,7 +855,7 @@
 	 	}
 
 
-		Papa.parse(filename, {
+		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
 		  // Do things after reading data
