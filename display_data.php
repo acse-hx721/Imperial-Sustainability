@@ -263,7 +263,7 @@
 
     	<div id="elecWeeksChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-    	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data, unit){
+    	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data){
 	        var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
 	    	let baseTime = +new Date(this_year_week_datetime);
 			let halfHour = 0.5 * 3600 * 1000;
@@ -387,7 +387,7 @@
 		<div id="elecDateChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
 
-    	function drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data, unit){
+    	function drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data){
 	        var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
 	    	let base = +new Date(2020, 12, 0);
 			let oneDay = 24 * 3600 * 1000;
@@ -503,7 +503,7 @@
 
     	<script type="text/javascript">
 
-    	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data, unit){
+    	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
 	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
 			option = {
 			  legend: {
@@ -556,7 +556,7 @@
 
 		<div id="elecHeatMap" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-    	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit){
+    	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times){
 	    	var elecHeatMap = echarts.init(document.getElementById('elecHeatMap'));
 	    	// prettier-ignore
 			// const hours = [
@@ -855,7 +855,7 @@
 	 	}
 
 
-		Papa.parse(filename, {
+		Papa.parse("data/all_elec_data.csv", {
 		  header: true,
 		  download: true,
 		  // Do things after reading data
@@ -953,11 +953,11 @@
 
 				all_data.push(a_meter_data);
 			}
-			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data, unit);
+			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data);
 
-			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data, unit);
+			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data);
 
-			drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data, unit);
+			drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data);
 
 			// Draw the heat map
 			var datetime1 = this_year_week_datetime;
@@ -1000,7 +1000,7 @@
 				heat_map_data.push(heat_map_element);
 			} 
 
-			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
+			drawHeapMap(heat_map_data, heat_map_days, heat_map_times);
 		  },
 		});
 
