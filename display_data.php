@@ -132,10 +132,22 @@
 		</header>
 		<!-- header end -->
 
-
-		<br><br><br><br><br><br><br>
-		
-
+		<!-- banner start -->
+		<!-- ================ -->
+		<!-- <div id="banner" class="banner"> -->
+<!-- 			<div class="banner-image"></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row"> -->
+						<!-- <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn"> -->
+							<br><br><br><br><br><br><br>
+							<h1 class="text-center" id="loading">Loading, please wait...</h1>
+<!-- 						</div>
+					</div>
+				</div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		<!-- banner end -->
 
 		<script type="text/javascript">
 		var a=GetRequest();
@@ -155,16 +167,11 @@
 		   return theRequest;
 		}
 		</script>
-		<h1 class="text-center" id="meter_type"></span></h1>
-		<h1 class="text-center" id="meter_id"></span></h1>
-		<h1 class="text-center" id="loading">Loading, please wait...</h1>
+		<h1 class="text-center" id="demo"></span></h1>
 
 		<script>
 		var meter_id = a['id'];
-		var meter = meter_id.split(",");
-		var meter_type = meter[0];
-		document.getElementById("meter_type").innerHTML = meter_type;
-		document.getElementById("meter_id").innerHTML = meter[1];
+		document.getElementById("demo").innerHTML = meter_id;
 		</script>
 
 
@@ -842,17 +849,6 @@
 
 	 	var current_month2 = 0;
 	 	var month_last_loop2 = 0;
-
-	 	var filename;
-	 	var unit;
-	 	if (meter_type == "electricity"){
-	 		filename = "data/all_elec_data.csv";
-	 		unit = "kWh";
-	 	}
-	 	else if(meter_type == "gas"){
-	 		filename = "data/all_gas_data.csv";
-	 		unit = "m^3";
-	 	}
 
 
 		Papa.parse("data/all_elec_data.csv", {
