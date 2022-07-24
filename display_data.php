@@ -100,7 +100,7 @@
 												<li><a href="index.php">Home</a></li>
 												<li><a href="index.php#about">About</a></li>
 												<li class="dropdown">
-													<a class="dropbtn" href="visualization.php">
+													<a class="dropbtn">
 														Visualization
 													</a>
 													  <div class="dropdown-content">
@@ -132,22 +132,10 @@
 		</header>
 		<!-- header end -->
 
-		<!-- banner start -->
-		<!-- ================ -->
-		<!-- <div id="banner" class="banner"> -->
-<!-- 			<div class="banner-image"></div>
-			<div class="banner-caption">
-				<div class="container">
-					<div class="row"> -->
-						<!-- <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn"> -->
-							<br><br><br><br><br><br><br>
-							<h1 class="text-center" id="loading">Loading, please wait...</h1>
-<!-- 						</div>
-					</div>
-				</div> -->
-			<!-- </div> -->
-		<!-- </div> -->
-		<!-- banner end -->
+
+		<br><br><br><br><br><br><br>
+		
+
 
 		<script type="text/javascript">
 		var a=GetRequest();
@@ -167,11 +155,16 @@
 		   return theRequest;
 		}
 		</script>
-		<h1 class="text-center" id="demo"></span></h1>
+		<h1 class="text-center" id="meter_type"></span></h1>
+		<h1 class="text-center" id="meter_id"></span></h1>
+		<h1 class="text-center" id="loading">Loading, please wait...</h1>
 
 		<script>
-		var meter_id = a['id'];
-		document.getElementById("demo").innerHTML = meter_id;
+		var meter = a['id'].split(",");
+		var meter_type = meter[0];
+		var meter_id = meter[1];
+		document.getElementById("meter_type").innerHTML = meter_type;
+		document.getElementById("meter_id").innerHTML = meter_id;
 		</script>
 
 
@@ -270,7 +263,7 @@
 
     	<div id="elecWeeksChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-    	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data){
+    	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data, unit){
 	        var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
 	    	let baseTime = +new Date(this_year_week_datetime);
 			let halfHour = 0.5 * 3600 * 1000;
@@ -297,7 +290,7 @@
 			    }
 			  },
 			  title: {
-			    text: 'Electricity Week Data Chart (Same week last year)'
+			    text: 'Week Data Chart (Same week last year)'
 			  },
 			  toolbox: {
 			    feature: {
@@ -318,7 +311,7 @@
 			    boundaryGap: [0, '100%'],
 			    axisLabel: 
 			    {
-	                formatter:'{value} kWh'
+	                formatter:'{value} ' + unit
 	            }
 
 			  },
@@ -415,7 +408,7 @@
 			    }
 			  },
 			  title: {
-			    text: 'Electricity Year Data Chart'
+			    text: 'Year Data Chart'
 			  },
 			  toolbox: {
 			    feature: {
@@ -436,7 +429,7 @@
 			    boundaryGap: [0, '100%'],
 			    axisLabel: 
 			    {
-	                formatter:'{value} kWh'
+	                formatter:'{value} ' + unit
 	            }
 			  },
 			  dataZoom: [
@@ -525,7 +518,7 @@
 			  },
 			  tooltip: {},
 			  title: {
-			    text: 'Electricity Years Comparison by Month'
+			    text: 'Years Comparison by Month'
 			  },
 			  xAxis: {
 			  	type: 'category',
@@ -534,7 +527,7 @@
 			  yAxis: {		    
 			  	axisLabel: 
 			    {
-	                formatter:'{value} kWh'
+	                formatter:'{value} ' + unit
 	            }
 	          },
 			  // Declare several bar series, each will be mapped
@@ -592,7 +585,7 @@
 			    position: 'top'
 			  },
 			  title: {
-			    text: 'Electricity Week Heat Map (30 mins interval)'
+			    text: 'Week Heat Map (30 mins interval)'
 			  },
 			  grid: {
 			    height: '60%',
@@ -622,7 +615,7 @@
 			  },
 			  series: [
 			    {
-			      name: 'Electricity comsumption (kWh)',
+			      name: unit,
 			      type: 'heatmap',
 			      data: data,
 			      label: {
@@ -850,8 +843,19 @@
 	 	var current_month2 = 0;
 	 	var month_last_loop2 = 0;
 
+	 	var filename;
+	 	var unit;
+	 	if (meter_type == "electricity"){
+	 		filename = "data/all_elec_data.csv";
+	 		unit = "kWh";
+	 	}
+	 	else if(meter_type == "gas"){
+	 		filename = "data/all_gas_data.csv";
+	 		unit = "m^3";
+	 	}
 
-		Papa.parse("data/all_elec_data.csv", {
+
+		Papa.parse(filename, {
 		  header: true,
 		  download: true,
 		  // Do things after reading data
@@ -949,11 +953,11 @@
 
 				all_data.push(a_meter_data);
 			}
-			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data);
+			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data, unit);
 
-			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data);
+			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data, unit);
 
-			drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data);
+			drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data, unit);
 
 			// Draw the heat map
 			var datetime1 = this_year_week_datetime;
@@ -996,7 +1000,7 @@
 				heat_map_data.push(heat_map_element);
 			} 
 
-			drawHeapMap(heat_map_data, heat_map_days, heat_map_times);
+			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
 		  },
 		});
 
