@@ -290,7 +290,8 @@
 			    }
 			  },
 			  title: {
-			    text: 'Week Data Chart (Same week last year)'
+			    text: 'Week Data Chart (Same week last year)',
+			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year in the form of a line chart. You can browse the data of different periods by dragging the slider below.',
 			  },
 			  toolbox: {
 			    feature: {
@@ -408,7 +409,8 @@
 			    }
 			  },
 			  title: {
-			    text: 'Year Data Chart'
+			    text: 'Year Data Chart',
+			   	subtext:'This chart shows the most recent civil year in the available data compared to the previous year by way of a line graph.',
 			  },
 			  toolbox: {
 			    feature: {
@@ -518,7 +520,8 @@
 			  },
 			  tooltip: {},
 			  title: {
-			    text: 'Years Comparison by Month'
+			    text: 'Years Comparison by Month',
+			    subtext: 'This chart shows the data of the last full natural year in the available data compared to the previous year in a bar chart, showing the data of each month in detail.',
 			  },
 			  xAxis: {
 			  	type: 'category',
@@ -585,7 +588,8 @@
 			    position: 'top'
 			  },
 			  title: {
-			    text: 'Week Heat Map (30 mins interval)'
+			    text: 'Week Heat Map (30 mins interval)',
+			    subtext: 'This figure shows the data of the last week of existing data by color, and the usage of specific time can be observed by the depth of data. You can filter the range of data you want to display by using the slider below.',
 			  },
 			  grid: {
 			    height: '60%',
