@@ -789,8 +789,9 @@
             	return "wrong year number!";
         	} 
         }
+        </script>
 
-
+        <script type="text/javascript">
         // Meter channels in a building
         var location_file_name;
         var meter_channels = [];
@@ -817,7 +818,9 @@
 				} else if (meter_location == "campus"){
 					meter_channels.push(element["CHN:<channelID>"]);
 				}
-		}
+			}
+		  }
+		});
 
 
         // Calculate the sum of this location
