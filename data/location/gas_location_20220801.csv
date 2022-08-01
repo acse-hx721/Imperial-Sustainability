@@ -1,0 +1,10 @@
+﻿SIT:<name>;MET:<name>;CHN:<channelID>;CHN:<TspDataType>;CHN:<unit>
+8-15 Princes Gardens (inc Garden Hall);13 Princes Gardens Gas Meter;sk-nor-101-sip2.ad.ic.ac.uk_Device_1;Volumetric Consumption;m3
+Bessemer;M160A0010812A7;sk-ec-101-sip1.ad.ic.ac.uk_Device_27;Volumetric Consumption;m3
+Eastside Hall;Eastside Gas;sk-est-102-sip1.ad.ic.ac.uk_Device_1;Volumetric Consumption;m3
+Energy Centre;153432;sk-ec-101-sip1.ad.ic.ac.uk_Device_66;Volumetric Consumption;m3
+Energy Centre;153432;sk-ec-101-sip1.ad.ic.ac.uk_Device_26;Volumetric Consumption;m3
+Bone and Roderic Hill;Roderic Hill Gas;sk-ace-103-sip1.ad.ic.ac.uk_Device_1;Volumetric Consumption;m3
+Bone and Roderic Hill;M100A0021412A6;sk-ace-103-sip1.ad.ic.ac.uk_Device_2;Volumetric Consumption;m3
+Sherfield;E065K2384919D6;sk-she-101-sip2.ad.ic.ac.uk_Device_5;Volumetric Consumption;m3
+Southside Hall;Southside Gas;sk-sou-102-sip1.ad.ic.ac.uk_Device_1;Volumetric Consumption;m3
