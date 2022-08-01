@@ -156,6 +156,7 @@
 		}
 		</script>
 		<h1 class="text-center" id="meter_type"></span></h1>
+		<!-- <h1 class="text-center" id="meter_location"></span></h1> -->
 		<h1 class="text-center" id="meter_id"></span></h1>
 		<h1 class="text-center" id="loading">Loading, please wait...</h1>
 
@@ -163,8 +164,15 @@
 		var meter = a['id'].split(",");
 		var meter_type = meter[0];
 		var meter_id = meter[1];
+		var meter_location = meter[2];
 		document.getElementById("meter_type").innerHTML = meter_type;
-		document.getElementById("meter_id").innerHTML = meter_id;
+		if (meter_location != "null"){
+			document.getElementById("meter_id").innerHTML = meter_location;
+		}else{
+			document.getElementById("meter_id").innerHTML = meter_id;
+		}
+
+		
 		</script>
 
 
@@ -781,9 +789,51 @@
             	return "wrong year number!";
         	} 
         }
+
+
+        // Meter channels in a building
+        var location_file_name;
+        var meter_channels = [];
+
+
+        if (meter_type == "electricity"){
+        	location_file_name = "data/location/elec_location_20220801.csv";
+        }else if (meter_type == "gas"){
+        	location_file_name = "data/location/gas_location_20220801.csv";
+        }
+
+        // Read location file
+        Papa.parse(location_file_name, {
+		  header: true,
+		  download: true,
+		  // Do things after reading data
+		  complete: function(results) {
+		    console.log(results);
+		    location_data = results.data;
+		    for (var index=0; index < location_data.length; index++) {
+				const element = location_data[index];
+				if (element["SIT:<name>"] == meter_location){
+					meter_channels.push(element["CHN:<channelID>"]);
+				} else if (meter_location == "campus"){
+					meter_channels.push(element["CHN:<channelID>"]);
+				}
+		}
+
+
+        // Calculate the sum of this location
+        function sumOfLocation(elem){
+        	var sum;
+        	for (var e in elem){
+        		let index = meter_channels.indexOf(e);
+        		if (index != -1){
+        			sum = sum + parseFloat(elem[e]);
+        		}
+        	}
+        	return sum;
+        }
+
+
 		</script>
-
-
 
 
 		<script type="text/javascript">
@@ -847,6 +897,8 @@
 	 	var current_month2 = 0;
 	 	var month_last_loop2 = 0;
 
+	 	// var all_campus_data;
+
 	 	var filename;
 	 	var unit;
 	 	if (meter_type == "electricity"){
@@ -892,24 +944,35 @@
 		    for (var index=0; index < elec_data.length; index++) {
 				const elem = elec_data[index];
 				// console.log(index, elem);
-				var a_meter_data = {
-					Date: elem['Date'],
-					Time: elem['Time'],
-					Value: elem[meter_id],
-				};
+				var one_data;
+				if (meter_location != "null"){
+					one_data = {
+						Date: elem['Date'],
+						Time: elem['Time'],
+						Value: sumOfLocation(elem),
+					};
+				}else{
+					one_data = {
+						Date: elem['Date'],
+						Time: elem['Time'],
+						Value: elem[meter_id],
+					};
+				}
+
+
 				// Calculate data of latest week for this year and previous year
 				var current_datetime_str = '20' + elec_data[index]['Date'] + " " + elec_data[index]['Time'];
 				var current_datetime = new Date(current_datetime_str);
 				if (current_datetime >= previous_year_week_datetime && previous_year_week_data.length <= 48 * 7){
-					previous_year_week_data.push(elem[meter_id]);
+					previous_year_week_data.push(one_data['Value']);
 				}
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
-					this_year_week_data.push(elem[meter_id]);
+					this_year_week_data.push(one_data['Value']);
 				}
 
 				// Store each day data of last year and last last year
 				if (current_datetime >= start_of_last_year && last_year_data.length < 365){
-					last_year_day_sum = last_year_day_sum + parseFloat(elem[meter_id]);
+					last_year_day_sum = last_year_day_sum + parseFloat(one_data['Value']);
 					last_year_day_counter = last_year_day_counter + 1;
 
 					if (last_year_day_counter == 48){
@@ -919,7 +982,7 @@
 					}
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
-					last_last_year_day_sum = last_last_year_day_sum + parseFloat(elem[meter_id]);
+					last_last_year_day_sum = last_last_year_day_sum + parseFloat(one_data['Value']);
 					last_last_year_day_counter = last_last_year_day_counter + 1;
 
 					if (last_last_year_day_counter == 48){
@@ -935,7 +998,7 @@
 
 				if (current_datetime >= start_of_last_year && last_year_month_data.length < 12){
 					if (current_month1 == month_last_loop1){
-						last_year_month_sum = last_year_month_sum + parseFloat(elem[meter_id]);
+						last_year_month_sum = last_year_month_sum + parseFloat(one_data['Value']);
 					}
 					else {
 						last_year_month_data.push(last_year_month_sum);
@@ -945,7 +1008,7 @@
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
 					if (current_month2 == month_last_loop2){
-						last_last_year_month_sum = last_last_year_month_sum + parseFloat(elem[meter_id]);
+						last_last_year_month_sum = last_last_year_month_sum + parseFloat(one_data['Value']);
 					}
 					else {
 						last_last_year_month_data.push(last_last_year_month_sum);
@@ -955,7 +1018,7 @@
 				}
 				
 
-				all_data.push(a_meter_data);
+				all_data.push(one_data);
 			}
 			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data, unit);
 

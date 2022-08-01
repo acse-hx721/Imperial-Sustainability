@@ -180,24 +180,29 @@
 		<!-- electricity -->
 		<table id="electricity" border="1" align="center">
 		    <tr>
-		        <td><a href="display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
-		        <td><a href="display_data.php?id=electricity,1200010050250">1200010050250</td>
+		        <td><a href="display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
+		        <td><a href="display_data.php?id=electricity,1200010050250,null">1200010050250</td>
 		    </tr>
 		    <tr>
-		        <td><a href="display_data.php?id=electricity,1200010081620">1200010081620</td>
-		        <td><a href="display_data.php?id=electricity,1200010081630">1200010081630</td>
+		        <td><a href="display_data.php?id=electricity,1200010081620,null">1200010081620</td>
+		        <td><a href="display_data.php?id=electricity,1200010081630,null">1200010081630</td>
+		    </tr>
+
+		    <tr>
+		        <td><a href="display_data.php?id=electricity,1200010081620,campus">South Kensington Campus</td>
+		        <td><a href="display_data.php?id=electricity,1200010081630,RSM">RSM</td>
 		    </tr>
 		</table>
 
 		<!-- gas -->
 		<table id="gas" border="1" align="center">
 		    <tr>
-		        <td><a href="display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">sk-58pg-101-sip1.ad.ic.ac.uk_Device_3</a></td>
-		        <td><a href="display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_2">sk-58pg-101-sip1.ad.ic.ac.uk_Device_2</td>
+		        <td><a href="display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3,null">sk-58pg-101-sip1.ad.ic.ac.uk_Device_3</a></td>
+		        <td><a href="display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_2,null">sk-58pg-101-sip1.ad.ic.ac.uk_Device_2</td>
 		    </tr>
 		    <tr>
-		        <td><a href="display_data.php?id=gas,sk-ec-101-sip1.ad.ic.ac.uk_Device_27">sk-ec-101-sip1.ad.ic.ac.uk_Device_27</td>
-		        <td><a href="display_data.php?id=gas,sk-est-102-sip1.ad.ic.ac.uk_Device_1">sk-est-102-sip1.ad.ic.ac.uk_Device_1</td>
+		        <td><a href="display_data.php?id=gas,sk-ec-101-sip1.ad.ic.ac.uk_Device_27,null">sk-ec-101-sip1.ad.ic.ac.uk_Device_27</td>
+		        <td><a href="display_data.php?id=gas,sk-est-102-sip1.ad.ic.ac.uk_Device_1,null">sk-est-102-sip1.ad.ic.ac.uk_Device_1</td>
 		    </tr>
 		</table>
 
