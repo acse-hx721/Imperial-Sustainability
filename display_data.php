@@ -766,7 +766,7 @@
 		    // tMonth = doHandleMonth(tMonth + 1);
 		    // tDate = doHandleMonth(tDate);
 		    return new Date(targetday_milliseconds);
-		};
+		}
 
 
 		function getDaysOfYear(t) {
