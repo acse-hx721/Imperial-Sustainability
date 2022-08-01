@@ -204,6 +204,11 @@
 		        <td><a href="display_data.php?id=gas,sk-ec-101-sip1.ad.ic.ac.uk_Device_27,null">sk-ec-101-sip1.ad.ic.ac.uk_Device_27</td>
 		        <td><a href="display_data.php?id=gas,sk-est-102-sip1.ad.ic.ac.uk_Device_1,null">sk-est-102-sip1.ad.ic.ac.uk_Device_1</td>
 		    </tr>
+		    
+		    <tr>
+		        <td><a href="display_data.php?id=gas,1200010081620,campus">South Kensington Campus</td>
+		        <td><a href="display_data.php?id=gas,1200010081630,Energy Centre">Energy Centre</td>
+		    </tr>
 		</table>
 
 
