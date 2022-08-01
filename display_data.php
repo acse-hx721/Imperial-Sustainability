@@ -825,10 +825,11 @@
 
         // Calculate the sum of this location
         function sumOfLocation(elem){
-        	var sum;
+        	var sum = 0;
         	for (var e in elem){
         		let index = meter_channels.indexOf(e);
         		if (index != -1){
+        			console.log(elem[e]);
         			sum = sum + parseFloat(elem[e]);
         		}
         	}
