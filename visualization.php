@@ -211,7 +211,7 @@
 		    </tr>
 		</table>
 
-		<div align="center">
+		<div left=50%>
 			<h1 class="text-center">Upload New Data File</h1>
 			<form action="upload_file.php" method="post" enctype="multipart/form-data" align="center">
 			    <label for="file" align="center">Filename: </label>
