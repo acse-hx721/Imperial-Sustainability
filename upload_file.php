@@ -1,10 +1,11 @@
 <?php
 // 允许上传的文件后缀
-$allowedExts = array("csv", "xls");
+$allowedExts = array("csv");
 $temp = explode(".", $_FILES["file"]["name"]);
 echo $_FILES["file"]["size"];
 $extension = end($temp);     // 获取文件后缀名
-if ($_FILES["file"]["type"] == "text/csv")   // 小于 20000 kb
+if (($_FILES["file"]["size"] < 20480000)   // 小于 20000 kb
+&& in_array($extension, $allowedExts))
 {
 	if ($_FILES["file"]["error"] > 0)
 	{
