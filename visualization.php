@@ -212,6 +212,13 @@
 		</table>
 
 
+		<h1 class="text-center">Upload New Data File</h1>
+		<form action="upload_file.php" method="post">
+		    <label for="file">Filename: </label>
+		    <input type="file" name="file" id="file"><br>
+		    <input type="submit" name="submit" value="Submit">
+		</form>
+
 
 		<!-- footer start -->
 		<!-- ================ -->
