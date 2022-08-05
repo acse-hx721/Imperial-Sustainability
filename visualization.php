@@ -141,7 +141,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">This page is for <span>Visualization</span></h1>
-							<p class="lead text-center">Selection of data type and time to show the specific data.</p>
+							<p class="lead text-center">Selection of data type to show the specific data.</p>
 						</div>
 					</div>
 				</div>
@@ -211,11 +211,11 @@
 		    </tr>
 		</table>
 
-		<div left=50%>
+		<div align-items=center;>
 			<h1 class="text-center">Upload New Data File</h1>
 			<form action="upload_file.php" method="post" enctype="multipart/form-data" align="center">
 			    <label for="file" align="center">Filename: </label>
-			    <input type="file" name="file" id="file" align="center"><br>
+			    <input type="file" name="file" id="file" text-align=center margin=auto><br>
 			    <input type="submit" name="submit" value="Submit" align="center">
 			</form>
 		</div>
