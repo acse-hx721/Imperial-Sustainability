@@ -211,11 +211,11 @@
 		    </tr>
 		</table>
 
-		<div style="text-align:center">
+		<div class="text-center">
 			<h1 class="text-center">Upload New Data File</h1>
 			<form action="upload_file.php" method="post" enctype="multipart/form-data" align="center">
 			    <label for="file" align="center">Filename: </label>
-			    <input type="file" name="file" id="file" text-align=center margin=auto><br>
+			    <input type="file" name="file" id="file" class="text-center"><br>
 			    <input type="submit" name="submit" value="Submit" align="center">
 			</form>
 		</div>
