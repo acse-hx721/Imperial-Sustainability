@@ -215,7 +215,7 @@
 			<h1 class="text-center">Upload New Data File</h1>
 			<form action="upload_file.php" method="post" enctype="multipart/form-data">
 			    <label for="file" align="center">Filename: </label>
-			    <input type="file" name="file" id="file" class="text-center"><br>
+			    <input type="file" name="file" id="file"><br>
 			    <input type="submit" name="submit" value="Submit" align="center">
 			</form>
 		</div>
