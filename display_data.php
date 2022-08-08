@@ -804,35 +804,42 @@
         }
 
 
-        function getSites(){
-	        var all_sites = new Set();
+        var all_sites_obj = {}; //Obj类型
+	    var all_channels_obj = {}; //Obj类型
+        var all_sites = new Set();
+        var all_channels = new Set();
 
-	        // Read location file
-	        Papa.parse(location_file_name, {
-			  header: true,
-			  download: true,
-			  // Do things after reading data
-			  complete: function(results) {
-			    // console.log(results);
-			    location_data = results.data;
-			    for (var index=0; index < location_data.length; index++) {
-			    	const element = location_data[index];
-			    	if (element["SIT:<name>"] != ""){
-						all_sites.add(element["SIT:<name>"]);
-					}
+        // Read location file
+        Papa.parse(location_file_name, {
+		  header: true,
+		  download: true,
+		  // Do things after reading data
+		  complete: function(results) {
+		    // console.log(results);
+		    location_data = results.data;
+		    for (var index=0; index < location_data.length; index++) {
+		    	const element = location_data[index];
+		    	if (element["SIT:<name>"] != ""){
+					all_sites.add(element["SIT:<name>"]);
 				}
-				var all_sites_obj = {};
-			    for (var x of all_sites){
-			    	all_sites_obj[x] = 0;
-			    }
-			    console.log(all_sites_obj);
-				return all_sites_obj;
-			  }
-			});
+				if (element["CHN:<channelID>"] != ""){
+					all_channels.add(element["CHN:<channelID>"]);
+				}
+			}
+		    for (var x of all_sites){
+		    	all_sites_obj[x] = 0;
+		    }
+		    for (var x of all_channels){
+		    	all_channels_obj[x] = 0;
+		    }
+		    console.log(all_sites_obj);
+		    console.log(all_channels_obj);
+		  }
+		});
 
-	    }
 
-        function getAllChannel(meter_location){
+
+        function getChannelOfLocation(meter_location){
 	        var temp_meter_channels = [];
 
 	        // Read location file
@@ -857,17 +864,14 @@
 	    }
 
 
-	    var all_sites_obj = getSites(); //Obj类型
-
-
-	    var meter_channels = getAllChannel(meter_location);
+	    var meter_channels = getChannelOfLocation(meter_location);
 
 
         // Calculate the sum of this location
-        function sumOfLocation(elem){
+        function sumOfLocation(elem, channels){
         	var sum = 0;
         	for (var e in elem){
-        		let index = meter_channels.indexOf(e);
+        		let index = channels.indexOf(e);
         		if (index != -1){
         			sum = sum + parseFloat(elem[e]);
         		}
@@ -992,7 +996,7 @@
 					one_data = {
 						Date: elem['Date'],
 						Time: elem['Time'],
-						Value: sumOfLocation(elem),
+						Value: sumOfLocation(elem, meter_channels),
 					};
 				}else{
 					one_data = {
