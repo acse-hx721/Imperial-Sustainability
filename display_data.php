@@ -1166,7 +1166,7 @@
 					var channels = sites_channels[site].split(",");
 					// console.log(channels);
 
-					for(var k = 0; k < channels.length; k++){
+					for(var k = 1; k < channels.length; k++){
 						// console.log(channels[k]);
 						if (!isNaN(all_channels_obj[channels[k]])){
 							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
