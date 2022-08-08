@@ -1166,8 +1166,8 @@
 					}
 				}
 
-				// console.log(all_sites_obj);
-				// console.log(all_sites_obj_year);
+				console.log(all_sites_obj);
+				console.log(all_sites_obj_year);
 			}
 
 
