@@ -821,9 +821,14 @@
 						all_sites.add(element["SIT:<name>"]);
 					}
 				}
+				var all_sites_obj = {};
+			    for (var x of all_sites){
+			    	all_sites_obj[x] = 0;
+			    }
+				return all_sites_obj;
 			  }
 			});
-			return all_sites;
+
 	    }
 
         function getAllChannel(meter_location){
@@ -851,14 +856,9 @@
 	    }
 
 
-	    var all_sites = getSites(); //Set类型
-	    console.log(all_sites);
-	    var all_sites_obj = {};
-	    for (var x of all_sites){
-	    	all_sites_obj[x] = 0;
-	    }
-
+	    var all_sites_obj = getSites(); //Obj类型
 	    console.log(all_sites_obj);
+
 	    var meter_channels = getAllChannel(meter_location);
 
 
