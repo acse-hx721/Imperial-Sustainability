@@ -1155,6 +1155,7 @@
 					console.log(site);
 					var channels = getChannelOfLocation(site);
 					console.log(channels);
+					while(channels.length == 0);
 					for(var k = 0; k < channels.length; k++){
 						console.log(channels[k]);
 						// if (!isNaN(all_channels_obj[channels[i]])){
