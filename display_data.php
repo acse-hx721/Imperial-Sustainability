@@ -966,6 +966,8 @@
 	 	}
 
 
+	 	sum_counter = 0;
+
 		Papa.parse(filename, {
 		  header: true,
 		  download: true,
@@ -1045,16 +1047,17 @@
 						last_year_day_sum = 0;
 						last_year_day_counter = 0;
 					}
+				}
+				if (current_datetime >= start_of_last_year && sum_counter < 365 * 48 && meter_location == "campus"){
 					// 累计计算去年的每个channel消耗
-					if (meter_location == "campus"){
-						for (var x in elem){
-							if (x != 'Date' && x != 'Time'){
-								if (!isNaN(elem[x])){
-									all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
-								}
+					for (var x in elem){
+						if (x != 'Date' && x != 'Time'){
+							if (!isNaN(elem[x])){
+								all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
 							}
 						}
 					}
+					sum_counter = sum_counter + 1;
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
 					last_last_year_day_sum = last_last_year_day_sum + parseFloat(one_data['Value']);
