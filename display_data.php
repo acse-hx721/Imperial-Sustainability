@@ -1152,7 +1152,7 @@
 				console.log(all_channels_obj);
 				console.log(all_channels_obj_year);
 				for (var site in all_sites_obj){
-					// console.log(site);
+					console.log(site);
 					channels = getChannelOfLocation(site);
 					console.log(channels);
 					for(var k = 0; k < channels.length; k++){
