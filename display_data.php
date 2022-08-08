@@ -1142,7 +1142,7 @@
 
 			for (var i = 0; i < 48 * 7; i++) {
 				var heat_map_element = [6 - parseInt(i/48), i%48, this_year_week_data[i]];
-				heat_map_data.push(parseFloat(heat_map_element).toFixed(3));
+				heat_map_data.push(parseFloat(heat_map_element));
 			} 
 
 			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
@@ -1156,6 +1156,7 @@
 					var channels = getChannelOfLocation(site);
 
 					for(var channel in channels){
+						console.log("1");
 						console.log(channel);
 						if (!isNaN(all_channels_obj[channel])){
 							all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channel]);
