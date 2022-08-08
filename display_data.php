@@ -1163,17 +1163,17 @@
 				console.log(all_channels_obj_year);
 				for (var site in all_sites_obj){
 					// console.log(site);
-					var channels = getChannelOfLocation(site);
-					// console.log(channels);
+					var channels = sites_channels[site].split(",");
+					console.log(channels);
 
 					for(var k = 0; k < channels.length; k++){
 						console.log(channels[k]);
-						// if (!isNaN(all_channels_obj[channels[i]])){
-						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
-						// }
-						// if (!isNaN(all_channels_obj_year[channels[i]])){
-						// 	all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[i]]);
-						// }
+						if (!isNaN(all_channels_obj[channels[i]])){
+							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
+						}
+						if (!isNaN(all_channels_obj_year[channels[i]])){
+							all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[i]]);
+						}
 					}
 				}
 
