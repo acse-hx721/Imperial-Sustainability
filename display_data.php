@@ -803,8 +803,29 @@
         	location_file_name = "data/location/gas_location_20220801.csv";
         }
 
+
+        function getSites(){
+	        var all_sites = new Set();
+
+	        // Read location file
+	        Papa.parse(location_file_name, {
+			  header: true,
+			  download: true,
+			  // Do things after reading data
+			  complete: function(results) {
+			    console.log(results);
+			    location_data = results.data;
+			    for (var index=0; index < location_data.length; index++) {
+					all_sites.add();
+				}
+			  }
+			});
+			return all_sites;
+	    }
+
         function getAllChannel(meter_location){
 	        var temp_meter_channels = [];
+
 	        // Read location file
 	        Papa.parse(location_file_name, {
 			  header: true,
@@ -826,6 +847,9 @@
 			return temp_meter_channels;
 	    }
 
+
+	    var all_sites = getSites();
+	    console.log(all_sites);
 	    var meter_channels = getAllChannel(meter_location);
 
 
