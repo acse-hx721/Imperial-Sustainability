@@ -244,717 +244,722 @@
 		    </tr>
 		</table> -->
 
-	<style type="text/css">
-		.tg  {border-collapse:collapse;border-spacing:0;}
-		.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-		  overflow:hidden;padding:10px 5px;word-break:normal;}
-		.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-		  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-		.tg .tg-cly1{text-align:left;vertical-align:middle}
-		.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-	</style>
-	<table id="electricity" border="1" align="center" class="tg">
-		<thead>
-		  <tr>
-		    <th class="tg-lboi">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</th>
-		    <th class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</th>
-		  </tr>
-		</thead>
-	<tbody>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_10</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_9</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">ACE</td>
-	    <td class="tg-cly1">sk-ace-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-101-sip2.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_6</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_21</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Beit Quad</td>
-	    <td class="tg-cly1">sk-ace-102-sip2.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_14</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Bessemer</td>
-	    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_31</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Blackett</td>
-	    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Bone and Roderic Hill</td>
-	    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_15</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_18</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_5</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Business School</td>
-	    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Chemistry 1 &amp; 2</td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_196</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_211</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_18</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_17</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_19</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-che-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-che-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-che-101-sip1.ad.ic.ac.uk_Device_7</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">City and Guilds</td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_76</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_121</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_91</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_106</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-102-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-102-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Data Centre</td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_12</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_5</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_6</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_15</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_7</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_7</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_19</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_11</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_13</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_12</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_6</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_9</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_10</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_8</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_14</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_5</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_8</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_9</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_10</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_11</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_13</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_14</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_17</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_18</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_20</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_21</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_17</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_15</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Dyson SoE</td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_20</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_21</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">SK-DBDE-B-SIP2.ad.ic.ac.uk_Device_64</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Eastside Hall</td>
-	    <td class="tg-cly1">sk-est-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-est-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Electrical Engineering</td>
-	    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_48</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_18</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_33</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Energy Centre</td>
-	    <td class="tg-cly1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-ele-101-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Ethos Sports Centre</td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Ethos Sports Centre Residences</td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Faculty</td>
-	    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_5</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Flowers</td>
-	    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_63</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Huxley</td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_181</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_166</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_151</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_5</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_6</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Library</td>
-	    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_17</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-lib-102-sip3.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">RCS1</td>
-	    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_66</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_81</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-che-101-sip2.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_25</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_26</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_27</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_28</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_29</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_30</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_31</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_32</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_33</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_34</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_35</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_36</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_37</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_38</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_39</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_40</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_41</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_42</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_43</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_44</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_45</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_46</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_47</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_48</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_49</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_50</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_51</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_52</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_53</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_54</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_55</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_56</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">RSM</td>
-	    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_46</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_47</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">SAF</td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_31</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_46</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_61</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-saf-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-saf-101-sip2.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Sherfield</td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_16</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Sir Ernst Chain (Biochemistry)</td>
-	    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_18</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Skempton</td>
-	    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_36</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_51</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">South Kensington</td>
-	    <td class="tg-cly1">sk-mec-g-sip1.ad.ic.ac.uk_Device_2</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-mec-g-sip1.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Southside Hall</td>
-	    <td class="tg-cly1">sk-rsm-101-sip2.ad.ic.ac.uk_Device_18</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-rsm-101-sip2.ad.ic.ac.uk_Device_33</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-sou-101-sip2.ad.ic.ac.uk_Device_1</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">Weeks Hall</td>
-	    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_136</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_3</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_4</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_12</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1"></td>
-	    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_6</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-cly1">William Penney</td>
-	    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_5</td>
-	  </tr>
-	</tbody>
-	</table>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table id="electricity" class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">South Kensington Campus</th>
+    <th class="tg-0lax"></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-lboi">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_10</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_9</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ACE</td>
+    <td class="tg-cly1">sk-ace-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-101-sip2.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_6</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_21</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Beit Quad</td>
+    <td class="tg-cly1">sk-ace-102-sip2.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_14</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Bessemer</td>
+    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_31</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Blackett</td>
+    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Bone and Roderic Hill</td>
+    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_15</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip3.ad.ic.ac.uk_Device_18</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ace-102-sip1.ad.ic.ac.uk_Device_5</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Business School</td>
+    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Chemistry 1 &amp; 2</td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_196</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_211</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_18</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_17</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_19</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-che-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-che-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-che-101-sip1.ad.ic.ac.uk_Device_7</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">City and Guilds</td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_76</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_121</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_91</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_106</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-102-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-102-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Data Centre</td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_12</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_5</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_6</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_15</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_7</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_7</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_19</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_11</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_13</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_12</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_6</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_9</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_10</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_8</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_14</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_5</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_8</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_9</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_10</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_11</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_13</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_14</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_17</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_18</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_20</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_21</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_17</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip1.ad.ic.ac.uk_Device_15</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-104-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Dyson SoE</td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_20</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_21</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">SK-DBDE-B-SIP2.ad.ic.ac.uk_Device_64</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Eastside Hall</td>
+    <td class="tg-cly1">sk-est-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-est-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Electrical Engineering</td>
+    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_48</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_18</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_33</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Energy Centre</td>
+    <td class="tg-cly1">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-ele-101-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Ethos Sports Centre</td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Ethos Sports Centre Residences</td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Faculty</td>
+    <td class="tg-cly1">sk-mec-102-sip2.ad.ic.ac.uk_Device_5</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Flowers</td>
+    <td class="tg-cly1">sk-bes-104-sip2.ad.ic.ac.uk_Device_63</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Huxley</td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_181</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_166</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_151</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_5</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_6</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-hux-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Library</td>
+    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_17</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-lib-102-sip3.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">RCS1</td>
+    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_66</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_81</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-che-101-sip2.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_25</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_26</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_27</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_28</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_29</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_30</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_31</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_32</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_33</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_34</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_35</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_36</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_37</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_38</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_39</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_40</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_41</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_42</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_43</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_44</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_45</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_46</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_47</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_48</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_49</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_50</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_51</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_52</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_53</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_54</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_55</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rcs-101-sip1.ad.ic.ac.uk_Device_56</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">RSM</td>
+    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_46</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bes-102-sip1.ad.ic.ac.uk_Device_47</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">SAF</td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_31</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_46</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_61</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-saf-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-saf-101-sip2.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Sherfield</td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_16</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Sir Ernst Chain (Biochemistry)</td>
+    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_18</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-bio-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Skempton</td>
+    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_36</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-eyec-b-sip.ad.ic.ac.uk_Device_51</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">South Kensington</td>
+    <td class="tg-cly1">sk-mec-g-sip1.ad.ic.ac.uk_Device_2</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-mec-g-sip1.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Southside Hall</td>
+    <td class="tg-cly1">sk-rsm-101-sip2.ad.ic.ac.uk_Device_18</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-rsm-101-sip2.ad.ic.ac.uk_Device_33</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-sou-101-sip2.ad.ic.ac.uk_Device_1</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Weeks Hall</td>
+    <td class="tg-cly1">sk-icsm-2-sip1.ad.ic.ac.uk_Device_136</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_3</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_4</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_12</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1"></td>
+    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_6</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">William Penney</td>
+    <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_5</td>
+  </tr>
+</tbody>
+</table>
 
 		<!-- gas -->
 		<table id="gas" border="1" align="center">
