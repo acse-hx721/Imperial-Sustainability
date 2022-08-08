@@ -794,7 +794,7 @@
         <script type="text/javascript">
         // Meter channels in a building
         var location_file_name;
-        var meter_channels = [];
+        // var meter_channels = [];
 
 
         if (meter_type == "electricity"){
@@ -823,10 +823,10 @@
 				}
 			  }
 			});
+			return temp_meter_channels;
 	    }
 
-	    meter_channels = getAllChannel(meter_location)
-
+	    var meter_channels = getAllChannel(meter_location);
 
 
         // Calculate the sum of this location
