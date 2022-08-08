@@ -832,13 +832,13 @@
 					if (element["CHN:<channelID>"] != ""){
 						all_channels.add(element["CHN:<channelID>"]);
 					}
-					if (element["CHN:<channelID>"] != "undefined"){
-						if (sites_channels[element["SIT:<name>"]] == ""){
-							sites_channels[element["SIT:<name>"]] = element["CHN:<channelID>"];
-						}else{
-							sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
-						}
+
+					if (sites_channels[element["SIT:<name>"]] == ""){
+						sites_channels[element["SIT:<name>"]] = element["CHN:<channelID>"];
+					}else{
+						sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
 					}
+					
 				}
 			    for (var x of all_sites){
 			    	all_sites_obj[x] = 0;
@@ -1164,15 +1164,15 @@
 				for (var site in all_sites_obj){
 					// console.log(site);
 					var channels = sites_channels[site].split(",");
-					console.log(channels);
+					// console.log(channels);
 
 					for(var k = 0; k < channels.length; k++){
-						console.log(channels[k]);
-						if (!isNaN(all_channels_obj[channels[i]])){
+						// console.log(channels[k]);
+						if (!isNaN(all_channels_obj[channels[k]])){
 							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
 						}
-						if (!isNaN(all_channels_obj_year[channels[i]])){
-							all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[i]]);
+						if (!isNaN(all_channels_obj_year[channels[k]])){
+							all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[k]]);
 						}
 					}
 				}
