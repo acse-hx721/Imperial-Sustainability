@@ -1156,7 +1156,7 @@
 					var channels = getChannelOfLocation(site);
 
 					for(var i in channels){
-						console.log(channel);
+						console.log(channels[i]);
 						if (!isNaN(all_channels_obj[channels[i]])){
 							all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channels[i]]);
 						}
