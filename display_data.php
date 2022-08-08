@@ -1026,8 +1026,8 @@
 					// 累计计算这周的每个channel消耗
 					if (meter_location == "campus"){
 						for (var x in elem){
-							if (x != 'Date' || x != 'Time'){
-								if (!isNaN(parseFloat(elem[x]))){
+							if (x != 'Date' && x != 'Time'){
+								if (!isNaN(elem[x])){
 									all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
 								}
 							}
@@ -1048,8 +1048,8 @@
 					// 累计计算去年的每个channel消耗
 					if (meter_location == "campus"){
 						for (var x in elem){
-							if (x != 'Date' || x != 'Time'){
-								if (!isNaN(parseFloat(elem[x]))){
+							if (x != 'Date' && x != 'Time'){
+								if (!isNaN(elem[x])){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
 								}
 							}
