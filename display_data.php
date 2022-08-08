@@ -831,10 +831,10 @@
 						all_channels.add(element["CHN:<channelID>"]);
 					}
 				}
-			    for (var x of all_sites){
-			    	all_sites_obj[x] = 0;
-			    	all_sites_obj_year[x] = 0;
-			    }
+			    // for (var x of all_sites){
+			    // 	all_sites_obj[x] = 0;
+			    // 	all_sites_obj_year[x] = 0;
+			    // }
 			    for (var x of all_channels){
 			    	all_channels_obj[x] = 0;
 			    	all_channels_obj_year[x] = 0;
