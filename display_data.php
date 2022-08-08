@@ -816,7 +816,8 @@
 			    console.log(results);
 			    location_data = results.data;
 			    for (var index=0; index < location_data.length; index++) {
-					all_sites.add();
+			    	const element = location_data[index];
+					all_sites.add(element["SIT:<name>"]);
 				}
 			  }
 			});
