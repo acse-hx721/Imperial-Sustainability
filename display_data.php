@@ -1027,6 +1027,7 @@
 					for (var x in elem){
 						if (x != 'Date' || x != 'Time'){
 							all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
+							console.log(all_channels_obj[x]);
 						}
 					}
 				}
