@@ -833,7 +833,11 @@
 						all_channels.add(element["CHN:<channelID>"]);
 					}
 					if (element["CHN:<channelID>"] != "undefined"){
-						sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
+						if (sites_channels[element["SIT:<name>"]] == ""){
+							sites_channels[element["SIT:<name>"]] = element["CHN:<channelID>"];
+						}else{
+							sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
+						}
 					}
 				}
 			    for (var x of all_sites){
@@ -1158,9 +1162,9 @@
 				console.log(all_channels_obj);
 				console.log(all_channels_obj_year);
 				for (var site in all_sites_obj){
-					console.log(site);
+					// console.log(site);
 					var channels = getChannelOfLocation(site);
-					console.log(channels);
+					// console.log(channels);
 
 					for(var k = 0; k < channels.length; k++){
 						console.log(channels[k]);
