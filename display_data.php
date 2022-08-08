@@ -1147,14 +1147,13 @@
 
 			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
 
-
+			var channels = [];
 			if (meter_location == "campus"){
 				console.log(all_channels_obj);
 				console.log(all_channels_obj_year);
-
 				for (var site in all_sites_obj){
 					// console.log(site);
-					var channels = getChannelOfLocation(site);
+					channels = getChannelOfLocation(site);
 					// console.log(channels);
 					for(var k = 0; k < channels.length; k++){
 						console.log(channels[k]);
