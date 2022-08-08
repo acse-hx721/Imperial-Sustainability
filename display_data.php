@@ -1027,7 +1027,7 @@
 					if (meter_location == "campus"){
 						for (var x in elem){
 							if (x != 'Date' || x != 'Time'){
-								if (isNaN(elem[x])){
+								if (!isNaN(parseFloat(elem[x]))){
 									all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
 								}
 							}
@@ -1049,7 +1049,7 @@
 					if (meter_location == "campus"){
 						for (var x in elem){
 							if (x != 'Date' || x != 'Time'){
-								if (isNaN(elem[x])){
+								if (!isNaN(parseFloat(elem[x]))){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
 								}
 							}
