@@ -1156,7 +1156,7 @@
 					var channels = getChannelOfLocation(site);
 					console.log(channels);
 					while(channels.length == 0){
-						onsole.log(channels);
+						console.log(channels);
 					};
 					for(var k = 0; k < channels.length; k++){
 						console.log(channels[k]);
