@@ -1073,10 +1073,10 @@
 
 	 	sum_counter = 0;
 
-	 	$("#buildingChart").hide();
-	 	if (meter_location == "campus"){ {
-				$("#buildingChart").show();
-		}
+	 // 	$("#electricity").hide();
+	 // 	if (meter_location == "campus"){ {
+		// 		$("#electricity").show();
+		// }
 
 
 		Papa.parse(filename, {

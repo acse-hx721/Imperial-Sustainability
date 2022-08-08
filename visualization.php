@@ -36,6 +36,9 @@
 
 		<!-- import echarts.js -->
 		<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+		<!-- import papaparse.min.js -->
+		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 	</head>
 
 	<body class="no-trans">
@@ -168,6 +171,73 @@
 		}
 
 		</script>
+
+		<script type="text/javascript">
+			// Meter channels in a building
+	        var location_file_name;
+	        // var meter_channels = [];
+
+
+	        if (meter_type == "electricity"){
+	        	location_file_name = "data/location/elec_location_20220801.csv";
+	        }else if (meter_type == "gas"){
+	        	location_file_name = "data/location/gas_location_20220801.csv";
+	        }
+
+
+	        var all_sites_obj = {}; //Obj类型
+		    var all_channels_obj = {}; //Obj类型
+
+		    var all_sites_obj_year = {}; //Obj类型
+		    var all_channels_obj_year = {}; //Obj类型
+
+	        var all_sites = new Set();
+	        var all_channels = new Set();
+
+	        var sites_channels = {};
+
+	        // Read location file
+	        if (meter_location == "campus"){
+		        Papa.parse(location_file_name, {
+				  header: true,
+				  download: true,
+				  // Do things after reading data
+				  complete: function(results) {
+				    // console.log(results);
+				    location_data = results.data;
+				    for (var index=0; index < location_data.length; index++) {
+				    	const element = location_data[index];
+				    	if (element["SIT:<name>"] != ""){
+							all_sites.add(element["SIT:<name>"]);
+						}
+						if (element["CHN:<channelID>"] != ""){
+							all_channels.add(element["CHN:<channelID>"]);
+						}
+
+						if (sites_channels[element["SIT:<name>"]] == ""){
+							sites_channels[element["SIT:<name>"]] = element["CHN:<channelID>"];
+						}else{
+							sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
+						}
+						
+					}
+				    for (var x of all_sites){
+				    	all_sites_obj[x] = 0;
+				    	all_sites_obj_year[x] = 0;
+				    }
+				    for (var x of all_channels){
+				    	all_channels_obj[x] = 0;
+				    	all_channels_obj_year[x] = 0;
+				    }
+				    console.log(all_sites_obj);
+				    console.log(all_channels_obj);
+				    console.log(sites_channels);
+				  }
+				});
+		    }
+		</script>
+
+
 
 		<h1 class="text-center" id="meter_type_title"></span></h1>
 
