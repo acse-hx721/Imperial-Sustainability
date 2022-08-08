@@ -1073,6 +1073,12 @@
 
 	 	sum_counter = 0;
 
+	 	$("#buildingChart").hide();
+	 	if (meter_location == "campus"){ {
+				$("#buildingChart").show();
+		}
+
+
 		Papa.parse(filename, {
 		  header: true,
 		  download: true,
