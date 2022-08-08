@@ -803,24 +803,30 @@
         	location_file_name = "data/location/gas_location_20220801.csv";
         }
 
-        // Read location file
-        Papa.parse(location_file_name, {
-		  header: true,
-		  download: true,
-		  // Do things after reading data
-		  complete: function(results) {
-		    console.log(results);
-		    location_data = results.data;
-		    for (var index=0; index < location_data.length; index++) {
-				const element = location_data[index];
-				if (element["SIT:<name>"] == meter_location){
-					meter_channels.push(element["CHN:<channelID>"]);
-				} else if (meter_location == "campus"){
-					meter_channels.push(element["CHN:<channelID>"]);
+        function getAllChannel(meter_location){
+	        var temp_meter_channels = [];
+	        // Read location file
+	        Papa.parse(location_file_name, {
+			  header: true,
+			  download: true,
+			  // Do things after reading data
+			  complete: function(results) {
+			    console.log(results);
+			    location_data = results.data;
+			    for (var index=0; index < location_data.length; index++) {
+					const element = location_data[index];
+					if (element["SIT:<name>"] == meter_location){
+						temp_meter_channels.push(element["CHN:<channelID>"]);
+					} else if (meter_location == "campus"){
+						temp_meter_channels.push(element["CHN:<channelID>"]);
+					}
 				}
-			}
-		  }
-		});
+			  }
+			});
+	    }
+
+	    meter_channels = getAllChannel(meter_location)
+
 
 
         // Calculate the sum of this location
