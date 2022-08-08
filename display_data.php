@@ -1142,13 +1142,31 @@
 
 			for (var i = 0; i < 48 * 7; i++) {
 				var heat_map_element = [6 - parseInt(i/48), i%48, this_year_week_data[i]];
-				heat_map_data.push(heat_map_element);
+				heat_map_data.push(parseFloat(heat_map_element).toFixed(3));
 			} 
 
 			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
 
 			console.log(all_channels_obj);
 			console.log(all_channels_obj_year);
+
+			for (var site in all_sites_obj){
+				var channels = getChannelOfLocation(site);
+				for(var channel in channels){
+					if (!isNaN(all_channels_obj[channel])){
+						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channel];
+					}
+					if (!isNaN(all_channels_obj_year[channel])){
+						all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channel];
+					}
+				}
+			}
+
+			console.log(all_sites_obj);
+			console.log(all_sites_obj_year);
+
+
+
 		  },
 		});
 
