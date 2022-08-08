@@ -825,6 +825,7 @@
 			    for (var x of all_sites){
 			    	all_sites_obj[x] = 0;
 			    }
+			    console.log(all_sites_obj);
 				return all_sites_obj;
 			  }
 			});
@@ -857,7 +858,7 @@
 
 
 	    var all_sites_obj = getSites(); //Obj类型
-	    console.log(all_sites_obj);
+
 
 	    var meter_channels = getAllChannel(meter_location);
 
