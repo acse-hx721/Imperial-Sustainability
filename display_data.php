@@ -1074,7 +1074,7 @@
 	 	sum_counter = 0;
 
 	 	$("#buildingChart").hide();
-	 	if (meter_location == "campus"){ {
+	 	if (meter_location == "campus"){
 				$("#buildingChart").show();
 		}
 
