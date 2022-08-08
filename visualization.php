@@ -263,7 +263,7 @@
 </thead>
 <tbody>
   <tr>
-    <td class="tg-lboi"><a href="display_data.php?id=electricity,null,Princes Gardens (inc Garden Hall)">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
+    <td class="tg-lboi"><a href="display_data.php?id=electricity,null,8-15 Princes Gardens (inc Garden Hall)">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
     <td class="tg-cly1"><a href="display_data.php?id=electricity,sk-nor-101-sip1.ad.ic.ac.uk_Device_5,null">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
   </tr>
   <tr>
