@@ -254,17 +254,17 @@
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
-<table id="electricity" class="tg">
+<table id="electricity" border="1" align="center" class="tg">
 <thead>
   <tr>
-    <th class="tg-0lax">South Kensington Campus</th>
+    <th class="tg-0lax"><a href="display_data.php?id=electricity,1200010081620,campus">South Kensington Campus</th>
     <th class="tg-0lax"></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-lboi">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
-    <td class="tg-cly1">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
+    <td class="tg-lboi"><a href="display_data.php?id=electricity,null,Princes Gardens (inc Garden Hall)">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
+    <td class="tg-cly1"><a href="display_data.php?id=electricity,sk-nor-101-sip1.ad.ic.ac.uk_Device_5,null">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
   </tr>
   <tr>
     <td class="tg-cly1"></td>
