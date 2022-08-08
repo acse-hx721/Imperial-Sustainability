@@ -813,7 +813,7 @@
 			  download: true,
 			  // Do things after reading data
 			  complete: function(results) {
-			    console.log(results);
+			    // console.log(results);
 			    location_data = results.data;
 			    for (var index=0; index < location_data.length; index++) {
 			    	const element = location_data[index];
@@ -835,7 +835,7 @@
 			  download: true,
 			  // Do things after reading data
 			  complete: function(results) {
-			    console.log(results);
+			    // console.log(results);
 			    location_data = results.data;
 			    for (var index=0; index < location_data.length; index++) {
 					const element = location_data[index];
@@ -851,9 +851,13 @@
 	    }
 
 
-	    var all_sites = getSites();
+	    var all_sites = getSites(); //Set类型
 	    console.log(all_sites);
-	    let all_sites_obj = {...all_sites}
+	    var all_sites_obj = {};
+	    for (var x of all_sites){
+	    	all_sites_obj[x] = 0;
+	    }
+
 	    console.log(all_sites_obj);
 	    var meter_channels = getAllChannel(meter_location);
 
