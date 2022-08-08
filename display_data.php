@@ -806,36 +806,44 @@
 
         var all_sites_obj = {}; //Obj类型
 	    var all_channels_obj = {}; //Obj类型
+
+	    var all_sites_obj_year = {}; //Obj类型
+	    var all_channels_obj_year = {}; //Obj类型
+
         var all_sites = new Set();
         var all_channels = new Set();
 
         // Read location file
-        Papa.parse(location_file_name, {
-		  header: true,
-		  download: true,
-		  // Do things after reading data
-		  complete: function(results) {
-		    // console.log(results);
-		    location_data = results.data;
-		    for (var index=0; index < location_data.length; index++) {
-		    	const element = location_data[index];
-		    	if (element["SIT:<name>"] != ""){
-					all_sites.add(element["SIT:<name>"]);
+        if (meter_location == "campus"){
+	        Papa.parse(location_file_name, {
+			  header: true,
+			  download: true,
+			  // Do things after reading data
+			  complete: function(results) {
+			    // console.log(results);
+			    location_data = results.data;
+			    for (var index=0; index < location_data.length; index++) {
+			    	const element = location_data[index];
+			    	if (element["SIT:<name>"] != ""){
+						all_sites.add(element["SIT:<name>"]);
+					}
+					if (element["CHN:<channelID>"] != ""){
+						all_channels.add(element["CHN:<channelID>"]);
+					}
 				}
-				if (element["CHN:<channelID>"] != ""){
-					all_channels.add(element["CHN:<channelID>"]);
-				}
-			}
-		    for (var x of all_sites){
-		    	all_sites_obj[x] = 0;
-		    }
-		    for (var x of all_channels){
-		    	all_channels_obj[x] = 0;
-		    }
-		    console.log(all_sites_obj);
-		    console.log(all_channels_obj);
-		  }
-		});
+			    for (var x of all_sites){
+			    	all_sites_obj[x] = 0;
+			    	all_sites_obj_year[x] = 0;
+			    }
+			    for (var x of all_channels){
+			    	all_channels_obj[x] = 0;
+			    	all_channels_obj_year[x] = 0;
+			    }
+			    console.log(all_sites_obj);
+			    console.log(all_channels_obj);
+			  }
+			});
+	    }
 
 
 
@@ -1015,6 +1023,12 @@
 				}
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
 					this_year_week_data.push(one_data['Value']);
+					// 累计计算这周的每个channel消耗
+					for (var x in elem){
+						if (x != 'Date' || x != 'Time'){
+							all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
+						}
+					}
 				}
 
 				// Store each day data of last year and last last year
@@ -1027,6 +1041,13 @@
 						last_year_day_sum = 0;
 						last_year_day_counter = 0;
 					}
+					// 累计计算去年的每个channel消耗
+					for (var x in elem){
+						if (x != 'Date' || x != 'Time'){
+							all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
+						}
+					}
+
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
 					last_last_year_day_sum = last_last_year_day_sum + parseFloat(one_data['Value']);
@@ -1115,6 +1136,9 @@
 			} 
 
 			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
+
+			console.log(all_channels_obj);
+			console.log(all_channels_obj_year);
 		  },
 		});
 
