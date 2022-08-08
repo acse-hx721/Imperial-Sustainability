@@ -1154,10 +1154,10 @@
 				var channels = getChannelOfLocation(site);
 				for(var channel in channels){
 					if (!isNaN(all_channels_obj[channel])){
-						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channel];
+						all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channel]);
 					}
 					if (!isNaN(all_channels_obj_year[channel])){
-						all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channel];
+						all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channel]);
 					}
 				}
 			}
