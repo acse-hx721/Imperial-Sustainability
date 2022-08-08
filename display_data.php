@@ -1156,15 +1156,15 @@
 					// console.log(site);
 					var channels = getChannelOfLocation(site);
 					// console.log(channels);
-					for(var i = 0; i < channels.length; i++){
-						console.log(channels[i]);
+					// for(var i = 0; i < channels.length; i++){
+						console.log(channels[0]);
 						// if (!isNaN(all_channels_obj[channels[i]])){
-						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[i]];
+						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[0]];
 						// }
 						// if (!isNaN(all_channels_obj_year[channels[i]])){
 						// 	all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[i]]);
 						// }
-					}
+					// }
 				}
 
 				console.log(all_sites_obj);
