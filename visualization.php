@@ -184,21 +184,10 @@
 	        	location_file_name = "data/location/gas_location_20220801.csv";
 	        }
 
-
-	        var all_sites_obj = {}; //Obj类型
-		    var all_channels_obj = {}; //Obj类型
-
-		    var all_sites_obj_year = {}; //Obj类型
-		    var all_channels_obj_year = {}; //Obj类型
-
-	        var all_sites = new Set();
-	        var all_channels = new Set();
-
 	        var sites_channels = {};
 
 	        // Read location file
-	        if (meter_location == "campus"){
-		        Papa.parse(location_file_name, {
+	        Papa.parse(location_file_name, {
 				  header: true,
 				  download: true,
 				  // Do things after reading data
@@ -206,14 +195,6 @@
 				    // console.log(results);
 				    location_data = results.data;
 				    for (var index=0; index < location_data.length; index++) {
-				    	const element = location_data[index];
-				    	if (element["SIT:<name>"] != ""){
-							all_sites.add(element["SIT:<name>"]);
-						}
-						if (element["CHN:<channelID>"] != ""){
-							all_channels.add(element["CHN:<channelID>"]);
-						}
-
 						if (sites_channels[element["SIT:<name>"]] == ""){
 							sites_channels[element["SIT:<name>"]] = element["CHN:<channelID>"];
 						}else{
@@ -234,7 +215,6 @@
 				    console.log(sites_channels);
 				  }
 				});
-		    }
 		</script>
 
 
