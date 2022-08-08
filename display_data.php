@@ -832,7 +832,9 @@
 					if (element["CHN:<channelID>"] != ""){
 						all_channels.add(element["CHN:<channelID>"]);
 					}
-					sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
+					if (element["CHN:<channelID>"] != "undefined"){
+						sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
+					}
 				}
 			    for (var x of all_sites){
 			    	all_sites_obj[x] = 0;
