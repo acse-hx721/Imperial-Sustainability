@@ -1147,23 +1147,27 @@
 
 			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
 
-			console.log(all_channels_obj);
-			console.log(all_channels_obj_year);
 
-			for (var site in all_sites_obj){
-				var channels = getChannelOfLocation(site);
-				for(var channel in channels){
-					if (!isNaN(all_channels_obj[channel])){
-						all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channel]);
-					}
-					if (!isNaN(all_channels_obj_year[channel])){
-						all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channel]);
+			if (meter_location == "campus"){
+				console.log(all_channels_obj);
+				console.log(all_channels_obj_year);
+
+				for (var site in all_sites_obj){
+					var channels = getChannelOfLocation(site);
+					console.log(channels);
+					for(var channel in channels){
+						if (!isNaN(all_channels_obj[channel])){
+							all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channel]);
+						}
+						if (!isNaN(all_channels_obj_year[channel])){
+							all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channel]);
+						}
 					}
 				}
-			}
 
-			console.log(all_sites_obj);
-			console.log(all_sites_obj_year);
+				// console.log(all_sites_obj);
+				// console.log(all_sites_obj_year);
+			}
 
 
 
