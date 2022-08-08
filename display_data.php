@@ -847,7 +847,7 @@
 
 
 
-        function getChannelOfLocation(meter_location){
+        function getChannelOfLocation(meter_site){
 	        var temp_meter_channels = [];
 
 	        // Read location file
@@ -860,7 +860,7 @@
 			    location_data = results.data;
 			    for (var index=0; index < location_data.length; index++) {
 					const element = location_data[index];
-					if (element["SIT:<name>"] == meter_location){
+					if (element["SIT:<name>"] == meter_site){
 						temp_meter_channels.push(element["CHN:<channelID>"]);
 					} else if (meter_location == "campus"){
 						temp_meter_channels.push(element["CHN:<channelID>"]);
