@@ -228,7 +228,7 @@
 		</script>
 
 		<!-- electricity -->
-		<table id="electricity" border="1" align="center">
+<!-- 		<table id="electricity" border="1" align="center">
 		    <tr>
 		        <td><a href="display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">sk-ele-101-sip1.ad.ic.ac.uk_Device_1</a></td>
 		        <td><a href="display_data.php?id=electricity,1200010050250,null">1200010050250</td>
@@ -242,7 +242,7 @@
 		        <td><a href="display_data.php?id=electricity,1200010081620,campus">South Kensington Campus</td>
 		        <td><a href="display_data.php?id=electricity,1200010081630,RSM">RSM</td>
 		    </tr>
-		</table>
+		</table> -->
 
 	<style type="text/css">
 		.tg  {border-collapse:collapse;border-spacing:0;}
