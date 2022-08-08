@@ -817,7 +817,9 @@
 			    location_data = results.data;
 			    for (var index=0; index < location_data.length; index++) {
 			    	const element = location_data[index];
-					all_sites.add(element["SIT:<name>"]);
+			    	if (element["SIT:<name>"] != ""){
+						all_sites.add(element["SIT:<name>"]);
+					}
 				}
 			  }
 			});
@@ -851,6 +853,8 @@
 
 	    var all_sites = getSites();
 	    console.log(all_sites);
+	    let all_sites_obj = {...all_sites}
+	    console.log(all_sites_obj);
 	    var meter_channels = getAllChannel(meter_location);
 
 
