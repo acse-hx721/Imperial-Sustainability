@@ -1172,7 +1172,7 @@
 							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
 						}
 						if (!isNaN(all_channels_obj_year[channels[k]])){
-							all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[k]]);
+							all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channels[k]];
 						}
 					}
 				}
