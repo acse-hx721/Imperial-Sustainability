@@ -1024,10 +1024,13 @@
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
 					this_year_week_data.push(one_data['Value']);
 					// 累计计算这周的每个channel消耗
-					for (var x in elem){
-						if (x != 'Date' || x != 'Time'){
-							all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
-							console.log(all_channels_obj[x]);
+					if (meter_location == "campus"){
+						for (var x in elem){
+							if (x != 'Date' || x != 'Time'){
+								if (isNaN(elem[x])){
+									all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
+								}
+							}
 						}
 					}
 				}
@@ -1043,12 +1046,15 @@
 						last_year_day_counter = 0;
 					}
 					// 累计计算去年的每个channel消耗
-					for (var x in elem){
-						if (x != 'Date' || x != 'Time'){
-							all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
+					if (meter_location == "campus"){
+						for (var x in elem){
+							if (x != 'Date' || x != 'Time'){
+								if (isNaN(elem[x])){
+									all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
+								}
+							}
 						}
 					}
-
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
 					last_last_year_day_sum = last_last_year_day_sum + parseFloat(one_data['Value']);
