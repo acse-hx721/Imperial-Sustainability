@@ -1155,9 +1155,8 @@
 				for (var site in all_sites_obj){
 					// console.log(site);
 					var channels = getChannelOfLocation(site);
-					console.log(channels);
-
-					for(var i in channels){
+					// console.log(channels);
+					for(var i = 0; i < channels.length; i++){
 						console.log(channels[i]);
 						// if (!isNaN(all_channels_obj[channels[i]])){
 						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[i]];
