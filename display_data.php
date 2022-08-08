@@ -831,10 +831,10 @@
 						all_channels.add(element["CHN:<channelID>"]);
 					}
 				}
-			    // for (var x of all_sites){
-			    // 	all_sites_obj[x] = 0;
-			    // 	all_sites_obj_year[x] = 0;
-			    // }
+			    for (var x of all_sites){
+			    	all_sites_obj[x] = 0;
+			    	all_sites_obj_year[x] = 0;
+			    }
 			    for (var x of all_channels){
 			    	all_channels_obj[x] = 0;
 			    	all_channels_obj_year[x] = 0;
@@ -1142,7 +1142,7 @@
 
 			for (var i = 0; i < 48 * 7; i++) {
 				var heat_map_element = [6 - parseInt(i/48), i%48, this_year_week_data[i]];
-				heat_map_data.push(parseFloat(heat_map_element));
+				heat_map_data.push(heat_map_element);
 			} 
 
 			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
@@ -1157,9 +1157,9 @@
 
 					for(var i in channels){
 						console.log(channels[i]);
-						if (!isNaN(all_channels_obj[channels[i]])){
-							all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channels[i]]);
-						}
+						// if (!isNaN(all_channels_obj[channels[i]])){
+						all_sites_obj[site] = all_sites_obj[site] + parseFloat(all_channels_obj[channels[i]]);
+						// }
 						if (!isNaN(all_channels_obj_year[channels[i]])){
 							all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[i]]);
 						}
