@@ -813,6 +813,8 @@
         var all_sites = new Set();
         var all_channels = new Set();
 
+        var sites_channels = {};
+
         // Read location file
         if (meter_location == "campus"){
 	        Papa.parse(location_file_name, {
@@ -830,6 +832,7 @@
 					if (element["CHN:<channelID>"] != ""){
 						all_channels.add(element["CHN:<channelID>"]);
 					}
+					sites_channels[element["SIT:<name>"]] = sites_channels[element["SIT:<name>"]] + "," + element["CHN:<channelID>"];
 				}
 			    for (var x of all_sites){
 			    	all_sites_obj[x] = 0;
@@ -841,6 +844,7 @@
 			    }
 			    console.log(all_sites_obj);
 			    console.log(all_channels_obj);
+			    console.log(sites_channels);
 			  }
 			});
 	    }
@@ -1155,9 +1159,7 @@
 					console.log(site);
 					var channels = getChannelOfLocation(site);
 					console.log(channels);
-					while(channels.length == 0){
-						console.log(channels);
-					};
+
 					for(var k = 0; k < channels.length; k++){
 						console.log(channels[k]);
 						// if (!isNaN(all_channels_obj[channels[i]])){
