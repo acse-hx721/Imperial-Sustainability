@@ -1156,15 +1156,15 @@
 					// console.log(site);
 					var channels = getChannelOfLocation(site);
 					// console.log(channels);
-					// for(var i = 0; i < channels.length; i++){
-						console.log(channels[0]);
+					for(var k = 0; k < arr.length; k++){
+						console.log(channels[k]);
 						// if (!isNaN(all_channels_obj[channels[i]])){
-						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[0]];
+						all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
 						// }
 						// if (!isNaN(all_channels_obj_year[channels[i]])){
 						// 	all_sites_obj_year[site] = all_sites_obj_year[site] + parseFloat(all_channels_obj_year[channels[i]]);
 						// }
-					// }
+					}
 				}
 
 				console.log(all_sites_obj);
