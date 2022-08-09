@@ -180,11 +180,11 @@
     	<div id="channelPieChartWeek" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	function drawChannelPieChartWeek(this_site_channel_obj, unit){
-	        var channelPieChartWeek = echarts.init(document.getElementById('channelPieChartWeek');
+	        var channelPieChartWeek = echarts.init(document.getElementById('channelPieChartWeek'));
 			option = {
 			  title: {
 			    text: 'Meter consumption over the past 7 days',
-			    subtext: meter_type,
+			    subtext: meter_type + "("+unit+")",
 			    left: 'center'
 			  },
 			  tooltip: {
