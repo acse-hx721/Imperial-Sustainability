@@ -233,9 +233,9 @@
 					str += "<thead>";
 					str += "<tr>";
 					if (meter_type == "electricity"){
-					    str += "<th class='tg-0lax'><a href='display_data.php?id=electricity,null,campus'><b>South Kensington Campus</b></th>";
+					    str += "<th class='tg-0lax'><a href='display_data.php?id=electricity,null,campus'><h3><b>South Kensington Campus</b></h3></th>";
 					}else if (meter_type == "gas"){
-						str += "<th class='tg-0lax'><a href='display_data.php?id=gas,null,campus'><b>South Kensington Campus</b></th>";
+						str += "<th class='tg-0lax'><a href='display_data.php?id=gas,null,campus'><h3><b>South Kensington Campus</b></h3></th>";
 					}
 					    str += "<th class='tg-0lax'></th>"
 					  str += "</tr>";
