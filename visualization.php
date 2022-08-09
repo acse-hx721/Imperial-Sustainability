@@ -172,6 +172,16 @@
 
 		</script>
 
+
+		<h1 class="text-center" id="meter_type_title"></span></h1>
+
+		<script>
+		var a=GetRequest();
+		var meter_type = a['type'];
+		document.getElementById("meter_type_title").innerHTML = meter_type;
+		</script>
+
+
 		<script type="text/javascript">
 			// Meter channels in a building
 	        var location_file_name;
@@ -202,29 +212,9 @@
 						}
 						
 					}
-				    for (var x of all_sites){
-				    	all_sites_obj[x] = 0;
-				    	all_sites_obj_year[x] = 0;
-				    }
-				    for (var x of all_channels){
-				    	all_channels_obj[x] = 0;
-				    	all_channels_obj_year[x] = 0;
-				    }
-				    console.log(all_sites_obj);
-				    console.log(all_channels_obj);
 				    console.log(sites_channels);
 				  }
 				});
-		</script>
-
-
-
-		<h1 class="text-center" id="meter_type_title"></span></h1>
-
-		<script>
-		var a=GetRequest();
-		var meter_type = a['type'];
-		document.getElementById("meter_type_title").innerHTML = meter_type;
 		</script>
 
 		<!-- electricity -->
@@ -262,7 +252,30 @@
   </tr>
 </thead>
 <tbody>
-  <tr>
+
+
+
+
+
+<script>
+	var str = "";
+
+    for (var site in sites_channels){
+    	str += "<tr>";
+    	var channels = sites_channels[site].split(",");
+            for(var j = 1; j < channels.length; j++){
+            	if (j == 1){
+            		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'>" + site + "</td>";
+            	}else{
+            		str += "<td class='tg-cly1'></td>";
+            	}
+            	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ","+ site +"'>" + site + "</td>";
+            }
+        str += "</tr>";
+    }
+    document.write(str);
+</script>
+  <!-- <tr>
     <td class="tg-lboi"><a href="display_data.php?id=electricity,null,8-15 Princes Gardens (inc Garden Hall)">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
     <td class="tg-cly1"><a href="display_data.php?id=electricity,sk-nor-101-sip1.ad.ic.ac.uk_Device_5,null">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
   </tr>
@@ -957,7 +970,7 @@
   <tr>
     <td class="tg-cly1">William Penney</td>
     <td class="tg-cly1">sk-she-101-sip1.ad.ic.ac.uk_Device_5</td>
-  </tr>
+  </tr> -->
 </tbody>
 </table>
 
