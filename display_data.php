@@ -1176,11 +1176,19 @@
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
 					this_year_week_data.push(one_data['Value']);
 					// 累计计算这周的每个channel消耗
-					if (meter_location == "campus"){
-						for (var x in elem){
+					
+					for (var x in elem){
+						if (meter_location == "campus"){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x])){
 									all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
+								}
+							}
+						}
+						else if (meter_location != "campus" && meter_location != "null"){
+							if (x != 'Date' && x != 'Time'){
+								if (!isNaN(elem[x]) && meter_channels.indexOf(x) != -1){
+									this_site_channel_obj[x] = this_site_channel_obj[x] + parseFloat(elem[x]);
 								}
 							}
 						}
@@ -1341,7 +1349,7 @@
 				drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit);
 			}
 
-
+			console.log(this_site_channel_obj);
 
 		  },
 		});
