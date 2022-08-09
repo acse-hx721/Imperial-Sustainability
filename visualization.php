@@ -214,6 +214,37 @@
 						
 					}
 				    console.log(sites_channels);
+
+				    var str = "";
+				    str += "<table id='electricity' border='1' align='center' class='tg'>";
+					str += "<thead>";
+					str += "<tr>";
+					    str += "<th class='tg-0lax'><a href='display_data.php?id=electricity,1200010081620,campus'>South Kensington Campus</th>";
+					    str += "<th class='tg-0lax'></th>"
+					  str += "</tr>";
+					str += "</thead>";
+					str += "<tbody>";
+
+						
+					    for (var site in sites_channels){
+					    	var channels = sites_channels[site].split(",");
+					            for(var j = 1; j < channels.length; j++){
+					            	str += "<tr>";
+					            	if (j == 1){
+					            		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'>" + site + "</td>";
+					            	}else{
+					            		str += "<td class='tg-cly1'></td>";
+					            	}
+					            	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ",null'>" + channels[j] + "</td>";
+					            	str += "</tr>";
+					            }
+					    }
+					   
+					str += "</tbody>";
+					str += "</table>";
+					document.write(str);
+
+
 				  }
 				});
 		</script>
@@ -254,28 +285,25 @@
 </thead>
 <tbody>
 
-
-
-
-
 <script>
 	var str = "";
-
     for (var site in sites_channels){
-    	str += "<tr>";
     	var channels = sites_channels[site].split(",");
             for(var j = 1; j < channels.length; j++){
+            	str += "<tr>";
             	if (j == 1){
             		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'>" + site + "</td>";
             	}else{
             		str += "<td class='tg-cly1'></td>";
             	}
             	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ",null'>" + channels[j] + "</td>";
+            	str += "</tr>";
             }
-        str += "</tr>";
     }
     document.write(str);
 </script>
+</tbody>
+</table>
   <!-- <tr>
     <td class="tg-lboi"><a href="display_data.php?id=electricity,null,8-15 Princes Gardens (inc Garden Hall)">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
     <td class="tg-cly1"><a href="display_data.php?id=electricity,sk-nor-101-sip1.ad.ic.ac.uk_Device_5,null">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
