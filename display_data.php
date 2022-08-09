@@ -995,6 +995,16 @@
 	    var meter_channels = getChannelOfLocation(meter_location);
 
 
+	    var this_site_channel_obj = {};
+	    if (meter_location != "campus" && meter_location != "null"){
+	    	for (var x of meter_channels){
+			    	this_site_channel_obj[x] = 0;
+			}
+			console.log(this_site_channel_obj);
+	    }
+
+
+
         // Calculate the sum of this location
         function sumOfLocation(elem, channels){
         	var sum = 0;
