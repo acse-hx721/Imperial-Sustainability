@@ -183,8 +183,8 @@
 	        var channelPieChartWeek = echarts.init(document.getElementById('channelPieChartWeek');
 			option = {
 			  title: {
-			    text: 'Referer of a Website',
-			    subtext: 'Fake Data',
+			    text: 'Meter consumption over the past 7 days',
+			    subtext: meter_type,
 			    left: 'center'
 			  },
 			  tooltip: {
@@ -212,6 +212,7 @@
 			};
 			channelPieChartWeek.setOption(option);
 		}
+		
 		</script>
 
     	<div id="buildingChart" style="width: 100%; height:500px; float:center; "></div>
