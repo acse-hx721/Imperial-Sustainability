@@ -134,7 +134,8 @@
 
 
 		<br><br><br><br><br><br><br>
-		
+
+
 
 
 		<script type="text/javascript">
@@ -173,6 +174,44 @@
 		}
 
 		
+		</script>
+
+
+    	<div id="channelPieChartWeek" style="width: 100%; height:500px; float:center; "></div>
+    	<script type="text/javascript">
+    	function drawChannelPieChartWeek(this_site_channel_obj, unit){
+	        var channelPieChartWeek = echarts.init(document.getElementById('channelPieChartWeek');
+			option = {
+			  title: {
+			    text: 'Referer of a Website',
+			    subtext: 'Fake Data',
+			    left: 'center'
+			  },
+			  tooltip: {
+			    trigger: 'item'
+			  },
+			  legend: {
+			    orient: 'vertical',
+			    left: 'left'
+			  },
+			  series: [
+			    {
+			      name: 'Access From',
+			      type: 'pie',
+			      radius: '50%',
+			      data: this_site_channel_obj,
+			      emphasis: {
+			        itemStyle: {
+			          shadowBlur: 10,
+			          shadowOffsetX: 0,
+			          shadowColor: 'rgba(0, 0, 0, 0.5)'
+			        }
+			      }
+			    }
+			  ]
+			};
+			channelPieChartWeek.setOption(option);
+		}
 		</script>
 
     	<div id="buildingChart" style="width: 100%; height:500px; float:center; "></div>
@@ -1102,9 +1141,12 @@
 
 	 	$("#buildingChart").hide();
 	 	$("#buildingChartYear").hide();
+	 	$("#channelPieChartWeek").hide();
 	 	if (meter_location == "campus"){
 			$("#buildingChart").show();
 			$("#buildingChartYear").show();
+		}else if (meter_location != "campus" && meter_location != "null"){
+			$("#channelPieChartWeek").show();
 		}
 
 
@@ -1347,9 +1389,11 @@
 				drawBuildingChart(all_sites_obj, all_sites_obj_week, unit);
 
 				drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit);
+			}else if (meter_location != "campus" && meter_location != "null"){
+				console.log(this_site_channel_obj);
+				drawChannelPieChartWeek(this_site_channel_obj, unit);
 			}
 
-			console.log(this_site_channel_obj);
 
 		  },
 		});
