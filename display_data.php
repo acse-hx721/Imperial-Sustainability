@@ -989,8 +989,8 @@
 			  }
 			});
 			if (meter_location != "campus" && meter_location != "null"){
-		    	for (var x of temp_meter_channels){
-				    	this_site_channel_obj[x] = 0;
+		    	for (var x in temp_meter_channels){
+				    	this_site_channel_obj[temp_meter_channels[x]] = 0;
 				}
 				console.log(this_site_channel_obj);
 	    	}
