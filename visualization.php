@@ -251,7 +251,7 @@
 					            	}
 					            	str += "<tr>";
 					            	if (j == 1){
-					            		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'>" + site + "</td>";
+					            		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'><b>" + site + "</b></td>";
 					            	}else{
 					            		str += "<td class='tg-cly1'></td>";
 					            	}
