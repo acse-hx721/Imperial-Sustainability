@@ -242,7 +242,9 @@
 					   
 					str += "</tbody>";
 					str += "</table>";
-					document.write(str);
+					document.open("text/html","replace");//加上
+				    document.write(str);
+				    document.close();//加上
 
 
 				  }
