@@ -269,7 +269,7 @@
             	}else{
             		str += "<td class='tg-cly1'></td>";
             	}
-            	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ","+ site +"'>" + channels[j] + "</td>";
+            	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ",null'>" + channels[j] + "</td>";
             }
         str += "</tr>";
     }
