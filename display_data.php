@@ -986,14 +986,16 @@
 						temp_meter_channels.push(element["CHN:<channelID>"]);
 					}
 				}
+
+				if (meter_location != "campus" && meter_location != "null"){
+			    	for (var x = 0; x <temp_meter_channels.length; x++){
+					    this_site_channel_obj[temp_meter_channels[x]] = 0;
+					}
+					console.log(this_site_channel_obj);
+	    		}
 			  }
 			});
-			if (meter_location != "campus" && meter_location != "null"){
-		    	for (var x = 0; x <temp_meter_channels.length; x++){
-				    	this_site_channel_obj[temp_meter_channels[x]] = 0;
-				}
-				console.log(this_site_channel_obj);
-	    	}
+			
 			return temp_meter_channels;
 	    }
 
