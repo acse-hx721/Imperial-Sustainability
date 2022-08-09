@@ -205,6 +205,7 @@
 				    // console.log(results);
 				    location_data = results.data;
 				    for (var index=0; index < location_data.length; index++) {
+				    	const element = location_data[index];
 						if (sites_channels[element["SIT:<name>"]] == ""){
 							sites_channels[element["SIT:<name>"]] = element["CHN:<channelID>"];
 						}else{
