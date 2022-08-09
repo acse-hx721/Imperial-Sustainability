@@ -192,7 +192,7 @@
 		.tg .tg-0lax{text-align:left;vertical-align:top}
 		</style>
 
-		<div id="table"></div>
+		<div id="site_channel_table"></div>
 
 
 		<script type="text/javascript">
@@ -255,7 +255,7 @@
 					   
 					str += "</tbody>";
 					str += "</table>";
-					document.getElementById('mb_ad').innerHTML = str;
+					document.getElementById('site_channel_table').innerHTML = str;
 
 
 				  }
