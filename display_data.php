@@ -181,6 +181,15 @@
     	<script type="text/javascript">
     	function drawChannelPieChartWeek(this_site_channel_obj, unit){
 	        var channelPieChartWeek = echarts.init(document.getElementById('channelPieChartWeek'));
+
+	        var pie_data = [];
+	        for (var x in this_site_channel_obj){
+	        	var pie_obj = {};
+	        	pie_obj["name"] = x;
+	        	pie_obj["value"] = this_site_channel_obj[x];
+	        	pie_data.push(pie_obj);
+	        }
+
 			option = {
 			  title: {
 			    text: 'Meter consumption over the past 7 days',
@@ -196,10 +205,10 @@
 			  },
 			  series: [
 			    {
-			      name: 'Access From',
+			      name: 'Electricity Data',
 			      type: 'pie',
 			      radius: '50%',
-			      data: this_site_channel_obj,
+			      data: pie_data,
 			      emphasis: {
 			        itemStyle: {
 			          shadowBlur: 10,
