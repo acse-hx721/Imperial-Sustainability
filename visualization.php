@@ -181,6 +181,19 @@
 		document.getElementById("meter_type_title").innerHTML = meter_type;
 		</script>
 
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+		  overflow:hidden;padding:10px 5px;word-break:normal;}
+		.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+		  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+		.tg .tg-cly1{text-align:left;vertical-align:middle}
+		.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+		.tg .tg-0lax{text-align:left;vertical-align:top}
+		</style>
+
+		<div id="table"></div>
+
 
 		<script type="text/javascript">
 			// Meter channels in a building
@@ -242,9 +255,7 @@
 					   
 					str += "</tbody>";
 					str += "</table>";
-					document.open("text/html","replace");//加上
-				    document.write(str);
-				    document.close();//加上
+					document.getElementById('mb_ad').innerHTML = str;
 
 
 				  }
@@ -268,17 +279,8 @@
 		    </tr>
 		</table> -->
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table id="electricity" border="1" align="center" class="tg">
+
+<!-- <table id="electricity" border="1" align="center" class="tg">
 <thead>
   <tr>
     <th class="tg-0lax"><a href="display_data.php?id=electricity,1200010081620,campus">South Kensington Campus</th>
@@ -305,7 +307,7 @@
     document.write(str);
 </script>
 </tbody>
-</table>
+</table> -->
   <!-- <tr>
     <td class="tg-lboi"><a href="display_data.php?id=electricity,null,8-15 Princes Gardens (inc Garden Hall)">8-15&nbsp;&nbsp;&nbsp;Princes Gardens (inc Garden Hall)</td>
     <td class="tg-cly1"><a href="display_data.php?id=electricity,sk-nor-101-sip1.ad.ic.ac.uk_Device_5,null">sk-nor-101-sip1.ad.ic.ac.uk_Device_5</td>
