@@ -175,103 +175,9 @@
 		
 		</script>
 
-
-		<!-- <div id="elecWeekChart" style="width: 100%; height:500px; float:center; "></div>
-    	<script type="text/javascript">
-        var elecWeekChart = echarts.init(document.getElementById('elecWeekChart'));
-
-        option = {
-		  title: {
-		    text: 'Electricity Week Chart'
-		  },
-		  tooltip: {
-		    trigger: 'axis',
-		    axisPointer: {
-		      type: 'cross',
-		      label: {
-		        backgroundColor: '#6a7985'
-		      }
-		    }
-		  },
-		  legend: {
-		  },
-		  toolbox: {
-		    feature: {
-		      restore: {},
-		      saveAsImage: {}
-		    }
-		  },
-		  grid: {
-		    left: '3%',
-		    right: '4%',
-		    bottom: '3%',
-		    containLabel: true
-		  },
-		  xAxis: [
-		    {
-		      type: 'category',
-		      boundaryGap: false,
-		      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-		    }
-		  ],
-		  yAxis: [
-		    {
-		      type: 'value'
-		    }
-		  ],
-		  series: [
-		    {
-		      name: 'Fake 2021 electric Data',
-		      type: 'line',
-		      // stack: 'Total',
-		      areaStyle: {
-		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-		          {
-		            offset: 0,
-		            color: 'rgb(255, 158, 68)'
-		          },
-		          {
-		            offset: 1,
-		            color: 'rgb(255, 70, 131)'
-		          }
-		        ]),
-		      },
-		      emphasis: {
-		        focus: 'series'
-		      },
-		      data: [120, 132, 101, 134, 90, 230, 210, 120, 132, 101, 134, 90, 230, 210]
-		    },
-		    {
-		      name: 'Fake 2022 electric Data',
-		      type: 'line',
-		      // stack: 'Total',
-		      areaStyle: {
-		        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-		          {
-		            offset: 0,
-		            color: 'rgb(123, 104, 238)'
-		          },
-		          {
-		            offset: 1,
-		            color: 'rgb(0, 191, 255)'
-		          }
-		        ]),
-		        opacity: 0.3
-		      },
-		      emphasis: {
-		        focus: 'series'
-		      },
-		      data: [220, 182, 191, 234, 290, 330, 310, 220, 182, 191, 234, 290, 330, 310]
-		    }
-		  ]
-		};
-        elecWeekChart.setOption(option);
-
-    	</script> -->
-
     	<div id="buildingChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-    	function drawBuildingChart(all_sites_obj, all_sites_obj_year, last_year, unit){
+    	function drawBuildingChart(all_sites_obj, all_sites_obj_week, unit){
 	        var buildingChart = echarts.init(document.getElementById('buildingChart'));
 
 	        option = {
@@ -296,7 +202,7 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', 'Last 7 Days Accumulated Consumption', last_year + "Accumulated Consumption"],
+		        data: ['Growth', "Last year's 7 Days Accumulated Consumption", 'Last 7 Days Accumulated Consumption'],
 		        itemGap: 5
 		      },
 		      grid: {
@@ -346,14 +252,14 @@
 		      ],
 		      series: [
 		        {
+		          name: "Last year's 7 Days Accumulated Consumption",
+		          type: 'bar',
+		          data: Object.values(all_sites_obj_week)
+		        },
+		        {
 		          name: 'Last 7 Days Accumulated Consumption',
 		          type: 'bar',
 		          data: Object.values(all_sites_obj)
-		        },
-		        {
-		          name: last_year + "Accumulated Consumption",
-		          type: 'bar',
-		          data: Object.values(all_sites_obj_year)
 		        }
 		      ]
 		    };
@@ -482,6 +388,101 @@
 		};
 
 		</script>
+
+
+		<div id="buildingChartYear" style="width: 100%; height:500px; float:center; "></div>
+    	<script type="text/javascript">
+    	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit){
+	        var buildingChartYear = echarts.init(document.getElementById('buildingChartYear'));
+
+	        option = {
+		      tooltip: {
+		        trigger: 'axis',
+		        axisPointer: {
+		          type: 'shadow',
+		          label: {
+		            show: true
+		          }
+		        }
+		      },
+		      toolbox: {
+		        show: true,
+		        feature: {
+		          mark: { show: true },
+		          dataView: { show: true, readOnly: false },
+		          magicType: { show: true, type: ['line', 'bar'] },
+		          restore: { show: true },
+		          saveAsImage: { show: true }
+		        }
+		      },
+		      calculable: true,
+		      legend: {
+		        data: ['Growth', last_last_year + "Accumulated Consumption", last_year + "Accumulated Consumption"],
+		        itemGap: 5
+		      },
+		      grid: {
+		        top: '12%',
+		        left: '1%',
+		        right: '10%',
+		        containLabel: true
+		      },
+		      xAxis: [
+		        {
+		          type: 'category',
+		          data: Object.keys(all_sites_obj)
+		        }
+		      ],
+		      yAxis: [
+		        {
+		          type: 'value',
+		          name: unit,
+		          axisLabel: {
+		            formatter: function (a) {
+		              a = +a;
+		              return isFinite(a) ? echarts.format.addCommas(+a / 1000) : '';
+		            }
+		          }
+		        }
+		      ],
+		      dataZoom: [
+		        {
+		          show: true,
+		          start: 94,
+		          end: 100
+		        },
+		        {
+		          type: 'inside',
+		          start: 94,
+		          end: 100
+		        },
+		        {
+		          show: true,
+		          yAxisIndex: 0,
+		          filterMode: 'empty',
+		          width: 30,
+		          height: '80%',
+		          showDataShadow: false,
+		          left: '93%'
+		        }
+		      ],
+		      series: [
+		        {
+		          name: last_last_year + "Accumulated Consumption",
+		          type: 'bar',
+		          data: Object.values(all_sites_obj_last_year)
+		        },
+		        {
+		          name: last_year + "Accumulated Consumption",
+		          type: 'bar',
+		          data: Object.values(all_sites_obj_year)
+		        }
+		      ]
+		    };
+		    buildingChartYear.setOption(option);
+
+	    }
+		</script>
+
 		<br/>
 		<br/>
 		<br/>
@@ -600,6 +601,9 @@
 		};
 
 		</script>
+
+		
+
 		<br/>
 		<br/>
 		<br/>
@@ -902,8 +906,14 @@
         var all_sites_obj = {}; //Obj类型
 	    var all_channels_obj = {}; //Obj类型
 
+	    var all_sites_obj_week = {}; //Obj类型
+	    var all_channels_obj_week = {}; //Obj类型
+
 	    var all_sites_obj_year = {}; //Obj类型
 	    var all_channels_obj_year = {}; //Obj类型
+
+	   	var all_sites_obj_last_year = {}; //Obj类型
+	    var all_channels_obj_last_year = {}; //Obj类型
 
         var all_sites = new Set();
         var all_channels = new Set();
@@ -937,11 +947,16 @@
 				}
 			    for (var x of all_sites){
 			    	all_sites_obj[x] = 0;
+			    	all_sites_obj_week[x] = 0;
 			    	all_sites_obj_year[x] = 0;
+			    	all_sites_obj_last_year[x] = 0;
 			    }
 			    for (var x of all_channels){
 			    	all_channels_obj[x] = 0;
+			    	all_channels_obj_week[x] = 0;
 			    	all_channels_obj_year[x] = 0;
+			    	all_channels_obj_last_year[x] = 0;
+
 			    }
 			    console.log(all_sites_obj);
 			    console.log(all_channels_obj);
@@ -1072,10 +1087,13 @@
 
 
 	 	sum_counter = 0;
+	 	sum_counter_last_year = 0;
 
 	 	$("#buildingChart").hide();
+	 	$("#buildingChartYear").hide();
 	 	if (meter_location == "campus"){
-				$("#buildingChart").show();
+			$("#buildingChart").show();
+			$("#buildingChartYear").show();
 		}
 
 
@@ -1133,6 +1151,16 @@
 				var current_datetime = new Date(current_datetime_str);
 				if (current_datetime >= previous_year_week_datetime && previous_year_week_data.length <= 48 * 7){
 					previous_year_week_data.push(one_data['Value']);
+					// 累计计算去年这周的每个channel消耗
+					if (meter_location == "campus"){
+						for (var x in elem){
+							if (x != 'Date' && x != 'Time'){
+								if (!isNaN(elem[x])){
+									all_channels_obj_week[x] = all_channels_obj_week[x] + parseFloat(elem[x]);
+								}
+							}
+						}
+					}
 				}
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
 					this_year_week_data.push(one_data['Value']);
@@ -1179,6 +1207,17 @@
 						last_last_year_day_sum = 0;
 						last_last_year_day_counter = 0;
 					}
+				}
+				if (current_datetime >= start_of_last_last_year && sum_counter_last_year < 365 * 48 && meter_location == "campus"){
+					// 累计计算前年的每个channel消耗
+					for (var x in elem){
+						if (x != 'Date' && x != 'Time'){
+							if (!isNaN(elem[x])){
+								all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + parseFloat(elem[x]);
+							}
+						}
+					}
+					sum_counter_last_year = sum_counter_last_year + 1;
 				}
 
 				// Month bar chart
@@ -1272,15 +1311,23 @@
 						if (!isNaN(all_channels_obj[channels[k]])){
 							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
 						}
+						if (!isNaN(all_channels_obj_week[channels[k]])){
+							all_sites_obj_week[site] = all_sites_obj_week[site] + all_channels_obj_week[channels[k]];
+						}
 						if (!isNaN(all_channels_obj_year[channels[k]])){
 							all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channels[k]];
+						}
+						if (!isNaN(all_channels_obj_last_year[channels[k]])){
+							all_sites_obj_last_year[site] = all_sites_obj_last_year[site] + all_channels_obj_last_year[channels[k]];
 						}
 					}
 				}
 
 				console.log(all_sites_obj);
 				console.log(all_sites_obj_year);
-				drawBuildingChart(all_sites_obj, all_sites_obj_year, last_year, unit);
+				drawBuildingChart(all_sites_obj, all_sites_obj_week, unit);
+
+				drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit);
 			}
 
 
