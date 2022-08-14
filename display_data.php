@@ -1222,7 +1222,9 @@
 				if (float_data > 1000 * last_data || float_data > threshold || float_data < -threshold){
 					float_data = last_data;
 				}
-				last_data = float_data;
+				if (float_data != 0){
+					last_data = float_data;
+				}
 				console.log(float_data);
 
 
