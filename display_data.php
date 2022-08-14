@@ -1240,7 +1240,7 @@
 								if (!isNaN(elem[x])){
 									var float_num = parseFloat(elem[x]).toFixed(2);
 									float_num = parseFloat(float_num);
-									if (float_num < threshold || float_num > -threshold){
+									if (float_num < threshold && float_num > -threshold){
 										all_channels_obj_week[x] = all_channels_obj_week[x] + float_num;
 									}
 								}
@@ -1258,7 +1258,7 @@
 								if (!isNaN(elem[x])){
 									var float_num = parseFloat(elem[x]).toFixed(2);
 									float_num = parseFloat(float_num);
-									if (float_num < threshold || float_num > -threshold){
+									if (float_num < threshold && float_num > -threshold){
 										all_channels_obj[x] = all_channels_obj[x] + float_num;
 									}
 								}
@@ -1269,7 +1269,7 @@
 								if (!isNaN(elem[x]) && meter_channels.indexOf(x) != -1){
 									var float_num = parseFloat(elem[x]).toFixed(2);
 									float_num = parseFloat(float_num);
-									if (float_num < threshold || float_num > -threshold){
+									if (float_num < threshold && float_num > -threshold){
 										this_site_channel_obj[x] = this_site_channel_obj[x] + float_num;
 									}
 								}
@@ -1296,7 +1296,7 @@
 							if (!isNaN(elem[x])){
 								var float_num = parseFloat(elem[x]).toFixed(2);
 								float_num = parseFloat(float_num);
-								if (float_num < threshold || float_num > -threshold){
+								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + float_num;
 								}
 							}
@@ -1321,7 +1321,7 @@
 							if (!isNaN(elem[x])){
 								var float_num = parseFloat(elem[x]).toFixed(2);
 								float_num = parseFloat(float_num);
-								if (float_num < threshold || float_num > -threshold){
+								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + float_num;
 								}
 							}
