@@ -1135,8 +1135,8 @@
 
 // Data error handle
 	 	// The number of the latest one
-	 	var last_data = 1000000;
-	 	var threshold = 1000000;
+	 	var last_data = 100000;
+	 	var threshold = 100000;
 	 	// The number of the latest one for each building
 
 	 	// var all_campus_data;
@@ -1214,7 +1214,7 @@
 						Value: elem[meter_id],
 					};
 				}
-				console.log(one_data['Value']);
+				// console.log(one_data['Value']);
 				var float_data = parseFloat(one_data['Value']);
 
 				float_data = float_data.toFixed(2);
@@ -1225,7 +1225,7 @@
 				if (float_data != 0){
 					last_data = float_data;
 				}
-				console.log(float_data);
+				// console.log(float_data);
 
 
 				// Calculate data of latest week for this year and previous year
