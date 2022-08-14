@@ -1132,6 +1132,13 @@
 	 	var current_month2 = 0;
 	 	var month_last_loop2 = 0;
 
+
+// Data error handle
+	 	// The number of the latest one
+	 	var last_data = 100000;
+	 	var threshold = 100000;
+	 	// The number of the latest one for each building
+
 	 	// var all_campus_data;
 
 	 	var filename;
@@ -1208,12 +1215,20 @@
 					};
 				}
 
+				var float_data = parseFloat(one_data['Value']);
+				float_data = float_data.toFixed(2);
+				float_data = parseFloat(float_data);
+				if (float_data > 100 * last_data && float_data > threshold && float_data < -threshold){
+					float_data = last_data;
+				}
+				last_data = float_data;
+
 
 				// Calculate data of latest week for this year and previous year
 				var current_datetime_str = '20' + elec_data[index]['Date'] + " " + elec_data[index]['Time'];
 				var current_datetime = new Date(current_datetime_str);
 				if (current_datetime >= previous_year_week_datetime && previous_year_week_data.length <= 48 * 7){
-					previous_year_week_data.push(one_data['Value']);
+					previous_year_week_data.push(float_data);
 					// 累计计算去年这周的每个channel消耗
 					if (meter_location == "campus"){
 						for (var x in elem){
@@ -1226,21 +1241,27 @@
 					}
 				}
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
-					this_year_week_data.push(one_data['Value']);
+					this_year_week_data.push(float_data);
 					// 累计计算这周的每个channel消耗
 					
 					for (var x in elem){
 						if (meter_location == "campus"){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x])){
-									all_channels_obj[x] = all_channels_obj[x] + parseFloat(elem[x]);
+									var float_num = parseFloat(elem[x]);
+									if (float_num < threshold && float_num > -threshold){
+										all_channels_obj[x] = all_channels_obj[x] + float_num;
+									}
 								}
 							}
 						}
 						else if (meter_location != "campus" && meter_location != "null"){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x]) && meter_channels.indexOf(x) != -1){
-									this_site_channel_obj[x] = this_site_channel_obj[x] + parseFloat(elem[x]);
+									var float_num = parseFloat(elem[x]);
+									if (float_num < threshold && float_num > -threshold){
+										this_site_channel_obj[x] = this_site_channel_obj[x] + float_num;
+									}
 								}
 							}
 						}
@@ -1249,7 +1270,7 @@
 
 				// Store each day data of last year and last last year
 				if (current_datetime >= start_of_last_year && last_year_data.length < 365){
-					last_year_day_sum = last_year_day_sum + parseFloat(one_data['Value']);
+					last_year_day_sum = last_year_day_sum + float_data;
 					last_year_day_counter = last_year_day_counter + 1;
 
 					if (last_year_day_counter == 48){
@@ -1263,14 +1284,17 @@
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x])){
-								all_channels_obj_year[x] = all_channels_obj_year[x] + parseFloat(elem[x]);
+								var float_num = parseFloat(elem[x]);
+								if (float_num < threshold && float_num > -threshold){
+									all_channels_obj_year[x] = all_channels_obj_year[x] + float_num;
+								}
 							}
 						}
 					}
 					sum_counter = sum_counter + 1;
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
-					last_last_year_day_sum = last_last_year_day_sum + parseFloat(one_data['Value']);
+					last_last_year_day_sum = last_last_year_day_sum + float_data;
 					last_last_year_day_counter = last_last_year_day_counter + 1;
 
 					if (last_last_year_day_counter == 48){
@@ -1284,7 +1308,10 @@
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x])){
-								all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + parseFloat(elem[x]);
+								var float_num = parseFloat(elem[x]);
+								if (float_num < threshold && float_num > -threshold){
+									all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + float_num;
+								}
 							}
 						}
 					}
@@ -1297,7 +1324,7 @@
 
 				if (current_datetime >= start_of_last_year && last_year_month_data.length < 12){
 					if (current_month1 == month_last_loop1){
-						last_year_month_sum = last_year_month_sum + parseFloat(one_data['Value']);
+						last_year_month_sum = last_year_month_sum + float_data;
 					}
 					else {
 						last_year_month_data.push(last_year_month_sum);
@@ -1307,7 +1334,7 @@
 				}
 				if (current_datetime >= start_of_last_last_year && last_last_year_month_data.length < 12){
 					if (current_month2 == month_last_loop2){
-						last_last_year_month_sum = last_last_year_month_sum + parseFloat(one_data['Value']);
+						last_last_year_month_sum = last_last_year_month_sum + float_data;
 					}
 					else {
 						last_last_year_month_data.push(last_last_year_month_sum);
