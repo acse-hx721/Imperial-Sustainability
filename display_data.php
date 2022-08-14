@@ -1135,8 +1135,8 @@
 
 // Data error handle
 	 	// The number of the latest one
-	 	var last_data = 100000;
-	 	var threshold = 100000;
+	 	var last_data = 1000000;
+	 	var threshold = 1000000;
 	 	// The number of the latest one for each building
 
 	 	// var all_campus_data;
@@ -1218,7 +1218,7 @@
 				var float_data = parseFloat(one_data['Value']);
 				float_data = float_data.toFixed(2);
 				float_data = parseFloat(float_data);
-				if (float_data > 100 * last_data && float_data > threshold && float_data < -threshold){
+				if (float_data > 1000 * last_data && float_data > threshold && float_data < -threshold){
 					float_data = last_data;
 				}
 				last_data = float_data;
@@ -1234,7 +1234,11 @@
 						for (var x in elem){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x])){
-									all_channels_obj_week[x] = all_channels_obj_week[x] + parseFloat(elem[x]);
+									var float_num = parseFloat(elem[x]).toFixed(2);
+									float_num = parseFloat(float_num);
+									if (float_num < threshold && float_num > -threshold){
+										all_channels_obj_week[x] = all_channels_obj_week[x] + float_num;
+									}
 								}
 							}
 						}
