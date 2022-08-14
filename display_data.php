@@ -1217,7 +1217,7 @@
 				// console.log(one_data['Value']);
 				var float_data = parseFloat(one_data['Value']);
 
-				float_data = float_data.toFixed(2);
+				float_data = float_data.toFixed(0);
 				float_data = parseFloat(float_data);
 				if (float_data > threshold * last_data || float_data > threshold || float_data < -threshold){
 					float_data = last_data;
@@ -1238,7 +1238,7 @@
 						for (var x in elem){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x])){
-									var float_num = parseFloat(elem[x]).toFixed(2);
+									var float_num = parseFloat(elem[x]).toFixed(0);
 									float_num = parseFloat(float_num);
 									if (float_num < threshold && float_num > -threshold){
 										all_channels_obj_week[x] = all_channels_obj_week[x] + float_num;
@@ -1256,7 +1256,7 @@
 						if (meter_location == "campus"){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x])){
-									var float_num = parseFloat(elem[x]).toFixed(2);
+									var float_num = parseFloat(elem[x]).toFixed(0);
 									float_num = parseFloat(float_num);
 									if (float_num < threshold && float_num > -threshold){
 										all_channels_obj[x] = all_channels_obj[x] + float_num;
@@ -1267,7 +1267,7 @@
 						else if (meter_location != "campus" && meter_location != "null"){
 							if (x != 'Date' && x != 'Time'){
 								if (!isNaN(elem[x]) && meter_channels.indexOf(x) != -1){
-									var float_num = parseFloat(elem[x]).toFixed(2);
+									var float_num = parseFloat(elem[x]).toFixed(0);
 									float_num = parseFloat(float_num);
 									if (float_num < threshold && float_num > -threshold){
 										this_site_channel_obj[x] = this_site_channel_obj[x] + float_num;
@@ -1294,7 +1294,7 @@
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x])){
-								var float_num = parseFloat(elem[x]).toFixed(2);
+								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + float_num;
@@ -1319,7 +1319,7 @@
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x])){
-								var float_num = parseFloat(elem[x]).toFixed(2);
+								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + float_num;
