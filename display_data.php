@@ -199,7 +199,7 @@
 		</thead>
 		<tbody>
 		  	<tr>
-			    <td class="tg-1wig">CO<sub>2</sub> emission (unit: t)</td>
+			    <td class="tg-1wig">CO<sub>2</sub>e emission (unit: t)</td>
 			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
 			    <td class="tg-0lax" id="table_seven_emision">Loading</td>
 			    <td class="tg-0lax" id="table_last_last_year_emision">Loading</td>
@@ -254,34 +254,22 @@
 		 	}
 		 	else if(meter_type == "gas"){
 		 		switch(year){
-				    case 2022: factor = 0.19338;
+				    case 2022: factor = 0.18;
 				        break;
-				    case 2021: factor = 0.21233;
+				    case 2021: factor = 0.18316;
 				        break;
-				    case 2020: factor = 0.23314;
+				    case 2020: factor = 0.18387;
 				        break;
-				    case 2019: factor = 0.2556;
+				    case 2019: factor = 0.18385;
 				        break;
-				    case 2018: factor = 0.28307;
+				    case 2018: factor = 0.18396;
 				        break;
-				    case 2017: factor = 0.35156;
+				    case 2017: factor = 0.184163989077374;
 				        break;
-				    case 2016: factor = 0.41205;
-				        break;
-				    case 2015: factor = 0.46219;
-				        break;
-				    case 2014: factor = 0.49426;
-				        break;
-				    case 2013: factor = 0.44548;
-				        break;
-				    case 2012: factor = 0.46002;
-				        break;
-				    case 2011: factor = 0.45205;
-				        break;
-				    case 2010: factor = 0.48531;
+				    case 2016: factor = 0.183996818181275;
 				        break;
 				    default:
-				        factor = 0.19338;
+				        factor = 0.18;
 				}
 		 	}
 		 	return factor;
@@ -1368,7 +1356,7 @@
 						Value: elem[meter_id],
 					};
 				}
-				console.log(one_data['Value']);
+				// console.log(one_data['Value']);
 				var float_data = parseFloat(one_data['Value']);
 
 				float_data = float_data.toFixed(0);
@@ -1381,8 +1369,8 @@
 						last_data = float_data;
 					}
 				// }
-				console.log(last_data);
-				console.log(float_data);
+				// console.log(last_data);
+				// console.log(float_data);
 
 
 				// Calculate data of latest week for this year and previous year
