@@ -1369,7 +1369,7 @@
 
 				float_data = float_data.toFixed(0);
 				float_data = parseFloat(float_data);
-				if (float_data > Math.abs(10000 * last_data) || float_data > threshold || float_data < -threshold){
+				if (float_data > Math.abs(100000 * last_data) || float_data > threshold || float_data < -threshold){
 					float_data = last_data;
 				}
 				if (float_data != 0){
