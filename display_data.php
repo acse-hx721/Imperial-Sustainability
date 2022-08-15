@@ -1292,10 +1292,14 @@
 	 	if (meter_type == "electricity"){
 	 		filename = "data/all_elec_data.csv";
 	 		unit = "kWh";
+	 		last_data = 100000;
+	 		threshold = 100000;
 	 	}
 	 	else if(meter_type == "gas"){
 	 		filename = "data/all_gas_data.csv";
-	 		unit = "m^3";
+	 		unit = "kWh";
+	 		last_data = 10000000;
+	 		threshold = 10000000;
 	 	}
 
 
