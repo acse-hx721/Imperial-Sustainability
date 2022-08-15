@@ -138,7 +138,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">Imperial College London <span>Sustainability</span></h1>
-							<p class="lead text-center">The project aims to improve the sustainability of Imperial College London. Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
+							<p class="lead text-center">Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
 						</div>
 					</div>
 				</div>
@@ -161,13 +161,11 @@
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-								<p>The project aims to improve the sustainability of Imperial College London. Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
+								<p>This project aims to improve the sustainability of Imperial College London. Through visualization, data analysis and other methods to actually investigate the use of different energy resources in Imperial College London, and try to maximize the utilization of resources.</p>
 								
 								<ul class="list-unstyled">
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Water</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Electricity</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Gas</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Meal</li>
 								</ul>
 							</div>
 						</div>
@@ -175,8 +173,7 @@
 						<h2>Description of energy</h2>
 						<div class="row">
 							<div class="col-md-6">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi adipisci illo, voluptatum ipsam fuga error commodi architecto, laudantium culpa tenetur at id, beatae placeat deserunt iure quas voluptas fugit eveniet.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ducimus explicabo quibusdam temporibus deserunt doloremque pariatur ea, animi a. Delectus similique atque eligendi, enim vel reiciendis deleniti neque aliquid, sit?</p>
+								<p>This project aims to develop a data science tool to study electricity and natural gas consumption data at Imperial College and has used it to analyse energy consumption on campus. This web-based application will provide easier and more comprehensive access to data for sustainability studies and will allow the carbon footprint of the College to be calculated in detail. Ultimately, the results obtained from the research carried out are intended to help Imperial College to achieve its sustainability goals, reducing potential future carbon emissions and improving energy efficiency.</p>
 							</div>
 							<div class="col-md-6">
 								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -190,11 +187,11 @@
 										</div>
 										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher.
+												Electricity is one of the most basic energy sources in the college. Every day, nearly 1 million KWH of electricity is used to maintain the daily operation of the college and the experimental consumption of campus research.
 											</div>
 										</div>
 									</div>
-									<div class="panel panel-default">
+									<!-- <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingTwo">
 											<h4 class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -207,7 +204,7 @@
 												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingThree">
 											<h4 class="panel-title">
@@ -218,7 +215,7 @@
 										</div>
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
-												Richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic.
+												The college uses combined heat and power (CHP) engines that generate electricity and heat from natural gas. As a result, the heating and hot water supply in the college is dependent on a large consumption of natural gas.
 											</div>
 										</div>
 									</div>
