@@ -207,6 +207,7 @@
 		  	</tr>
 		</tbody>
 		</table>
+		<br><br><br>
 
 		<script type="text/javascript">
 		function sumArr(arr) {
