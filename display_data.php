@@ -379,7 +379,7 @@
 		      },
 		      title: {
 			    text: 'Building Data Chart (Same week last year)',
-			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.',
+			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
 		        show: true,
@@ -460,7 +460,7 @@
 		</script>
 
 
-
+		<br><br>
     	<div id="elecWeeksChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data, unit){
@@ -598,7 +598,7 @@
 		      },
 		      title: {
 			    text: 'Building Data Chart (Same week last year)',
-			    subtext:'This chart shows the data comparison of the last year and the the year before last for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.',
+			    subtext:'This chart shows the data comparison of the last year and the the year before last for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
 		        show: true,
