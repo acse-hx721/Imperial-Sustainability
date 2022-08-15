@@ -157,7 +157,7 @@
 						<div class="space"></div>
 						<div class="row">
 							<div class="col-md-6">
-								<img src="images/ic_logo.png" alt="">
+								<img src="images/ic_logo.png" height="244" width="200" alt="">
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
