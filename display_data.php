@@ -1364,7 +1364,7 @@
 						Value: elem[meter_id],
 					};
 				}
-				// console.log(one_data['Value']);
+				console.log(one_data['Value']);
 				var float_data = parseFloat(one_data['Value']);
 
 				float_data = float_data.toFixed(0);
@@ -1375,7 +1375,7 @@
 				if (float_data != 0){
 					last_data = float_data;
 				}
-				// console.log(float_data);
+				console.log(float_data);
 
 
 				// Calculate data of latest week for this year and previous year
