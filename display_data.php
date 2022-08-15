@@ -377,6 +377,10 @@
 		          }
 		        }
 		      },
+		      title: {
+			    text: 'Building Data Chart (Same week last year)',
+			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.',
+			  },
 		      toolbox: {
 		        show: true,
 		        feature: {
@@ -576,7 +580,7 @@
 
 		</script>
 
-
+		<br><br>
 		<div id="buildingChartYear" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit){
@@ -592,6 +596,10 @@
 		          }
 		        }
 		      },
+		      title: {
+			    text: 'Building Data Chart (Same week last year)',
+			    subtext:'This chart shows the data comparison of the last year and the the year before last for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.',
+			  },
 		      toolbox: {
 		        show: true,
 		        feature: {
