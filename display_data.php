@@ -191,8 +191,8 @@
 		<thead>
 		  	<tr>
 			    <th class="tg-0lax"></th>
+			    <th class="tg-1wig">Emissions for the same 7 days last year</th>
 			    <th class="tg-1wig">Emissions for the last 7 days</th>
-			    <th class="tg-1wig">Emissions over the same 7 days last year</th>
 			    <th class="tg-1wig" id="table_last_last_year">Emissions by Year X</th>
 			    <th class="tg-1wig" id="table_last_year">Emissions by Year Y</th>
 		  	</tr>
