@@ -187,7 +187,7 @@
 			.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
 			.tg .tg-0lax{text-align:left;vertical-align:top}
 		</style>
-		<table class="tg">
+		<table border='1' align='center' class='tg'>
 		<thead>
 		  	<tr>
 			    <th class="tg-0lax"></th>
@@ -221,7 +221,7 @@
 		function getCO2Factor(year){
 			var factor = 0.1;
 			if (meter_type == "electricity"){
-		 		switch(n){
+		 		switch(year){
 				    case 2022: factor = 0.19338;
 				        break;
 				    case 2021: factor = 0.21233;
@@ -253,7 +253,7 @@
 				}
 		 	}
 		 	else if(meter_type == "gas"){
-		 		switch(n){
+		 		switch(year){
 				    case 2022: factor = 0.19338;
 				        break;
 				    case 2021: factor = 0.21233;
@@ -290,8 +290,8 @@
 
 		function calculateCO2(this_year, last_year, last_last_year, sum_last_seven, sum_seven, sum_last_last_year, sum_last_year){
 
-			document.getElementById("table_last_last_year").innerHTML = 'Emissions by Year' + last_last_year;
-		    document.getElementById("table_last_year").innerHTML = 'Emissions by Year' + last_year;
+			document.getElementById("table_last_last_year").innerHTML = 'Emissions by Year ' + last_last_year;
+		    document.getElementById("table_last_year").innerHTML = 'Emissions by Year ' + last_year;
 
 		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year);
 		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year);
