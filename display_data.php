@@ -288,7 +288,18 @@
 		}
 
 
+		var this_year1;
+		var last_year1;
+
+		var sum1;
+		var sum2;
+
 		function calculateCO2(this_year, last_year, last_last_year, sum_last_seven, sum_seven, sum_last_last_year, sum_last_year){
+			this_year1 = this_year;
+			last_year1 = last_year;
+			sum1 = sum_last_seven;
+			sum2 = sum_seven;
+
 
 			document.getElementById("table_last_last_year").innerHTML = 'Emissions by Year ' + last_last_year;
 		    document.getElementById("table_last_year").innerHTML = 'Emissions by Year ' + last_year;
