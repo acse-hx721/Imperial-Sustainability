@@ -199,7 +199,7 @@
 		</thead>
 		<tbody>
 		  	<tr>
-			    <td class="tg-1wig">CO<sub>2</sub> emission (unit: kg)</td>
+			    <td class="tg-1wig">CO<sub>2</sub> emission (unit: t)</td>
 			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
 			    <td class="tg-0lax" id="table_seven_emision">Loading</td>
 			    <td class="tg-0lax" id="table_last_last_year_emision">Loading</td>
@@ -304,11 +304,11 @@
 			document.getElementById("table_last_last_year").innerHTML = 'Emissions by Year ' + last_last_year;
 		    document.getElementById("table_last_year").innerHTML = 'Emissions by Year ' + last_year;
 
-		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year);
-		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year);
+		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year) / 1000;
+		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year) / 1000;
 
-		    document.getElementById("table_last_last_year_emision").innerHTML = sum_last_last_year * getCO2Factor(last_last_year);
-		    document.getElementById("table_last_year_emision").innerHTML = sum_last_year * getCO2Factor(last_year);
+		    document.getElementById("table_last_last_year_emision").innerHTML = sum_last_last_year * getCO2Factor(last_last_year) / 1000;
+		    document.getElementById("table_last_year_emision").innerHTML = sum_last_year * getCO2Factor(last_year) / 1000;
 		}
 		</script>
 
