@@ -1094,7 +1094,7 @@
         if (meter_type == "electricity"){
         	location_file_name = "data/location/elec_location_20220801.csv";
         }else if (meter_type == "gas"){
-        	location_file_name = "data/location/gas_location_20220801.csv";
+        	location_file_name = "data/location/gas_location_20220815.csv";
         }
 
 
