@@ -209,13 +209,12 @@
 		</table>
 
 		<script type="text/javascript">
-		function sumArr(arr){
-		    var sum = 0;
-		    for(var i = 0;i<=arr.length;i++){
-		    	sum += arr[i];//前提是arr中各项是数字，而不是数字字符串
-				//如果是数字字符串：sum += Number(arr[i]);
-		    }
-		  	return sum;
+		function sumArr(arr) {
+			var s = 0;
+		    for (var i = 0;i<arr.length;i++) {
+		    	s += arr[i];
+		  	}
+		  	return s;
 		}
 
 		function getCO2Factor(year){
