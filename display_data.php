@@ -177,6 +177,133 @@
 		</script>
 
 
+		<!-- Table for CO2 emission -->
+		<style type="text/css">
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+			.tg .tg-0lax{text-align:left;vertical-align:top}
+		</style>
+		<table class="tg">
+		<thead>
+		  	<tr>
+			    <th class="tg-0lax"></th>
+			    <th class="tg-1wig">Emissions for the last 7 days</th>
+			    <th class="tg-1wig">Emissions over the same 7 days last year</th>
+			    <th class="tg-1wig" id="table_last_last_year">Emissions by Year X</th>
+			    <th class="tg-1wig" id="table_last_year">Emissions by Year Y</th>
+		  	</tr>
+		</thead>
+		<tbody>
+		  	<tr>
+			    <td class="tg-1wig">CO<sub>2</sub> emission (unit: kg)</td>
+			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
+			    <td class="tg-0lax" id="table_seven_emision">Loading</td>
+			    <td class="tg-0lax" id="table_last_last_year_emision">Loading</td>
+			    <td class="tg-0lax" id="table_last_year_emision">Loading</td>
+		  	</tr>
+		</tbody>
+		</table>
+
+		<script type="text/javascript">
+		function sumArr(arr){
+		    var sum = 0;
+		    for(var i = 0;i<=arr.length;i++){
+		    	sum += arr[i];//前提是arr中各项是数字，而不是数字字符串
+				//如果是数字字符串：sum += Number(arr[i]);
+		    }
+		  	return sum;
+		}
+
+		function getCO2Factor(year){
+			var factor = 0.1;
+			if (meter_type == "electricity"){
+		 		switch(n){
+				    case 2022: factor = 0.19338;
+				        break;
+				    case 2021: factor = 0.21233;
+				        break;
+				    case 2020: factor = 0.23314;
+				        break;
+				    case 2019: factor = 0.2556;
+				        break;
+				    case 2018: factor = 0.28307;
+				        break;
+				    case 2017: factor = 0.35156;
+				        break;
+				    case 2016: factor = 0.41205;
+				        break;
+				    case 2015: factor = 0.46219;
+				        break;
+				    case 2014: factor = 0.49426;
+				        break;
+				    case 2013: factor = 0.44548;
+				        break;
+				    case 2012: factor = 0.46002;
+				        break;
+				    case 2011: factor = 0.45205;
+				        break;
+				    case 2010: factor = 0.48531;
+				        break;
+				    default:
+				        factor = 0.19338;
+				}
+		 	}
+		 	else if(meter_type == "gas"){
+		 		switch(n){
+				    case 2022: factor = 0.19338;
+				        break;
+				    case 2021: factor = 0.21233;
+				        break;
+				    case 2020: factor = 0.23314;
+				        break;
+				    case 2019: factor = 0.2556;
+				        break;
+				    case 2018: factor = 0.28307;
+				        break;
+				    case 2017: factor = 0.35156;
+				        break;
+				    case 2016: factor = 0.41205;
+				        break;
+				    case 2015: factor = 0.46219;
+				        break;
+				    case 2014: factor = 0.49426;
+				        break;
+				    case 2013: factor = 0.44548;
+				        break;
+				    case 2012: factor = 0.46002;
+				        break;
+				    case 2011: factor = 0.45205;
+				        break;
+				    case 2010: factor = 0.48531;
+				        break;
+				    default:
+				        factor = 0.19338;
+				}
+		 	}
+		 	return factor;
+		}
+
+
+		function calculateCO2(this_year, last_year, last_last_year, sum_last_seven, sum_seven, sum_last_last_year, sum_last_year){
+
+			document.getElementById("table_last_last_year").innerHTML = 'Emissions by Year' + last_last_year;
+		    document.getElementById("table_last_year").innerHTML = 'Emissions by Year' + last_year;
+
+		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year);
+		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year);
+
+		    document.getElementById("table_last_last_year_emision").innerHTML = sum_last_last_year * getCO2Factor(last_last_year);
+		    document.getElementById("table_last_year_emision").innerHTML = sum_last_year * getCO2Factor(last_year);
+		}
+		</script>
+
+
+
+
     	<div id="channelPieChartWeek" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	function drawChannelPieChartWeek(this_site_channel_obj, unit){
@@ -1442,6 +1569,8 @@
 				console.log(this_site_channel_obj);
 				drawChannelPieChartWeek(this_site_channel_obj, unit);
 			}
+
+			calculateCO2(this_year_week_datetime.getFullYear(), last_year, last_last_year, sumArr(previous_year_week_data), sumArr(this_year_week_data), sumArr(last_last_year_data), sumArr(last_year_data));
 
 
 		  },
