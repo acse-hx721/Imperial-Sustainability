@@ -1364,18 +1364,18 @@
 						Value: elem[meter_id],
 					};
 				}
-				console.log(one_data['Value']);
+				// console.log(one_data['Value']);
 				var float_data = parseFloat(one_data['Value']);
 
 				float_data = float_data.toFixed(0);
 				float_data = parseFloat(float_data);
-				if (float_data > threshold * last_data || float_data > threshold || float_data < -threshold){
+				if (float_data > abs(threshold * last_data) || float_data > threshold || float_data < -threshold){
 					float_data = last_data;
 				}
 				if (float_data != 0){
 					last_data = float_data;
 				}
-				console.log(float_data);
+				// console.log(float_data);
 
 
 				// Calculate data of latest week for this year and previous year
