@@ -288,11 +288,11 @@
 		}
 
 
-		var this_year1;
-		var last_year1;
+		// var this_year1;
+		// var last_year1;
 
-		var sum1;
-		var sum2;
+		// var sum1;
+		// var sum2;
 
 		function calculateCO2(this_year, last_year, last_last_year, sum_last_seven, sum_seven, sum_last_last_year, sum_last_year){
 			this_year1 = this_year;
@@ -1364,7 +1364,7 @@
 						Value: elem[meter_id],
 					};
 				}
-				// console.log(one_data['Value']);
+				console.log(one_data['Value']);
 				var float_data = parseFloat(one_data['Value']);
 
 				float_data = float_data.toFixed(0);
@@ -1375,7 +1375,7 @@
 				if (float_data != 0){
 					last_data = float_data;
 				}
-				// console.log(float_data);
+				console.log(float_data);
 
 
 				// Calculate data of latest week for this year and previous year
