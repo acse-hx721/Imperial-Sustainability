@@ -1660,18 +1660,22 @@
 					for(var k = 1; k < channels.length; k++){
 						// console.log(channels[k]);
 						if (!isNaN(all_channels_obj[channels[k]])){
-							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj);
+							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
 						}
 						if (!isNaN(all_channels_obj_week[channels[k]])){
-							all_sites_obj_week[site] = all_sites_obj_week[site] + all_channels_obj_week[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_week);
+							all_sites_obj_week[site] = all_sites_obj_week[site] + all_channels_obj_week[channels[k]];
 						}
 						if (!isNaN(all_channels_obj_year[channels[k]])){
-							all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_year);
+							all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channels[k]];
 						}
 						if (!isNaN(all_channels_obj_last_year[channels[k]])){
-							all_sites_obj_last_year[site] = all_sites_obj_last_year[site] + all_channels_obj_last_year[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_last_year);
+							all_sites_obj_last_year[site] = all_sites_obj_last_year[site] + all_channels_obj_last_year[channels[k]];
 						}
 					}
+					all_sites_obj[site] = all_sites_obj[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj);
+					all_sites_obj_week[site] = all_sites_obj_week[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_week);
+					all_sites_obj_year[site] = all_sites_obj_year[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_year);
+					all_sites_obj_last_year[site] = all_sites_obj_last_year[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_last_year);
 				}
 
 				console.log(all_sites_obj);
