@@ -1189,7 +1189,6 @@
 	    var mins_channels_sir_ernst = ["sk-bio-101-sip2.ad.ic.ac.uk_Device_18", "sk-bio-101-sip1.ad.ic.ac.uk_Device_17", "sk-bio-101-sip1.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_17", "sk-bio-101-sip2.ad.ic.ac.uk_Device_19", "sk-bio-101-sip1.ad.ic.ac.uk_Device_18"];
 
 	    function handleBuildingEquation(meter_location, elem, num){
-	    	
 	    	var result = num;
 
 	    	if (meter_location == "campus"){
@@ -1267,6 +1266,35 @@
         	result = handleBuildingEquation(meter_location, elem, sum);
         	return result;
         }
+
+
+
+        function handleBuildingEquationForCampus_numberNeedMinus(site, all_channels){
+	    	var result = 0;
+
+	    	if (site == "Bessemer"){
+	    		result = all_channels["sk-bes-102-sip1.ad.ic.ac.uk_Device_46"] + all_channels["sk-bes-102-sip1.ad.ic.ac.uk_Device_47"];
+	    	} else if (site == "ACE"){
+	    		result = all_channels["sk-ace-102-sip2.ad.ic.ac.uk_Device_16"] + all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_14"] + all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_15"] 
+	    		+ all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_18"];
+	    	} else if (site == "Huxley"){
+	    		result = all_channels["sk-hux-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_4"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_3"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_2"];
+	    	} else if (site == "Chemistry 1 & 2"){
+	    		result = all_channels["sk-che-101-sip2.ad.ic.ac.uk_Device_2"];
+	    	} else if (site == "Sherfield"){
+	    		result = all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_5"];
+	    	} else if (site == "Sir Ernst Chain (Biochemistry)"){
+	    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
+	    			result = result + all_channels[mins_channels_sir_ernst[index]];
+	    		}
+	    	} else if (site == "Southside Hall"){
+	    		result = all_channels["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
+	    	} else if (site == "RCS1"){
+	    		result = all_channels["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
+	    	}
+
+	    	return result;
+	    }
 
 
 		</script>
@@ -1632,16 +1660,16 @@
 					for(var k = 1; k < channels.length; k++){
 						// console.log(channels[k]);
 						if (!isNaN(all_channels_obj[channels[k]])){
-							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]];
+							all_sites_obj[site] = all_sites_obj[site] + all_channels_obj[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj);
 						}
 						if (!isNaN(all_channels_obj_week[channels[k]])){
-							all_sites_obj_week[site] = all_sites_obj_week[site] + all_channels_obj_week[channels[k]];
+							all_sites_obj_week[site] = all_sites_obj_week[site] + all_channels_obj_week[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_week);
 						}
 						if (!isNaN(all_channels_obj_year[channels[k]])){
-							all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channels[k]];
+							all_sites_obj_year[site] = all_sites_obj_year[site] + all_channels_obj_year[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_year);
 						}
 						if (!isNaN(all_channels_obj_last_year[channels[k]])){
-							all_sites_obj_last_year[site] = all_sites_obj_last_year[site] + all_channels_obj_last_year[channels[k]];
+							all_sites_obj_last_year[site] = all_sites_obj_last_year[site] + all_channels_obj_last_year[channels[k]] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_last_year);
 						}
 					}
 				}
