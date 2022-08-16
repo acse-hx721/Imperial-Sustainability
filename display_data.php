@@ -1209,8 +1209,8 @@
 	    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
 	    			result = result - elem[mins_channels_sir_ernst[index]];
 	    		}
-	    	} else if (meter_location == "Southside Hall"){
-	    		result = result - elem["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
+	    	// } else if (meter_location == "Southside Hall"){
+	    	// 	result = result - elem["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
 	    	} else if (meter_location == "RCS1"){
 	    		result = result - elem["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
 	    	} else if (meter_location == "City and Guilds"){
@@ -1289,8 +1289,8 @@
 	    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
 	    			result = result + all_channels[mins_channels_sir_ernst[index]];
 	    		}
-	    	} else if (site == "Southside Hall"){
-	    		result = all_channels["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
+	    	// } else if (site == "Southside Hall"){
+	    	// 	result = all_channels["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
 	    	} else if (site == "RCS1"){
 	    		result = all_channels["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
 	    	} else if (site == "City and Guilds"){
