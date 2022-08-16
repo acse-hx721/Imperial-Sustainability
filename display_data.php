@@ -1213,6 +1213,8 @@
 	    		result = result - elem["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
 	    	} else if (meter_location == "RCS1"){
 	    		result = result - elem["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
+	    	} else if (meter_location == "City and Guilds"){
+	    		result = result - elem["sk-mec-102-sip2.ad.ic.ac.uk_Device_3"] - elem["sk-mec-102-sip2.ad.ic.ac.uk_Device_4"] - elem["sk-mec-102-sip2.ad.ic.ac.uk_Device_5"];
 	    	}
 
 	    	// RSM "sk-bes-102-sip1.ad.ic.ac.uk_Device_46", "sk-bes-102-sip1.ad.ic.ac.uk_Device_47", 

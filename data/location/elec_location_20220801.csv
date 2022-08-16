@@ -1,5 +1,4 @@
 ﻿SIT:<name>;MET:<name>;CHN:<channelID>;CHN:<TspDataType>;CHN:<unit>
-Energy Centre;Engine #1 Elec Output;sk-ele-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 8-15 Princes Gardens (inc Garden Hall);14-15PG inc boiler plant room;sk-nor-101-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
 Data Centre;40KVA UPS;sk-mec-104-sip2.ad.ic.ac.uk_Device_12;Energy Consumption;kWh
 Data Centre;40KVA UPS SET A5;sk-mec-104-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
@@ -8,7 +7,7 @@ RSM;ACB62 to Aston Webb Main Incomer;sk-bes-102-sip1.ad.ic.ac.uk_Device_46;Energ
 RSM;ACB66 Supply to MPAC Panel;sk-bes-102-sip1.ad.ic.ac.uk_Device_47;Energy Consumption;kWh
 ACE;ACE Chiller #1;sk-ace-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 ACE;ACE Chiller #2;sk-ace-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
-Electrical Engineering;Transformer T10;sk-bes-104-sip2.ad.ic.ac.uk_Device_48;Energy Consumption;kWh
+Energy Centre;Transformer T10;sk-bes-104-sip2.ad.ic.ac.uk_Device_48;Energy Consumption;kWh
 ACE;Transformer T11;sk-eyec-b-sip.ad.ic.ac.uk_Device_6;Energy Consumption;kWh
 Flowers;Transformer T14;sk-bes-104-sip2.ad.ic.ac.uk_Device_63;Energy Consumption;kWh
 Electrical Engineering;Transformer T17;sk-bes-104-sip2.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
@@ -46,7 +45,6 @@ Blackett;Blackett Feeder No.3 (H1) ACB 117;sk-hux-101-sip2.ad.ic.ac.uk_Device_3;
 Blackett;Blackett Laser 019;sk-hux-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Business School;Business School Chiller;sk-mec-102-sip2.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Business School;Business School Riser;sk-mec-102-sip2.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
-Energy Centre;Engine #2 Elec Output;sk-ele-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Chemistry 1 and 2;Chemistry Level 0, Sw/Rm 039;sk-bio-101-sip2.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
 Chemistry 1 and 2;Chemistry Riser A Level 0 Sw/Rm;sk-bio-101-sip2.ad.ic.ac.uk_Device_19;Energy Consumption;kWh
 Chemistry 1 and 2;Chemistry Riser B;sk-bio-101-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
