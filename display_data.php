@@ -1265,7 +1265,11 @@
         		}
         	}
         	var result = 0;
-        	result = handleBuildingEquation(meter_location, elem, sum);
+        	if (meter_type == "electricity"){
+        		result = handleBuildingEquation(meter_location, elem, sum);
+        	}else{
+        		result = sum;
+        	}
         	return result;
         }
 
@@ -1273,30 +1277,30 @@
 
         function handleBuildingEquationForCampus_numberNeedMinus(site, all_channels){
 	    	var result = 0;
-
-	    	if (site == "Bessemer"){
-	    		result = all_channels["sk-bes-102-sip1.ad.ic.ac.uk_Device_46"] + all_channels["sk-bes-102-sip1.ad.ic.ac.uk_Device_47"];
-	    	} else if (site == "ACE"){
-	    		result = all_channels["sk-ace-102-sip2.ad.ic.ac.uk_Device_16"] + all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_14"] + all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_15"] 
-	    		+ all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_18"];
-	    	} else if (site == "Huxley"){
-	    		result = all_channels["sk-hux-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_4"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_3"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_2"];
-	    	} else if (site == "Chemistry 1 & 2"){
-	    		result = all_channels["sk-che-101-sip2.ad.ic.ac.uk_Device_2"];
-	    	} else if (site == "Sherfield"){
-	    		result = all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_5"];
-	    	} else if (site == "Sir Ernst Chain (Biochemistry)"){
-	    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
-	    			result = result + all_channels[mins_channels_sir_ernst[index]];
-	    		}
-	    	// } else if (site == "Southside Hall"){
-	    	// 	result = all_channels["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
-	    	} else if (site == "RCS1"){
-	    		result = all_channels["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
-	    	} else if (site == "City and Guilds"){
-	    		result = all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_3"] + all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_4"] + all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_5"];
-	    	}
-
+	    	if (meter_type == "electricity"){
+		    	if (site == "Bessemer"){
+		    		result = all_channels["sk-bes-102-sip1.ad.ic.ac.uk_Device_46"] + all_channels["sk-bes-102-sip1.ad.ic.ac.uk_Device_47"];
+		    	} else if (site == "ACE"){
+		    		result = all_channels["sk-ace-102-sip2.ad.ic.ac.uk_Device_16"] + all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_14"] + all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_15"] 
+		    		+ all_channels["sk-ace-102-sip3.ad.ic.ac.uk_Device_18"];
+		    	} else if (site == "Huxley"){
+		    		result = all_channels["sk-hux-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_4"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_3"] + all_channels["sk-hux-101-sip2.ad.ic.ac.uk_Device_2"];
+		    	} else if (site == "Chemistry 1 & 2"){
+		    		result = all_channels["sk-che-101-sip2.ad.ic.ac.uk_Device_2"];
+		    	} else if (site == "Sherfield"){
+		    		result = all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_5"];
+		    	} else if (site == "Sir Ernst Chain (Biochemistry)"){
+		    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
+		    			result = result + all_channels[mins_channels_sir_ernst[index]];
+		    		}
+		    	// } else if (site == "Southside Hall"){
+		    	// 	result = all_channels["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
+		    	} else if (site == "RCS1"){
+		    		result = all_channels["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
+		    	} else if (site == "City and Guilds"){
+		    		result = all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_3"] + all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_4"] + all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_5"];
+		    	}
+			}
 	    	return result;
 	    }
 
