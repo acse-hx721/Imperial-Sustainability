@@ -585,7 +585,7 @@
 		        }
 		      },
 		      title: {
-			    text: 'Building Data Chart (Same week last year)',
+			    text: 'Year Building Data Chart',
 			    subtext:'This chart shows the data comparison of the last year and the the year before last for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
