@@ -7,7 +7,7 @@ RSM;ACB62 to Aston Webb Main Incomer;sk-bes-102-sip1.ad.ic.ac.uk_Device_46;Energ
 RSM;ACB66 Supply to MPAC Panel;sk-bes-102-sip1.ad.ic.ac.uk_Device_47;Energy Consumption;kWh
 ACE;ACE Chiller #1;sk-ace-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 ACE;ACE Chiller #2;sk-ace-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
-Energy Centre;Transformer T10;sk-bes-104-sip2.ad.ic.ac.uk_Device_48;Energy Consumption;kWh
+Electrical Engineering;Transformer T10;sk-bes-104-sip2.ad.ic.ac.uk_Device_48;Energy Consumption;kWh
 ACE;Transformer T11;sk-eyec-b-sip.ad.ic.ac.uk_Device_6;Energy Consumption;kWh
 Flowers;Transformer T14;sk-bes-104-sip2.ad.ic.ac.uk_Device_63;Energy Consumption;kWh
 Electrical Engineering;Transformer T17;sk-bes-104-sip2.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
@@ -139,3 +139,4 @@ Data Centre;U1/B Board Feeder H2;sk-mec-104-sip2.ad.ic.ac.uk_Device_1;Energy Con
 Weeks Hall;Weeks Hall;sk-nor-101-sip1.ad.ic.ac.uk_Device_12;Energy Consumption;kWh
 William Penney;William Penny Lab Elec;sk-she-101-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
 Weeks Hall;ACB42;sk-nor-101-sip1.ad.ic.ac.uk_Device_6;Energy Consumption;kWh
+Energy Centre;Transformer T10;sk-ele-101-sip2.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
