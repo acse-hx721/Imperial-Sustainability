@@ -1293,6 +1293,8 @@
 	    		result = all_channels["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
 	    	} else if (site == "RCS1"){
 	    		result = all_channels["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
+	    	} else if (site == "City and Guilds"){
+	    		result = all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_3"] + all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_4"] + all_channels["sk-mec-102-sip2.ad.ic.ac.uk_Device_5"];
 	    	}
 
 	    	return result;
