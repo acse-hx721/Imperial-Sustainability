@@ -24,8 +24,8 @@ Sherfield;Transformer T31;sk-icsm-2-sip1.ad.ic.ac.uk_Device_1;Energy Consumption
 Sherfield;Transformer T32;sk-icsm-2-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Huxley;Transformer T33;sk-icsm-2-sip1.ad.ic.ac.uk_Device_181;Energy Consumption;kWh
 ACE;Transformer T34;sk-eyec-b-sip.ad.ic.ac.uk_Device_21;Energy Consumption;kWh
-Chemistry 1 & 2;Transformer T37;sk-icsm-2-sip1.ad.ic.ac.uk_Device_196;Energy Consumption;kWh
-Chemistry 1 & 2;Transformer T38;sk-icsm-2-sip1.ad.ic.ac.uk_Device_211;Energy Consumption;kWh
+Chemistry 1 and 2;Transformer T37;sk-icsm-2-sip1.ad.ic.ac.uk_Device_196;Energy Consumption;kWh
+Chemistry 1 and 2;Transformer T38;sk-icsm-2-sip1.ad.ic.ac.uk_Device_211;Energy Consumption;kWh
 SAF;Transformer T40;sk-icsm-2-sip1.ad.ic.ac.uk_Device_31;Energy Consumption;kWh
 SAF;Transformer T41;sk-icsm-2-sip1.ad.ic.ac.uk_Device_46;Energy Consumption;kWh
 SAF;Transformer T42;sk-icsm-2-sip1.ad.ic.ac.uk_Device_61;Energy Consumption;kWh
@@ -39,7 +39,7 @@ South Kensington;CW014675 (Check);sk-mec-g-sip1.ad.ic.ac.uk_Device_2;Energy Cons
 South Kensington;CW014675 (Check);sk-mec-g-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Beit Quad;BEIT Quad LV Panel;sk-ace-102-sip2.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Beit Quad;Beit Quad MCCB 88;sk-ace-102-sip3.ad.ic.ac.uk_Device_14;Energy Consumption;kWh
-Chemistry 1 & 2;Biochemistry Spare;sk-bio-101-sip1.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
+Chemistry 1 and 2;Biochemistry Spare;sk-bio-101-sip1.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
 Blackett;Blackett Feeder No.1 (B1) ACB 109;sk-hux-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Blackett;Blackett Feeder No.2 (E3) ACB 105;sk-hux-101-sip2.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
 Blackett;Blackett Feeder No.3 (H1) ACB 117;sk-hux-101-sip2.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
@@ -47,12 +47,12 @@ Blackett;Blackett Laser 019;sk-hux-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumpt
 Business School;Business School Chiller;sk-mec-102-sip2.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Business School;Business School Riser;sk-mec-102-sip2.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
 Energy Centre;Engine #2 Elec Output;sk-ele-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
-Chemistry 1 & 2;Chemistry Level 0, Sw/Rm 039;sk-bio-101-sip2.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
-Chemistry 1 & 2;Chemistry Riser A Level 0 Sw/Rm;sk-bio-101-sip2.ad.ic.ac.uk_Device_19;Energy Consumption;kWh
-Chemistry 1 & 2;Chemistry Riser B;sk-bio-101-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
+Chemistry 1 and 2;Chemistry Level 0, Sw/Rm 039;sk-bio-101-sip2.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
+Chemistry 1 and 2;Chemistry Riser A Level 0 Sw/Rm;sk-bio-101-sip2.ad.ic.ac.uk_Device_19;Energy Consumption;kWh
+Chemistry 1 and 2;Chemistry Riser B;sk-bio-101-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Data Centre;Chiller No1 E3;sk-mec-104-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Data Centre;Chiller No2;sk-mec-104-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
-Chemistry 1 & 2;Chiller Roof Level (#4);sk-bio-101-sip2.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
+Chemistry 1 and 2;Chiller Roof Level (#4);sk-bio-101-sip2.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Bone and Roderic Hill;Circuit A5 Busbar Riser Bone Building;sk-ace-102-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Library;College Block Library Interconnector S8/2;sk-she-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Huxley;Computer Centre Hux_221 IT Supply A;sk-hux-101-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
@@ -105,7 +105,7 @@ Data Centre;PDU 8- UPS1/J2;sk-mec-104-sip2.ad.ic.ac.uk_Device_21;Energy Consumpt
 Ethos Sports Centre;Sports Hall ACB32;sk-nor-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Ethos Sports Centre Residences;Sports Hall Residential D3;sk-nor-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Eastside Hall;Supply from Southside;sk-est-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
-Chemistry 1 & 2;Transformer Spare ACB156;sk-che-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
+Chemistry 1 and 2;Transformer Spare ACB156;sk-che-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Bone and Roderic Hill;Transformer T11;sk-ace-102-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Library;Transformer T12;sk-lib-102-sip3.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Bessemer;Transformer T15;sk-bes-102-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
@@ -123,8 +123,8 @@ Sherfield;Transformer T32;sk-she-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumptio
 Huxley;Transformer T33;sk-hux-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Bone and Roderic Hill;Transformer T34;sk-ace-102-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
 Bessemer;Transformer T35;sk-bes-102-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
-Chemistry 1 & 2;Transformer T37;sk-che-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
-Chemistry 1 & 2;Transformer T38;sk-che-101-sip1.ad.ic.ac.uk_Device_7;Energy Consumption;kWh
+Chemistry 1 and 2;Transformer T37;sk-che-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
+Chemistry 1 and 2;Transformer T38;sk-che-101-sip1.ad.ic.ac.uk_Device_7;Energy Consumption;kWh
 Weeks Hall;Transformer T39;sk-nor-101-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
 SAF;Transformer T41;sk-saf-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 SAF;Transformer T42;sk-saf-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh

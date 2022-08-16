@@ -1184,9 +1184,74 @@
 
 
 	    var meter_channels = getChannelOfLocation(meter_location);
+	    var mins_channels = ["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3", "sk-bio-101-sip2.ad.ic.ac.uk_Device_18", "sk-bes-102-sip1.ad.ic.ac.uk_Device_46", "sk-bes-102-sip1.ad.ic.ac.uk_Device_47", "sk-ace-102-sip2.ad.ic.ac.uk_Device_16", "sk-ace-102-sip3.ad.ic.ac.uk_Device_14", "sk-ace-102-sip3.ad.ic.ac.uk_Device_15", "sk-ace-102-sip3.ad.ic.ac.uk_Device_18" , "sk-hux-101-sip1.ad.ic.ac.uk_Device_3", "sk-hux-101-sip2.ad.ic.ac.uk_Device_4","sk-hux-101-sip2.ad.ic.ac.uk_Device_3","sk-hux-101-sip2.ad.ic.ac.uk_Device_2", "sk-che-101-sip2.ad.ic.ac.uk_Device_2", "sk-she-101-sip1.ad.ic.ac.uk_Device_3", "sk-bio-101-sip1.ad.ic.ac.uk_Device_17", "sk-she-101-sip1.ad.ic.ac.uk_Device_5", "sk-bio-101-sip1.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_17", "sk-bio-101-sip2.ad.ic.ac.uk_Device_19", "sk-bio-101-sip1.ad.ic.ac.uk_Device_18", "sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
+
+	    var mins_channels_sir_ernst = ["sk-bio-101-sip2.ad.ic.ac.uk_Device_18", "sk-bio-101-sip1.ad.ic.ac.uk_Device_17", "sk-bio-101-sip1.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_17", "sk-bio-101-sip2.ad.ic.ac.uk_Device_19", "sk-bio-101-sip1.ad.ic.ac.uk_Device_18"];
+
+	    function handleBuildingEquation(meter_location, elem, num){
+	    	
+	    	var result = num;
+
+	    	if (meter_location == "campus"){
+	    		for (var index=0; index < mins_channels.length; index++){
+	    			result = result - elem[mins_channels[index]];
+	    		}
+	    	} else if (meter_location == "Bessemer"){
+	    		result = result - elem["sk-bes-102-sip1.ad.ic.ac.uk_Device_46"] - elem["sk-bes-102-sip1.ad.ic.ac.uk_Device_47"];
+	    	} else if (meter_location == "ACE"){
+	    		result = result - elem["sk-ace-102-sip2.ad.ic.ac.uk_Device_16"] - elem["sk-ace-102-sip3.ad.ic.ac.uk_Device_14"] - elem["sk-ace-102-sip3.ad.ic.ac.uk_Device_15"] - elem["sk-ace-102-sip3.ad.ic.ac.uk_Device_18"];
+	    	} else if (meter_location == "Huxley"){
+	    		result = result - elem["sk-hux-101-sip1.ad.ic.ac.uk_Device_3"] - elem["sk-hux-101-sip2.ad.ic.ac.uk_Device_4"] - elem["sk-hux-101-sip2.ad.ic.ac.uk_Device_3"] - elem["sk-hux-101-sip2.ad.ic.ac.uk_Device_2"];
+	    	} else if (meter_location == "Chemistry 1 & 2"){
+	    		result = result - elem["sk-che-101-sip2.ad.ic.ac.uk_Device_2"];
+	    	} else if (meter_location == "Sherfield"){
+	    		result = result - elem["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] - elem["sk-she-101-sip1.ad.ic.ac.uk_Device_5"];
+	    	} else if (meter_location == "Sir Ernst Chain (Biochemistry)"){
+	    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
+	    			result = result - elem[mins_channels_sir_ernst[index]];
+	    		}
+	    	} else if (meter_location == "Southside Hall"){
+	    		result = result - elem["sk-est-101-sip1.ad.ic.ac.uk_Device_1"];
+	    	} else if (meter_location == "RCS1"){
+	    		result = result - elem["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3"];
+	    	}
+
+	    	// RSM "sk-bes-102-sip1.ad.ic.ac.uk_Device_46", "sk-bes-102-sip1.ad.ic.ac.uk_Device_47", 
+	    	// Bessemer
+
+	    	// Beit Quad "sk-ace-102-sip2.ad.ic.ac.uk_Device_16", "sk-ace-102-sip3.ad.ic.ac.uk_Device_14", 
+	    	// ACE
 
 
+	    	// Bone and Roderic Hill "sk-ace-102-sip3.ad.ic.ac.uk_Device_15", "sk-ace-102-sip3.ad.ic.ac.uk_Device_18" 
+	    	// ACE
 
+
+	    	// Blackett "sk-hux-101-sip1.ad.ic.ac.uk_Device_3", "sk-hux-101-sip2.ad.ic.ac.uk_Device_4","sk-hux-101-sip2.ad.ic.ac.uk_Device_3","sk-hux-101-sip2.ad.ic.ac.uk_Device_2"
+	    	// Huxley
+
+
+	    	// RCS1 "sk-che-101-sip2.ad.ic.ac.uk_Device_2"
+	    	// Chemistry 1 & 2
+
+	    	// Library "sk-she-101-sip1.ad.ic.ac.uk_Device_3", "sk-bio-101-sip1.ad.ic.ac.uk_Device_17"
+	    	// 1. Sherfield
+	    	// 2. Sir Ernst Chain (Biochemistry)
+
+
+	    	// William Penney "sk-she-101-sip1.ad.ic.ac.uk_Device_5"
+	    	// Sherfield
+
+	    	// Chemistry 1 & 2 "sk-bio-101-sip1.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_17", "sk-bio-101-sip2.ad.ic.ac.uk_Device_19", "sk-bio-101-sip1.ad.ic.ac.uk_Device_18", 
+	    	// Sir Ernst Chain (Biochemistry)
+	    	
+
+
+	    	// Eastside Hall "sk-est-101-sip1.ad.ic.ac.uk_Device_1"
+	    	// Southside Hall
+
+	    	return result;
+	    }
 
 
         // Calculate the sum of this location
@@ -1198,7 +1263,9 @@
         			sum = sum + parseFloat(elem[e]);
         		}
         	}
-        	return sum;
+        	var result = 0;
+        	result = handleBuildingEquation(meter_location, elem, sum);
+        	return result;
         }
 
 
@@ -1561,6 +1628,7 @@
 					var channels = sites_channels[site].split(",");
 					// console.log(channels);
 
+					// 遍历每个site的所有channel
 					for(var k = 1; k < channels.length; k++){
 						// console.log(channels[k]);
 						if (!isNaN(all_channels_obj[channels[k]])){
