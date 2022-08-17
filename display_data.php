@@ -191,10 +191,10 @@
 		<thead>
 		  	<tr>
 			    <th class="tg-0lax"></th>
-			    <th class="tg-1wig">Emissions for the same 7 days last year</th>
-			    <th class="tg-1wig">Emissions for the last 7 days</th>
-			    <th class="tg-1wig" id="table_last_last_year">Emissions by Year X</th>
-			    <th class="tg-1wig" id="table_last_year">Emissions by Year Y</th>
+			    <th class="tg-1wig">The same 7 days last year</th>
+			    <th class="tg-1wig">The last 7 days</th>
+			    <th class="tg-1wig" id="table_last_last_year">Year X</th>
+			    <th class="tg-1wig" id="table_last_year">Year Y</th>
 		  	</tr>
 		</thead>
 		<tbody>
@@ -296,8 +296,8 @@
 			sum2 = sum_seven;
 
 
-			document.getElementById("table_last_last_year").innerHTML = 'Emissions by Year ' + last_last_year;
-		    document.getElementById("table_last_year").innerHTML = 'Emissions by Year ' + last_year;
+			document.getElementById("table_last_last_year").innerHTML = 'Year ' + last_last_year;
+		    document.getElementById("table_last_year").innerHTML = 'Year ' + last_year;
 
 		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year) / 1000;
 		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year) / 1000;
