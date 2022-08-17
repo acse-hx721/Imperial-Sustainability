@@ -198,6 +198,13 @@
 		  	</tr>
 		</thead>
 		<tbody>
+			<tr>
+			    <td class="tg-1wig">Energy consumption (unit: kWh)</td>
+			    <td class="tg-0lax" id="table_last_seven_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_seven_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_last_last_year_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_last_year_consumption">Loading</td>
+		  	</tr>
 		  	<tr>
 			    <td class="tg-1wig">CO<sub>2</sub>e emission (unit: t)</td>
 			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
@@ -295,8 +302,14 @@
 		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year) / 1000;
 		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year) / 1000;
 
+		    document.getElementById("table_last_seven_consumption").innerHTML = sum_last_seven;
+		    document.getElementById("table_seven_consumption").innerHTML = sum_seven;
+
 		    document.getElementById("table_last_last_year_emision").innerHTML = sum_last_last_year * getCO2Factor(last_last_year) / 1000;
 		    document.getElementById("table_last_year_emision").innerHTML = sum_last_year * getCO2Factor(last_year) / 1000;
+
+		    document.getElementById("table_last_last_year_consumption").innerHTML = sum_last_last_year;
+		    document.getElementById("table_last_year_consumption").innerHTML = sum_last_year;
 		}
 		</script>
 
