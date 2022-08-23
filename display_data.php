@@ -1519,6 +1519,8 @@
 	 	$("#channelPieChartWeek").hide();
 	 	$("#map_year").hide();
 	 	$("btn_div").hide();
+	 	document.getElementById("last_year_btn").style.display = "none";
+	 	document.getElementById("last_last_year_btn").style.display = "none";
 	 	if (meter_location == "campus"){
 			$("#buildingChart").show();
 			$("#buildingChartYear").show();
@@ -1817,6 +1819,8 @@
 					document.getElementById("last_last_year_btn").innerHTML = last_last_year;
 					drawSKMap_year(all_sites_obj_year, last_year, unit);
 					$("btn_div").show();
+					document.getElementById("last_year_btn").style.display = "block";
+	 				document.getElementById("last_last_year_btn").style.display = "block";
 				}
 
 			}else if (meter_location != "campus" && meter_location != "null"){
