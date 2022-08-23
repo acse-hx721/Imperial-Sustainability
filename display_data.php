@@ -587,7 +587,7 @@
 		<!-- Button to change the year -->
 		<div class="rectangle" id="btn_div" style="text-align: center; margin: auto">
     		<button type="button" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_last_year, last_last_year1, unit)">Loading</button>
-			<button type="button" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_year, unit)">Loading</button>
+			<button type="button" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_year1, unit)">Loading</button>
 		</div>
 
 		<div id="map_year" style="width: 100%; height:500px; float:center; "></div>
