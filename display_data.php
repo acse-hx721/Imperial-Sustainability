@@ -585,9 +585,9 @@
 
 		<br><br>
 		<!-- Button to change the year -->
-		<div class="rectangle" style="text-align: center; margin: auto">
-    		<button type="button" id="last_last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_last_year, last_last_year1, unit)">Loading</button>
-			<button type="button" id="last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_year, unit)">Loading</button>
+		<div class="rectangle" id="btn_div" style="text-align: center; margin: auto">
+    		<button type="button" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_last_year, last_last_year1, unit)">Loading</button>
+			<button type="button" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_year, unit)">Loading</button>
 		</div>
 
 		<div id="map_year" style="width: 100%; height:500px; float:center; "></div>
@@ -1517,8 +1517,7 @@
 	 	$("#buildingChartYear").hide();
 	 	$("#channelPieChartWeek").hide();
 	 	$("#map_year").hide();
-	 	$("last_year_btn").hide();
-	 	$("last_last_year_btn").hide();
+	 	$("btn_div").hide();
 	 	if (meter_location == "campus"){
 			$("#buildingChart").show();
 			$("#buildingChartYear").show();
@@ -1816,8 +1815,7 @@
 					document.getElementById("last_year_btn").innerHTML = last_year;
 					document.getElementById("last_last_year_btn").innerHTML = last_last_year;
 					drawSKMap_year(all_sites_obj_year, last_year, unit);
-					$("last_year_btn").show();
-	 				$("last_last_year_btn").show();
+					$("btn_div").show();
 				}
 
 			}else if (meter_location != "campus" && meter_location != "null"){
