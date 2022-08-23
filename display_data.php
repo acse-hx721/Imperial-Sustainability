@@ -591,10 +591,10 @@
 			<button type="button" id="last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_year1, unit)">Loading</button>
 		</div>
 
-		<div id="map_year" style="width: 100%; height:500px; float:center; "></div>
+		<div id="map_year" style="width: 100%; height:500px; margin:0 auto; "></div>
 
 		<br><br>
-		<div id="buildingChartYear" style="width: 100%; height:500px; float:center; "></div>
+		<div id="buildingChartYear" style="width: 100%; height:500px; margin:0 auto; "></div>
     	<script type="text/javascript">
     	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit){
 	        var buildingChartYear = echarts.init(document.getElementById('buildingChartYear'));
