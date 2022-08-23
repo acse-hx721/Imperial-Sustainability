@@ -1044,12 +1044,12 @@
 		<script type="text/javascript" src="plugins/papaparse.min.js"></script>
 
 
-		
+
 		<div id="map" style="width: 100%; height:500px; float:center; "></div>
 		<script type="text/javascript">
 			var myChart = echarts.init(document.getElementById('map'));
 			$.get('SK_map.json', function (SK_map){
-			    echarts.registerMap('MY', SK_map) //注册
+			    echarts.registerMap('MY', SK_map); //注册
 
 			    var option = {     
 			    series: [
@@ -1068,7 +1068,7 @@
 
 		</script>
 
-		
+
 
 
 		<script type="text/javascript">
