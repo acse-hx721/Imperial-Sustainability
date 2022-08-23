@@ -1079,8 +1079,8 @@
 			    },
 			    visualMap: {
 			      left: 'right',
-			      min: Math.min.apply(null, Object.values(objs)),
-			      max: Math.max.apply(null, Object.values(objs)),
+			      min: 500000,
+			      max: 38000000,
 			      inRange: {
 			        color: [
 			          '#313695',
