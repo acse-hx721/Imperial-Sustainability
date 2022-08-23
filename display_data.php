@@ -593,7 +593,7 @@
 
 		<div id="map_year" style="width: 100%; height:500px; float:center; "></div>
 
-		<br><br><br>
+		<br><br>
 		<div id="buildingChartYear" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit){
@@ -1518,9 +1518,9 @@
 	 	$("#buildingChartYear").hide();
 	 	$("#channelPieChartWeek").hide();
 	 	$("#map_year").hide();
-	 	$("#btn_div").hide();
-	 	// document.getElementById("last_year_btn").style.display = "none";
-	 	// document.getElementById("last_last_year_btn").style.display = "none";
+	 	// $("#btn_div").hide();
+	 	document.getElementById("last_year_btn").style.display = "none";
+	 	document.getElementById("last_last_year_btn").style.display = "none";
 	 	if (meter_location == "campus"){
 			$("#buildingChart").show();
 			$("#buildingChartYear").show();
@@ -1818,9 +1818,9 @@
 					document.getElementById("last_year_btn").innerHTML = last_year;
 					document.getElementById("last_last_year_btn").innerHTML = last_last_year;
 					drawSKMap_year(all_sites_obj_year, last_year, unit);
-					$("btn_div").show();
-					// document.getElementById("last_year_btn").style.display = "block";
-	 			// 	document.getElementById("last_last_year_btn").style.display = "block";
+					// $("btn_div").show();
+					document.getElementById("last_year_btn").style.display = "block";
+	 				document.getElementById("last_last_year_btn").style.display = "block";
 				}
 
 			}else if (meter_location != "campus" && meter_location != "null"){
