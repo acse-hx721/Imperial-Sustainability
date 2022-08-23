@@ -1047,7 +1047,7 @@
 
 		<div id="station_map" style="width: 100%; height:500px; float:center; "></div>
 		<script type="text/javascript">
-			$.get('{% static "js/map/hungary.geojson" %}', function (hungaryJson) {
+			$.get('{% static "SK_map.json" %}', function (hungaryJson) {
 		    echarts.registerMap('hungary', hungaryJson);
 		    var chart = echarts.init(document.getElmentById('station_map'));
 		    chart.setOption({
