@@ -584,10 +584,11 @@
 		</script>
 
 		<br><br>
-		<button type="button" id="last_last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_last_year1, unit)">Loading</button>
-		<button type="button" id="last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_last_year, last_year, unit)">Loading</button>
-
-
+		<!-- Button to change the year -->
+		<div class="rectangle" style="text-align: center; margin: auto">
+    		<button type="button" id="last_last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_last_year, last_last_year1, unit)">Loading</button>
+			<button type="button" id="last_year_btn" style="width: 100px; height:30px; float:center;" onclick="drawSKMap_year(all_sites_obj_year, last_year, unit)">Loading</button>
+		</div>
 
 		<div id="map_year" style="width: 100%; height:500px; float:center; "></div>
 
@@ -684,7 +685,7 @@
 		        }
 		      ]
 		    };
-		    buildingChartYear.setOption(option);
+		    buildingChartYear.setOption(option, true);
 
 	    }
 		</script>
