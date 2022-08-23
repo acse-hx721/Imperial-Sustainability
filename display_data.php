@@ -1047,21 +1047,53 @@
 
 		<div id="map" style="width: 100%; height:500px; float:center; "></div>
 		<script type="text/javascript">
-			var myChart = echarts.init(document.getElementById('map'));
-			$.get('SK_map.json', function (SK_map){
-			    echarts.registerMap('MY', SK_map); //注册
+			const geoJSON = {
+			  '500000': require('./SK_map.json')
+			};
 
-			    var option = {     
-			    series: [
-			        {
-			          name: 'my custom map',
-			          type: 'map',
-			          roam: true,
-			          map: 'MY'       //使用
+			echarts.registerMap('500000', { geoJSON: geoJSON['500000'] });
+			const chart = echarts.init(document.getElementById('map'));
+			chart.setOption({
+			  geo: { // 作为底图，设置地图外围边框
+			    map: '500000',
+			    itemStyle: {
+			      areaColor: '#fff',
+			      borderColor: '#333',
+			      borderWidth: 1,
+			    }
+			  },
+			  series: [
+			    {
+			      type: 'map',
+			      map: '500000',
+			      itemStyle: {
+			        areaColor: '#fff',
+			        borderColor: '#333',
+			        borderType: [2, 4],
+			        borderDashOffset: 4
+			      },
+			      emphasis: { // 鼠标悬停时样式
+			        label: {
+			          color: 'rgb(0, 60, 131)'
+			        },
+			        itemStyle: {
+			          areaColor: 'rgba(0, 60, 131, 0.3)',
+			          borderType: 'solid',
+			          borderColor: 'rgb(0, 60, 131)',
 			        }
-			      ]
-			    };
-				myChart.setOption(option);
+			      },
+			      select: { // 选中时样式
+			        label: {
+			          color: '#fff'
+			        },
+			        itemStyle: {
+			          areaColor: 'rgba(0, 60, 131, 0.7)',
+			          borderType: 'solid',
+			          borderColor: 'rgb(0, 60, 131)',
+			        }
+			      }
+			    }
+			  ]
 			});
 
 
