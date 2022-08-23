@@ -685,7 +685,7 @@
 		        }
 		      ]
 		    };
-		    buildingChartYear.setOption(option, true);
+		    buildingChartYear.setOption(option);
 
 	    }
 		</script>
@@ -1132,7 +1132,7 @@
 			      }
 			    ]
 			  };
-			map_year_chart.setOption(option);
+			map_year_chart.setOption(option, true);
 		}
 
 		// drawSKMap();
