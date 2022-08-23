@@ -1068,7 +1068,7 @@
 
 		    var option = {
 			    title: {
-			      text: 'South Kensington Campus ' + meter_type + ' Usage',
+			      text: last_year + 'South Kensington Campus ' + meter_type + ' Usage',
 			      subtext: 'Unit: ' + unit,
 			      left: 'center'
 			    },
@@ -1079,8 +1079,8 @@
 			    },
 			    visualMap: {
 			      left: 'right',
-			      min: 500000,
-			      max: 38000000,
+			      min: Math.min.apply(null, Object.values(objs)),
+			      max: Math.max.apply(null, Object.values(objs)),
 			      inRange: {
 			        color: [
 			          '#313695',
