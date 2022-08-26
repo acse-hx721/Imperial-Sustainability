@@ -193,8 +193,9 @@
 			    <th class="tg-0lax"></th>
 			    <th class="tg-1wig">The same 7 days last year</th>
 			    <th class="tg-1wig">The last 7 days</th>
-			    <th class="tg-1wig" id="table_last_last_year">Year X</th>
-			    <th class="tg-1wig" id="table_last_year">Year Y</th>
+			    <th class="tg-1wig" id="table_last_last2_year">Year X</th>
+			    <th class="tg-1wig" id="table_last_last_year">Year Y</th>
+			    <th class="tg-1wig" id="table_last_year">Year Z</th>
 		  	</tr>
 		</thead>
 		<tbody>
@@ -202,6 +203,7 @@
 			    <td class="tg-1wig">Energy consumption (unit: kWh)</td>
 			    <td class="tg-0lax" id="table_last_seven_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_seven_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_last_last2_year_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_last_last_year_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_last_year_consumption">Loading</td>
 		  	</tr>
@@ -209,6 +211,7 @@
 			    <td class="tg-1wig">CO<sub>2</sub>e emission (unit: t)</td>
 			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
 			    <td class="tg-0lax" id="table_seven_emision">Loading</td>
+			    <td class="tg-0lax" id="table_last_last2_year_emision">Loading</td>
 			    <td class="tg-0lax" id="table_last_last_year_emision">Loading</td>
 			    <td class="tg-0lax" id="table_last_year_emision">Loading</td>
 		  	</tr>
@@ -286,19 +289,21 @@
 		var this_year1;
 		var last_year1;
 		var last_last_year1;
+		var last_last2_year1;
 
 
 		// var sum1;
 		// var sum2;
 
-		function calculateCO2(this_year, last_year, last_last_year, sum_last_seven, sum_seven, sum_last_last_year, sum_last_year){
+		function calculateCO2(this_year, last_year, last_last_year, last_last2_year, sum_last_seven, sum_seven, sum_last_last2_year, sum_last_last_year, sum_last_year){
 			this_year1 = this_year;
 			last_year1 = last_year;
 			last_last_year1 = last_last_year;
+			last_last2_year1 = last_last2_year;
 			sum1 = sum_last_seven;
 			sum2 = sum_seven;
 
-
+			document.getElementById("table_last_last_year").innerHTML = 'Year ' + last_last2_year;
 			document.getElementById("table_last_last_year").innerHTML = 'Year ' + last_last_year;
 		    document.getElementById("table_last_year").innerHTML = 'Year ' + last_year;
 
@@ -308,9 +313,11 @@
 		    document.getElementById("table_last_seven_consumption").innerHTML = sum_last_seven;
 		    document.getElementById("table_seven_consumption").innerHTML = sum_seven;
 
+		    document.getElementById("table_last_last2_year_emision").innerHTML = sum_last_last2_year * getCO2Factor(last_last2_year) / 1000;
 		    document.getElementById("table_last_last_year_emision").innerHTML = sum_last_last_year * getCO2Factor(last_last_year) / 1000;
 		    document.getElementById("table_last_year_emision").innerHTML = sum_last_year * getCO2Factor(last_year) / 1000;
 
+		    document.getElementById("table_last_last2_year_consumption").innerHTML = sum_last_last2_year;
 		    document.getElementById("table_last_last_year_consumption").innerHTML = sum_last_last_year;
 		    document.getElementById("table_last_year_consumption").innerHTML = sum_last_year;
 		}
@@ -532,29 +539,8 @@
 			    }
 			  ],
 			  series: [
-			    {
-			      name: this_year + ' Data',
-			      type: 'line',
-			      symbol: 'none',
-			      sampling: 'lttb',
-			      itemStyle: {
-			        color: 'rgb(255, 70, 131)'
-			      },
-			      areaStyle: {
-			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-			          {
-			            offset: 0,
-			            color: 'rgb(255, 158, 68)'
-			          },
-			          {
-			            offset: 1,
-			            color: 'rgb(255, 70, 131)'
-			          }
-			        ]),
-			      },
-			      data: this_year_data
-			    },
-			    {
+
+			  	{
 			      name: previous_year + ' Data',
 			      type: 'line',
 			      symbol: 'none',
@@ -576,6 +562,28 @@
 			        opacity: 0.3
 			      },
 			      data: previous_year_data
+			    },
+			    {
+			      name: this_year + ' Data',
+			      type: 'line',
+			      symbol: 'none',
+			      sampling: 'lttb',
+			      itemStyle: {
+			        color: 'rgb(255, 70, 131)'
+			      },
+			      areaStyle: {
+			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+			          {
+			            offset: 0,
+			            color: 'rgb(255, 158, 68)'
+			          },
+			          {
+			            offset: 1,
+			            color: 'rgb(255, 70, 131)'
+			          }
+			        ]),
+			      },
+			      data: this_year_data
 			    }
 			  ]
 			};
@@ -587,6 +595,7 @@
 		<br><br>
 		<!-- Button to change the year -->
 		<div class="rectangle" id="btn_div" style="text-align: center; margin: auto">
+			<button type="button" id="last_last2_year_btn" style="width: 100px; height:30px; margin:0 auto;" onclick="drawSKMap_year(all_sites_obj_last2_year, last_last2_year1, unit)">Loading</button>
     		<button type="button" id="last_last_year_btn" style="width: 100px; height:30px; margin:0 auto;" onclick="drawSKMap_year(all_sites_obj_last_year, last_last_year1, unit)">Loading</button>
 			<button type="button" id="last_year_btn" style="width: 100px; height:30px; margin:0 auto;" onclick="drawSKMap_year(all_sites_obj_year, last_year1, unit)">Loading</button>
 		</div>
@@ -596,7 +605,7 @@
 		<br><br>
 		<div id="buildingChartYear" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-    	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit){
+    	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, all_sites_obj_last2_year, last_year, last_last_year, last_last2_year, unit){
 	        var buildingChartYear = echarts.init(document.getElementById('buildingChartYear'));
 
 	        option = {
@@ -625,7 +634,7 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', last_last_year + "Accumulated Consumption", last_year + "Accumulated Consumption"],
+		        data: ['Growth', last_last2_year + " Accumulated Consumption", last_last_year + " Accumulated Consumption", last_year + " Accumulated Consumption"],
 		        itemGap: 5
 		      },
 		      grid: {
@@ -674,13 +683,18 @@
 		        }
 		      ],
 		      series: [
+		      	{
+		          name: last_last2_year + " Accumulated Consumption",
+		          type: 'bar',
+		          data: Object.values(all_sites_obj_last2_year)
+		        },
 		        {
-		          name: last_last_year + "Accumulated Consumption",
+		          name: last_last_year + " Accumulated Consumption",
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_last_year)
 		        },
 		        {
-		          name: last_year + "Accumulated Consumption",
+		          name: last_year + " Accumulated Consumption",
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_year)
 		        }
@@ -700,7 +714,7 @@
 		<div id="elecDateChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
 
-    	function drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data){
+    	function drawYearLineChart(last_year, last_last_year, last_last2_year, last_year_data, last_last_year_data, last_last2_year_data, unit){
 	        var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
 	    	let base = +new Date(2020, 12, 0);
 			let oneDay = 24 * 3600 * 1000;
@@ -758,29 +772,30 @@
 			    }
 			  ],
 			  series: [
-			    {
-			      name: last_year + ' Data',
+			  	{
+			      name: last_last2_year + ' Data',
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
 			      itemStyle: {
-			        color: 'rgb(255, 70, 131)'
+			        color: 'rgb(60,179,113)'
 			      },
 			      areaStyle: {
 			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
 			          {
 			            offset: 0,
-			            color: 'rgb(255, 158, 68)'
+			            color: 'rgb(46, 139, 87)'
 			          },
 			          {
 			            offset: 1,
-			            color: 'rgb(255, 70, 131)'
+			            color: 'rgb(144, 238, 144)'
 			          }
 			        ]),
+			        opacity: 0.3
 			      },
-			      data: last_year_data
+			      data: last_last2_year_data
 			    },
-			    {
+			  	{
 			      name: last_last_year + ' Data',
 			      type: 'line',
 			      symbol: 'none',
@@ -802,7 +817,30 @@
 			        opacity: 0.3
 			      },
 			      data: last_last_year_data
+			    },
+			    {
+			      name: last_year + ' Data',
+			      type: 'line',
+			      symbol: 'none',
+			      sampling: 'lttb',
+			      itemStyle: {
+			        color: 'rgb(255, 70, 131)'
+			      },
+			      areaStyle: {
+			        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+			          {
+			            offset: 0,
+			            color: 'rgb(255, 158, 68)'
+			          },
+			          {
+			            offset: 1,
+			            color: 'rgb(255, 70, 131)'
+			          }
+			        ]),
+			      },
+			      data: last_year_data
 			    }
+			    
 			  ]
 			};
 			elecDateChart.setOption(option);
@@ -820,7 +858,7 @@
 
     	<script type="text/javascript">
 
-    	function drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data){
+    	function drawMonthBarChart(last_year, last_last_year, last_last2_year, last_year_month_data, last_last_year_month_data, last_last2_year_month_data, unit){
 	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
 			option = {
 			  legend: {
@@ -851,6 +889,11 @@
 			  // Declare several bar series, each will be mapped
 			  // to a column of dataset.source by default.
 			  series: [
+			  			{
+                            name: last_last2_year + ' Data',
+                            type: 'bar',
+                            data: last_last2_year_month_data
+                        },
                         {
                             name: last_last_year + ' Data',
                             type: 'bar',
@@ -1211,6 +1254,11 @@
 	   	var all_sites_obj_last_year = {}; //Obj类型
 	    var all_channels_obj_last_year = {}; //Obj类型
 
+		// 前前年
+	    var all_sites_obj_last2_year = {}; //Obj类型
+	    var all_channels_obj_last2_year = {}; //Obj类型
+
+
         var all_sites = new Set();
         var all_channels = new Set();
 
@@ -1246,12 +1294,14 @@
 			    	all_sites_obj_week[x] = 0;
 			    	all_sites_obj_year[x] = 0;
 			    	all_sites_obj_last_year[x] = 0;
+			    	all_sites_obj_last2_year[x] = 0;
 			    }
 			    for (var x of all_channels){
 			    	all_channels_obj[x] = 0;
 			    	all_channels_obj_week[x] = 0;
 			    	all_channels_obj_year[x] = 0;
 			    	all_channels_obj_last_year[x] = 0;
+			    	all_channels_obj_last2_year[x] = 0;
 
 			    }
 			    console.log(all_sites_obj);
@@ -1457,11 +1507,13 @@
 	 	var heat_map_times= [];
 
 	 	// the date of last year and the year befor last year
+	 	var start_of_last_last2_year;
 	 	var start_of_last_last_year;
 	 	var start_of_last_year;
 
 	 	var last_year_data = [];
 	 	var last_last_year_data = [];
+	 	var last_last2_year_data = [];
 
 	 	var last_year_day_counter = 0;
 	 	var last_year_day_sum = 0;
@@ -1469,12 +1521,18 @@
 	 	var last_last_year_day_counter = 0;
 	 	var last_last_year_day_sum = 0;
 
+	 	// 前前年
+	 	var last_last2_year_day_counter = 0;
+	 	var last_last2_year_day_sum = 0;
+
 	 	// the variable used for month bar chart
 	 	var last_year_month_data = [];
 	 	var last_last_year_month_data = [];
+	 	var last_last2_year_month_data = [];
 
 	 	var last_year_month_sum = 0;
 	 	var last_last_year_month_sum = 0;
+	 	var last_last2_year_month_sum = 0;
 
 	 	var current_month1 = 0;
 	 	var month_last_loop1 = 0;
@@ -1482,8 +1540,12 @@
 	 	var current_month2 = 0;
 	 	var month_last_loop2 = 0;
 
+	 	// 前前年
+	 	var current_month3 = 0;
+	 	var month_last_loop3 = 0;
 
-// Data error handle
+
+		// Data error handle
 	 	// The number of the latest one
 	 	var last_data = 100000;
 	 	var threshold = 100000;
@@ -1513,6 +1575,7 @@
 
 	 	sum_counter = 0;
 	 	sum_counter_last_year = 0;
+	 	sum_counter_last2_year = 0;
 
 	 	$("#buildingChart").hide();
 	 	$("#buildingChartYear").hide();
@@ -1521,6 +1584,7 @@
 	 	// $("#btn_div").hide();
 	 	document.getElementById("last_year_btn").style.display = "none";
 	 	document.getElementById("last_last_year_btn").style.display = "none";
+	 	document.getElementById("last_last2_year_btn").style.display = "none";
 	 	if (meter_location == "campus"){
 			$("#buildingChart").show();
 			$("#buildingChartYear").show();
@@ -1551,15 +1615,20 @@
 			// Calculate the start of 2 year
 			var last_year = new Date(last_datetime).getFullYear() - 1;
 			var last_last_year = new Date(last_datetime).getFullYear() - 2;
+			// 前前年
+			var last_last2_year = new Date(last_datetime).getFullYear() - 3;
 
 			start_of_last_year = last_year + "/1/1";
 			start_of_last_last_year = last_last_year + "/1/1";
+			start_of_last_last2_year = last_last_year + "/1/1";
 
 			start_of_last_year = new Date(start_of_last_year);
 			start_of_last_last_year = new Date(start_of_last_last_year);
+			start_of_last_last2_year = new Date(start_of_last_last2_year);
 
 			var days_last_year = getDaysOfYear(last_year);
 			var days_last_last_year = getDaysOfYear(last_last_year);
+			var days_last_last2_year = getDaysOfYear(last_last2_year);
 
 
 
@@ -1586,12 +1655,12 @@
 				float_data = float_data.toFixed(0);
 				float_data = parseFloat(float_data);
 				// if (meter_type == 'electricity'){
-					if (float_data > Math.abs(threshold * last_data) || float_data > threshold || float_data < -threshold){
-						float_data = last_data;
-					}
-					if (float_data != 0){
-						last_data = float_data;
-					}
+				if (float_data > Math.abs(threshold * last_data) || float_data > threshold || float_data < -threshold){
+					float_data = last_data;
+				}
+				if (float_data != 0){
+					last_data = float_data;
+				}
 				// }
 				// console.log(last_data);
 				// console.log(float_data);
@@ -1648,6 +1717,7 @@
 				}
 
 				// Store each day data of last year and last last year
+				// 去年
 				if (current_datetime >= start_of_last_year && last_year_data.length < 365){
 					last_year_day_sum = last_year_day_sum + float_data;
 					last_year_day_counter = last_year_day_counter + 1;
@@ -1673,6 +1743,7 @@
 					}
 					sum_counter = sum_counter + 1;
 				}
+				// 前年
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
 					last_last_year_day_sum = last_last_year_day_sum + float_data;
 					last_last_year_day_counter = last_last_year_day_counter + 1;
@@ -1698,10 +1769,38 @@
 					}
 					sum_counter_last_year = sum_counter_last_year + 1;
 				}
+				// 前前年
+				if (current_datetime >= start_of_last_last2_year && last_last2_year_data.length < 365){
+					last_last2_year_day_sum = last_last2_year_day_sum + float_data;
+					last_last2_year_day_counter = last_last2_year_day_counter + 1;
+
+					if (last_last2_year_day_counter == 48){
+						last_last2_year_data.push(last_last2_year_day_sum);
+						last_last2_year_day_sum = 0;
+						last_last2_year_day_counter = 0;
+					}
+				}
+				if (current_datetime >= start_of_last_last2_year && sum_counter_last2_year < 365 * 48 && meter_location == "campus"){
+					// 累计计算前年的每个channel消耗
+					for (var x in elem){
+						if (x != 'Date' && x != 'Time'){
+							if (!isNaN(elem[x])){
+								var float_num = parseFloat(elem[x]).toFixed(0);
+								float_num = parseFloat(float_num);
+								if (float_num < threshold && float_num > -threshold){
+									all_channels_obj_last2_year[x] = all_channels_obj_last2_year[x] + float_num;
+								}
+							}
+						}
+					}
+					sum_counter_last2_year = sum_counter_last2_year + 1;
+				}
+
 
 				// Month bar chart
 				current_month1 = current_datetime.getMonth();
 				current_month2 = current_datetime.getMonth();
+				current_month3 = current_datetime.getMonth();
 
 				if (current_datetime >= start_of_last_year && last_year_month_data.length < 12){
 					if (current_month1 == month_last_loop1){
@@ -1723,15 +1822,29 @@
 					}
 					month_last_loop2 = current_month2;
 				}
+				// 前前年
+				if (current_datetime >= start_of_last_last2_year && last_last2_year_month_data.length < 12){
+					if (current_month3 == month_last_loop3){
+						last_last2_year_month_sum = last_last2_year_month_sum + float_data;
+					}
+					else {
+						last_last2_year_month_data.push(last_last2_year_month_sum);
+						last_last2_year_month_sum = 0;
+					}
+					month_last_loop3 = current_month3;
+				}
 				
 
 				all_data.push(one_data);
 			}
+
+
+			// -----------------------------------------
 			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data, unit);
 
-			drawYearLineChart(last_year, last_last_year, last_year_data, last_last_year_data, unit);
+			drawYearLineChart(last_year, last_last_year, last_last2_year, last_year_data, last_last_year_data, last_last2_year_data, unit);
 
-			drawMonthBarChart(last_year, last_last_year, last_year_month_data, last_last_year_month_data, unit);
+			drawMonthBarChart(last_year, last_last_year, last_last2_year, last_year_month_data, last_last_year_month_data, last_last2_year_month_data, unit);
 
 			// Draw the heat map
 			var datetime1 = this_year_week_datetime;
@@ -1812,15 +1925,17 @@
 				drawBuildingChart(all_sites_obj, all_sites_obj_week, unit);
 
 
-				drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, last_year, last_last_year, unit);
+				drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, all_sites_obj_last2_year, last_year, last_last_year, last_last2_year, unit);
 
 				if (meter_type == "electricity"){
 					document.getElementById("last_year_btn").innerHTML = last_year;
 					document.getElementById("last_last_year_btn").innerHTML = last_last_year;
+					document.getElementById("last_last2_year_btn").innerHTML = last_last_year;
 					drawSKMap_year(all_sites_obj_year, last_year, unit);
 					// $("btn_div").show();
 					document.getElementById("last_year_btn").style.display = "block";
 	 				document.getElementById("last_last_year_btn").style.display = "block";
+	 				document.getElementById("last_last2_year_btn").style.display = "block";
 				}
 
 			}else if (meter_location != "campus" && meter_location != "null"){
@@ -1828,7 +1943,8 @@
 				drawChannelPieChartWeek(this_site_channel_obj, unit);
 			}
 
-			calculateCO2(this_year_week_datetime.getFullYear(), last_year, last_last_year, sumArr(previous_year_week_data), sumArr(this_year_week_data), sumArr(last_last_year_data), sumArr(last_year_data));
+			calculateCO2(this_year_week_datetime.getFullYear(), last_year, last_last_year, last_last2_year, sumArr(previous_year_week_data), sumArr(this_year_week_data), sumArr(last_last2_year_data),sumArr(last_last_year_data), sumArr(last_year_data));
+
 
 
 		  },
