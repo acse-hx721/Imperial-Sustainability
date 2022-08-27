@@ -422,7 +422,8 @@
 		          data: Object.keys(all_sites_obj)
 		        }
 		      ],
-		      yAxis: {		    
+		      yAxis: {
+		      	name:'Energy Consumption',		    
 			  	axisLabel: 
 			    {
 	                formatter:'{value} ' + unit
@@ -518,6 +519,7 @@
 			  yAxis: {
 			    type: 'value',
 			    boundaryGap: [0, '100%'],
+			    name:'Energy Consumption',
 			    axisLabel: 
 			    {
 	                formatter:'{value} ' + unit
@@ -649,7 +651,8 @@
 		          data: Object.keys(all_sites_obj)
 		        }
 		      ],
-		      yAxis: {		    
+		      yAxis: {
+		      	name:'Energy Consumption',		    
 			  	axisLabel: 
 			    {
 	                formatter:'{value} ' + unit
@@ -749,6 +752,7 @@
 			  yAxis: {
 			    type: 'value',
 			    boundaryGap: [0, '100%'],
+			    name:'Energy Consumption',
 			    axisLabel: 
 			    {
 	                formatter:'{value} ' + unit
@@ -874,7 +878,8 @@
 			  	type: 'category',
 			  	data: ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',]
 			  },
-			  yAxis: {		    
+			  yAxis: {
+			  	name:'Energy Consumption',		    
 			  	axisLabel: 
 			    {
 	                formatter:'{value} ' + unit
@@ -948,6 +953,7 @@
 			    top: '10%'
 			  },
 			  xAxis: {
+			  	name:'Time',
 			    type: 'category',
 			    data: hours,
 			    splitArea: {
@@ -955,6 +961,7 @@
 			    }
 			  },
 			  yAxis: {
+			  	name:'Date',
 			    type: 'category',
 			    data: days,
 			    splitArea: {
