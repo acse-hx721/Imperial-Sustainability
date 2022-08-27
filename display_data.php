@@ -1264,7 +1264,7 @@
 
         var sites_channels = {};
 
-        var special_threshold = 900;
+
 
         // Read location file
         if (meter_location == "campus"){
@@ -1551,7 +1551,9 @@
 	 	// The number of the latest one
 	 	var last_data = 100000;
 	 	var threshold = 100000;
-	 	// The number of the latest one for each building
+
+
+	 	var special_threshold = 900;
 
 	 	// var all_campus_data;
 
@@ -1743,8 +1745,10 @@
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								// Special error handling
-								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12' && float_num > special_threshold){
-									continue;
+								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
+									if (float_num > special_threshold){
+										continue;
+									}
 								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + float_num;
@@ -1773,8 +1777,10 @@
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								// Special error handling
-								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12' && float_num > special_threshold){
-									continue;
+								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
+									if (float_num > special_threshold){
+										continue;
+									}
 								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + float_num;
@@ -1803,8 +1809,10 @@
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								// Special error handling
-								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12' && float_num > special_threshold){
-									continue;
+								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
+									if (float_num > special_threshold){
+										continue;
+									}
 								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last2_year[x] = all_channels_obj_last2_year[x] + float_num;
