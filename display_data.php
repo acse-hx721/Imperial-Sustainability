@@ -1264,6 +1264,8 @@
 
         var sites_channels = {};
 
+        var special_threshold = 900;
+
         // Read location file
         if (meter_location == "campus"){
 	        Papa.parse(location_file_name, {
@@ -1656,10 +1658,10 @@
 				float_data = parseFloat(float_data);
 				// if (meter_type == 'electricity'){
 				// Handling negative value
-				if (float_data < 0){
-					last_data = 0;
-					float_data = last_data;
-				}
+				// if (float_data < 0){
+				// 	last_data = 0;
+				// 	float_data = last_data;
+				// }
 				if (float_data > Math.abs(threshold * last_data) || float_data > threshold || float_data < -threshold){
 					float_data = last_data;
 				}
@@ -1740,6 +1742,10 @@
 							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
+								// Special error handling
+								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12' && float_num > special_threshold){
+									continue;
+								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + float_num;
 								}
@@ -1766,6 +1772,10 @@
 							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
+								// Special error handling
+								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12' && float_num > special_threshold){
+									continue;
+								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + float_num;
 								}
@@ -1792,6 +1802,10 @@
 							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
+								// Special error handling
+								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12' && float_num > special_threshold){
+									continue;
+								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last2_year[x] = all_channels_obj_last2_year[x] + float_num;
 								}
