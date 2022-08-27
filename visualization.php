@@ -264,6 +264,12 @@
 					str += "</table>";
 					// 注入html
 					document.getElementById('site_channel_table').innerHTML = str;
+					if (meter_type == "electricity") {
+						$("#electricity").show();
+					}
+					else if(meter_type == "gas"){
+						$("#gas").show();
+					}
 				  }
 				});
 		</script>
@@ -385,12 +391,12 @@
 			$("#electricity").hide();
 			$("#gas").hide();
 
-			if (meter_type == "electricity") {
-				$("#electricity").show();
-			}
-			else if(meter_type == "gas"){
-				$("#gas").show();
-			}
+			// if (meter_type == "electricity") {
+			// 	$("#electricity").show();
+			// }
+			// else if(meter_type == "gas"){
+			// 	$("#gas").show();
+			// }
 		</script>
 
 	</body>
