@@ -1913,11 +1913,15 @@
 						if (!isNaN(all_channels_obj_last_year[channels[k]])){
 							all_sites_obj_last_year[site] = all_sites_obj_last_year[site] + all_channels_obj_last_year[channels[k]];
 						}
+						if (!isNaN(all_channels_obj_last2_year[channels[k]])){
+							all_sites_obj_last2_year[site] = all_sites_obj_last2_year[site] + all_channels_obj_last2_year[channels[k]];
+						}
 					}
 					all_sites_obj[site] = all_sites_obj[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj);
 					all_sites_obj_week[site] = all_sites_obj_week[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_week);
 					all_sites_obj_year[site] = all_sites_obj_year[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_year);
 					all_sites_obj_last_year[site] = all_sites_obj_last_year[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_last_year);
+					all_sites_obj_last2_year[site] = all_sites_obj_last2_year[site] - handleBuildingEquationForCampus_numberNeedMinus(site, all_channels_obj_last2_year);
 				}
 
 				console.log(all_sites_obj);
@@ -1930,7 +1934,7 @@
 				if (meter_type == "electricity"){
 					document.getElementById("last_year_btn").innerHTML = last_year;
 					document.getElementById("last_last_year_btn").innerHTML = last_last_year;
-					document.getElementById("last_last2_year_btn").innerHTML = last_last_year;
+					document.getElementById("last_last2_year_btn").innerHTML = last_last2_year;
 					drawSKMap_year(all_sites_obj_year, last_year, unit);
 					// $("btn_div").show();
 					document.getElementById("last_year_btn").style.display = "block";
