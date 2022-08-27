@@ -405,7 +405,9 @@
 		      calculable: true,
 		      legend: {
 		        data: ['Growth', "Last year's 7 Days Accumulated Consumption", 'Last 7 Days Accumulated Consumption'],
-		        itemGap: 5
+		        itemGap: 5,
+		        x:'center',
+	        	y:'bottom',
 		      },
 		      grid: {
 		        top: '12%',
@@ -629,7 +631,9 @@
 		      calculable: true,
 		      legend: {
 		        data: ['Growth', last_last2_year + " Accumulated Consumption", last_last_year + " Accumulated Consumption", last_year + " Accumulated Consumption"],
-		        itemGap: 5
+		        itemGap: 5,
+		        x:'center',
+	        	y:'bottom',
 		      },
 		      grid: {
 		        top: '12%',
