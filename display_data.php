@@ -407,7 +407,7 @@
 		        data: ['Growth', "Last year's 7 Days Accumulated Consumption", 'Last 7 Days Accumulated Consumption'],
 		        itemGap: 5,
 		        x:'center',
-	        	y:'top',
+	        	y:'bottom',
 	        	padding:[0,0,40,0],
 		      },
 		      grid: {
@@ -634,7 +634,7 @@
 		        data: ['Growth', last_last2_year + " Accumulated Consumption", last_last_year + " Accumulated Consumption", last_year + " Accumulated Consumption"],
 		        itemGap: 5,
 		        x:'center',
-	        	y:'top',
+	        	y:'bottom',
 	        	padding:[0,0,40,0],
 		      },
 		      grid: {
