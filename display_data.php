@@ -1737,7 +1737,7 @@
 					// 累计计算去年的每个channel消耗
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
-							if (!isNaN(elem[x])){
+							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								if (float_num < threshold && float_num > -threshold){
@@ -1763,7 +1763,7 @@
 					// 累计计算前年的每个channel消耗
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
-							if (!isNaN(elem[x])){
+							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								if (float_num < threshold && float_num > -threshold){
@@ -1789,7 +1789,7 @@
 					// 累计计算前年的每个channel消耗
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
-							if (!isNaN(elem[x])){
+							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
 								var float_num = parseFloat(elem[x]).toFixed(0);
 								float_num = parseFloat(float_num);
 								if (float_num < threshold && float_num > -threshold){
