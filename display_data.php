@@ -494,7 +494,7 @@
 			  legend: {
 			  	x:'right',
 	        	y:'top',
-	        	padding:[0,150,0,0],
+	        	padding:[0,400,0,0],
 	          },
 			  tooltip: {
 			    trigger: 'axis',
