@@ -44,8 +44,6 @@ Chemistry 1 and 2;Chemistry Riser B;sk-bio-101-sip1.ad.ic.ac.uk_Device_16;Energy
 Chemistry 1 and 2;Chiller Roof Level (#4);sk-bio-101-sip2.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Bone and Roderic Hill;Circuit A5 Busbar Riser Bone Building;sk-ace-102-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Library;College Block Library Interconnector S8/2;sk-she-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
-Data Centre;DB-AC in Plantroom A3;sk-mec-104-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
-Data Centre;PDU 2 Switch K2;sk-mec-104-sip2.ad.ic.ac.uk_Device_6;Energy Consumption;kWh
 Dyson SoE;Dyson School Of Engineering Supply A;sk-rcs-101-sip1.ad.ic.ac.uk_Device_20;Energy Consumption;kWh
 Dyson SoE;Dyson School Of Engineering Supply B;sk-rcs-101-sip1.ad.ic.ac.uk_Device_21;Energy Consumption;kWh
 Eastside Hall;Eastside Sub Panel ACB43;sk-est-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
@@ -59,7 +57,6 @@ Sir Ernst Chain (Biochemistry);Queens Tower Basement;sk-bio-101-sip2.ad.ic.ac.uk
 RCS1;RCS1 NMR Feeder;sk-rcs-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Sherfield;S8/5 Interconnector to CHPS19/1;sk-she-101-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
 Bone and Roderic Hill;South Annex Riser DBSA/1 Bone Corridor;sk-ace-102-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
-8-15 Princes Gardens (inc Garden Hall);Spare;sk-nor-101-sip1.ad.ic.ac.uk_Device_9;Energy Consumption;kWh
 Ethos Sports Centre;Sports Hall ACB32;sk-nor-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Ethos Sports Centre Residences;Sports Hall Residential D3;sk-nor-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Eastside Hall;Supply from Southside;sk-est-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh

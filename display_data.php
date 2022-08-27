@@ -419,18 +419,12 @@
 		          data: Object.keys(all_sites_obj)
 		        }
 		      ],
-		      yAxis: [
-		        {
-		          type: 'value',
-		          name: unit,
-		          axisLabel: {
-		            formatter: function (a) {
-		              a = +a;
-		              return isFinite(a) ? echarts.format.addCommas(+a / 1000) : '';
-		            }
-		          }
-		        }
-		      ],
+		      yAxis: {		    
+			  	axisLabel: 
+			    {
+	                formatter:'{value} ' + unit
+	            }
+	          },
 		      dataZoom: [
 		        {
 		          show: true,
@@ -649,18 +643,12 @@
 		          data: Object.keys(all_sites_obj)
 		        }
 		      ],
-		      yAxis: [
-		        {
-		          type: 'value',
-		          name: unit,
-		          axisLabel: {
-		            formatter: function (a) {
-		              a = +a;
-		              return isFinite(a) ? echarts.format.addCommas(+a / 1000) : '';
-		            }
-		          }
-		        }
-		      ],
+		      yAxis: {		    
+			  	axisLabel: 
+			    {
+	                formatter:'{value} ' + unit
+	            }
+	          },
 		      dataZoom: [
 		        {
 		          show: true,
