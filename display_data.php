@@ -390,7 +390,7 @@
 		      },
 		      title: {
 			    text: 'Buildings of the South Kensington Campus Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
-			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
+			    // subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
 		        show: true,
@@ -416,12 +416,14 @@
 		        right: '10%',
 		        containLabel: true
 		      },
-		      xAxis: [
-		        {
-		          type: 'category',
-		          data: Object.keys(all_sites_obj)
-		        }
-		      ],
+		      xAxis:{
+		        type: 'category',
+		        data: Object.keys(all_sites_obj),
+		        axisLabel: {
+			      //  X 坐标轴标签相关设置
+			      rotate: '45'
+			    }
+			  },
 		      yAxis: {
 		      	name:'Energy Consumption',		    
 			  	axisLabel: 
@@ -500,7 +502,7 @@
 			  },
 			  title: {
 			    text: 'Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
-			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year in the form of a line chart. You can browse the data of different periods by dragging the slider below.',
+			    // subtext:'This chart shows the data comparison of the latest week and the same week of the previous year in the form of a line chart. You can browse the data of different periods by dragging the slider below.',
 			  },
 			  toolbox: {
 			    feature: {
@@ -619,7 +621,7 @@
 		      },
 		      title: {
 			    text: 'Buildings of the South Kensington Campus Energy Consumption Yearly Chart (compare the last 3 civil years)',
-			    subtext:'This chart shows the data comparison of the last 3 civil years for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
+			    // subtext:'This chart shows the data comparison of the last 3 civil years for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
 		        show: true,
@@ -735,7 +737,7 @@
 			  },
 			  title: {
 			    text: 'Energy Consumption Yearly Chart (compare the last 3 civil years)',
-			   	subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
+			   	// subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
 			  },
 			  toolbox: {
 			    feature: {
@@ -874,7 +876,7 @@
 			  tooltip: {},
 			  title: {
 			    text: 'Energy Consumption Yearly Chart by Month (compare the last 3 civil years)',
-			    subtext: 'This chart shows the data of the last 3 civil years in a bar chart, showing the accumulated data of each month in detail.',
+			    // subtext: 'This chart shows the data of the last 3 civil years in a bar chart, showing the accumulated data of each month in detail.',
 			  },
 			  xAxis: {
 			  	type: 'category',
