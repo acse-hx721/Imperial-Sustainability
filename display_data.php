@@ -389,7 +389,7 @@
 		        }
 		      },
 		      title: {
-			    text: 'Building Data Chart (Same week last year)',
+			    text: 'Buildings of the South Kensington Campus Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
 			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
@@ -495,7 +495,7 @@
 			    }
 			  },
 			  title: {
-			    text: 'Week Data Chart (Same week last year)',
+			    text: 'Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
 			    subtext:'This chart shows the data comparison of the latest week and the same week of the previous year in the form of a line chart. You can browse the data of different periods by dragging the slider below.',
 			  },
 			  toolbox: {
@@ -613,8 +613,8 @@
 		        }
 		      },
 		      title: {
-			    text: 'Year Building Data Chart',
-			    subtext:'This chart shows the data comparison of the last year and the the year before last for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
+			    text: 'Buildings of the South Kensington Campus Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			    subtext:'This chart shows the data comparison of the last 3 civil years for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
 		        show: true,
@@ -723,8 +723,8 @@
 			    }
 			  },
 			  title: {
-			    text: 'Year Data Chart',
-			   	subtext:'This chart shows the most recent civil year in the available data compared to the previous year by way of a line graph.',
+			    text: 'Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			   	subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
 			  },
 			  toolbox: {
 			    feature: {
@@ -861,8 +861,8 @@
 			  },
 			  tooltip: {},
 			  title: {
-			    text: 'Years Comparison by Month',
-			    subtext: 'This chart shows the data of the last full natural year in the available data compared to the previous year in a bar chart, showing the data of each month in detail.',
+			    text: 'Energy Consumption Yearly Chart by Month (compare the last 3 civil years)',
+			    subtext: 'This chart shows the data of the last 3 civil years in a bar chart, showing the accumulated data of each month in detail.',
 			  },
 			  xAxis: {
 			  	type: 'category',
@@ -934,8 +934,8 @@
 			    position: 'top'
 			  },
 			  title: {
-			    text: 'Week Heat Map (30 mins interval)',
-			    subtext: 'This figure shows the data of the last week of existing data by color, and the usage of specific time can be observed by the depth of data. You can filter the range of data you want to display by using the slider below.',
+			    text: 'Energy Consumption Weekly Heat Map (30 mins interval)',
+			    subtext: 'This figure shows the data of the lastest week of existing data by color, and the usage of specific time can be observed by the depth of data. You can filter the range of data you want to display by using the slider below.',
 			  },
 			  grid: {
 			    height: '60%',
@@ -1107,7 +1107,7 @@
 
 		    var option = {
 			    title: {
-			      text: last_year + ' South Kensington Campus ' + meter_type + ' Usage',
+			      text: last_year + ' South Kensington Campus ' + meter_type + ' Usage Map',
 			      subtext: 'Unit: ' + unit,
 			      left: 'center'
 			    },
