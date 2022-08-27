@@ -406,9 +406,9 @@
 		      legend: {
 		        data: ['Growth', "Last year's 7 Days Accumulated Consumption", 'Last 7 Days Accumulated Consumption'],
 		        itemGap: 5,
-		        x:'center',
+		        x:'right',
 	        	y:'top',
-	        	padding:[45,0,0,0],
+	        	padding:[0,0,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -633,9 +633,9 @@
 		      legend: {
 		        data: ['Growth', last_last2_year + " Accumulated Consumption", last_last_year + " Accumulated Consumption", last_year + " Accumulated Consumption"],
 		        itemGap: 5,
-		        x:'center',
+		        x:'right',
 	        	y:'top',
-	        	padding:[45,0,0,0],
+	        	padding:[0,0,0,0],
 		      },
 		      grid: {
 		        top: '12%',
