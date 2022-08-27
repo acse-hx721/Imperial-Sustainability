@@ -303,7 +303,7 @@
 			sum1 = sum_last_seven;
 			sum2 = sum_seven;
 
-			document.getElementById("table_last_last_year").innerHTML = 'Year ' + last_last2_year;
+			document.getElementById("table_last_last2_year").innerHTML = 'Year ' + last_last2_year;
 			document.getElementById("table_last_last_year").innerHTML = 'Year ' + last_last_year;
 		    document.getElementById("table_last_year").innerHTML = 'Year ' + last_year;
 
@@ -1620,15 +1620,15 @@
 
 			start_of_last_year = last_year + "/1/1";
 			start_of_last_last_year = last_last_year + "/1/1";
-			start_of_last_last2_year = last_last_year + "/1/1";
+			start_of_last_last2_year = last_last2_year + "/1/1";
 
 			start_of_last_year = new Date(start_of_last_year);
 			start_of_last_last_year = new Date(start_of_last_last_year);
 			start_of_last_last2_year = new Date(start_of_last_last2_year);
 
-			var days_last_year = getDaysOfYear(last_year);
-			var days_last_last_year = getDaysOfYear(last_last_year);
-			var days_last_last2_year = getDaysOfYear(last_last2_year);
+			// var days_last_year = getDaysOfYear(last_year);
+			// var days_last_last_year = getDaysOfYear(last_last_year);
+			// var days_last_last2_year = getDaysOfYear(last_last2_year);
 
 
 
