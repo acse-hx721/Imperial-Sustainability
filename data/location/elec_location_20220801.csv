@@ -1,7 +1,5 @@
 ﻿SIT:<name>;MET:<name>;CHN:<channelID>;CHN:<TspDataType>;CHN:<unit>
 8-15 Princes Gardens (inc Garden Hall);14-15PG inc boiler plant room;sk-nor-101-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
-Data Centre;40KVA UPS;sk-mec-104-sip2.ad.ic.ac.uk_Device_12;Energy Consumption;kWh
-Data Centre;40KVA UPS SET A5;sk-mec-104-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
 8-15 Princes Gardens (inc Garden Hall);8-9 PG (EYEC);sk-nor-101-sip1.ad.ic.ac.uk_Device_10;Energy Consumption;kWh
 RSM;ACB62 to Aston Webb Main Incomer;sk-bes-102-sip1.ad.ic.ac.uk_Device_46;Energy Consumption;kWh
 RSM;ACB66 Supply to MPAC Panel;sk-bes-102-sip1.ad.ic.ac.uk_Device_47;Energy Consumption;kWh
@@ -43,8 +41,6 @@ Business School;Business School Riser;sk-mec-102-sip2.ad.ic.ac.uk_Device_4;Energ
 Chemistry 1 and 2;Chemistry Level 0, Sw/Rm 039;sk-bio-101-sip2.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
 Chemistry 1 and 2;Chemistry Riser A Level 0 Sw/Rm;sk-bio-101-sip2.ad.ic.ac.uk_Device_19;Energy Consumption;kWh
 Chemistry 1 and 2;Chemistry Riser B;sk-bio-101-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
-Data Centre;Chiller No1 E3;sk-mec-104-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
-Data Centre;Chiller No2;sk-mec-104-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Chemistry 1 and 2;Chiller Roof Level (#4);sk-bio-101-sip2.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Bone and Roderic Hill;Circuit A5 Busbar Riser Bone Building;sk-ace-102-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Library;College Block Library Interconnector S8/2;sk-she-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
@@ -57,41 +53,13 @@ Faculty;Faculty Building;sk-mec-102-sip2.ad.ic.ac.uk_Device_5;Energy Consumption
 Bone and Roderic Hill;Honda Wind Tunnel Master;sk-ace-102-sip3.ad.ic.ac.uk_Device_15;Energy Consumption;kWh
 Bone and Roderic Hill;Honda Wind Tunnel Slave;sk-ace-102-sip3.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
 Library;Library Interconnector ACB162;sk-bio-101-sip1.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
-Data Centre;ICT Greenwing Switch M2;sk-mec-104-sip2.ad.ic.ac.uk_Device_15;Energy Consumption;kWh
-Data Centre;Mechanical Plant MCC A7;sk-mec-104-sip1.ad.ic.ac.uk_Device_7;Energy Consumption;kWh
 RCS1;NMR Panel in 011;sk-che-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Dyson SoE;Observatory Building;SK-DBDE-B-SIP2.ad.ic.ac.uk_Device_64;Energy Consumption;kWh
-Data Centre;PDU 7 Switch J3;sk-mec-104-sip2.ad.ic.ac.uk_Device_7;Energy Consumption;kWh
-Data Centre;Spare- UPS1/G3;sk-mec-104-sip2.ad.ic.ac.uk_Device_19;Energy Consumption;kWh
 Sir Ernst Chain (Biochemistry);Queens Tower Basement;sk-bio-101-sip2.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
 RCS1;RCS1 NMR Feeder;sk-rcs-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Sherfield;S8/5 Interconnector to CHPS19/1;sk-she-101-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
-Data Centre;SKMENG05EMTR042 - C2;sk-mec-104-sip1.ad.ic.ac.uk_Device_11;Energy Consumption;kWh
-Data Centre;SKMENG05EMTR044 - D2;sk-mec-104-sip1.ad.ic.ac.uk_Device_13;Energy Consumption;kWh
-Data Centre;Spare - Switch C3;sk-mec-104-sip1.ad.ic.ac.uk_Device_12;Energy Consumption;kWh
 Bone and Roderic Hill;South Annex Riser DBSA/1 Bone Corridor;sk-ace-102-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
 8-15 Princes Gardens (inc Garden Hall);Spare;sk-nor-101-sip1.ad.ic.ac.uk_Device_9;Energy Consumption;kWh
-Data Centre;Spare - Switch A2;sk-mec-104-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
-Data Centre;Spare - Switch A4;sk-mec-104-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
-Data Centre;Spare - Switch A6;sk-mec-104-sip1.ad.ic.ac.uk_Device_6;Energy Consumption;kWh
-Data Centre;Spare - Switch B4;sk-mec-104-sip1.ad.ic.ac.uk_Device_9;Energy Consumption;kWh
-Data Centre;Spare - Switch B6;sk-mec-104-sip1.ad.ic.ac.uk_Device_10;Energy Consumption;kWh
-Data Centre;Spare A1;sk-mec-104-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
-Data Centre;Spare B3;sk-mec-104-sip1.ad.ic.ac.uk_Device_8;Energy Consumption;kWh
-Data Centre;Temp Chiller Connection Box - D3;sk-mec-104-sip1.ad.ic.ac.uk_Device_14;Energy Consumption;kWh
-Data Centre;Spare J2;sk-mec-104-sip2.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
-Data Centre;PDU 3 Switch K3;sk-mec-104-sip2.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
-Data Centre;UPS U2 Switchboard L1;sk-mec-104-sip2.ad.ic.ac.uk_Device_8;Energy Consumption;kWh
-Data Centre;Spare L2;sk-mec-104-sip2.ad.ic.ac.uk_Device_9;Energy Consumption;kWh
-Data Centre;UPS No3 Switchboard L3;sk-mec-104-sip2.ad.ic.ac.uk_Device_10;Energy Consumption;kWh
-Data Centre;Spare L4;sk-mec-104-sip2.ad.ic.ac.uk_Device_11;Energy Consumption;kWh
-Data Centre;DB B/2 CRAC Unit L6;sk-mec-104-sip2.ad.ic.ac.uk_Device_13;Energy Consumption;kWh
-Data Centre;F-Air MCCP1 Switch M1;sk-mec-104-sip2.ad.ic.ac.uk_Device_14;Energy Consumption;kWh
-Data Centre;Spare M3;sk-mec-104-sip2.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
-Data Centre;CO2 Plant 2 M4;sk-mec-104-sip2.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
-Data Centre;CO2 Plant 1 M6;sk-mec-104-sip2.ad.ic.ac.uk_Device_18;Energy Consumption;kWh
-Data Centre;PDU 5- UPS1/H3;sk-mec-104-sip2.ad.ic.ac.uk_Device_20;Energy Consumption;kWh
-Data Centre;PDU 8- UPS1/J2;sk-mec-104-sip2.ad.ic.ac.uk_Device_21;Energy Consumption;kWh
 Ethos Sports Centre;Sports Hall ACB32;sk-nor-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Ethos Sports Centre Residences;Sports Hall Residential D3;sk-nor-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Eastside Hall;Supply from Southside;sk-est-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
@@ -124,8 +92,6 @@ RCS1;Transformer T47;sk-rcs-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Huxley;Transformer T7;sk-hux-101-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Huxley;Transformer T8;sk-hux-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 City and Guilds;Transformer T9;sk-mec-102-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
-Data Centre;U1/A Board Feeder;sk-mec-104-sip1.ad.ic.ac.uk_Device_15;Energy Consumption;kWh
-Data Centre;U1/B Board Feeder H2;sk-mec-104-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Weeks Hall;Weeks Hall;sk-nor-101-sip1.ad.ic.ac.uk_Device_12;Energy Consumption;kWh
 William Penney;William Penny Lab Elec;sk-she-101-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
 Energy Centre;Transformer T10;sk-ele-101-sip2.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
