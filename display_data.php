@@ -408,7 +408,7 @@
 		        itemGap: 5,
 		        x:'right',
 	        	y:'top',
-	        	padding:[0,200,0,0],
+	        	padding:[0,150,0,0],
 		      },
 		      grid: {
 		        top: '12%',
