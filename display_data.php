@@ -646,8 +646,8 @@
 		        containLabel: true
 		      },
 		      xAxis:{
-		          type: 'category',
-		          data: Object.keys(all_sites_obj)
+		        type: 'category',
+		        data: Object.keys(all_sites_obj),
 		        axisLabel: {
 			      //  X 坐标轴标签相关设置
 			      rotate: '45'
