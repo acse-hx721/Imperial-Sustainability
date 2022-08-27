@@ -1367,7 +1367,7 @@
 	    	} else if (meter_location == "Chemistry 1 & 2"){
 	    		result = result - elem["sk-che-101-sip2.ad.ic.ac.uk_Device_2"];
 	    	} else if (meter_location == "Sherfield"){
-	    		result = result - elem["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] - elem["sk-she-101-sip1.ad.ic.ac.uk_Device_5"];
+	    		result = result - elem["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] - elem["sk-she-101-sip1.ad.ic.ac.uk_Device_5"] - elem['sk-she-101-sip1.ad.ic.ac.uk_Device_4'];
 	    	} else if (meter_location == "Sir Ernst Chain (Biochemistry)"){
 	    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
 	    			result = result - elem[mins_channels_sir_ernst[index]];
@@ -1451,7 +1451,7 @@
 		    	} else if (site == "Chemistry 1 & 2"){
 		    		result = all_channels["sk-che-101-sip2.ad.ic.ac.uk_Device_2"];
 		    	} else if (site == "Sherfield"){
-		    		result = all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_5"];
+		    		result = all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_3"] + all_channels["sk-she-101-sip1.ad.ic.ac.uk_Device_5"] + all_channels['sk-she-101-sip1.ad.ic.ac.uk_Device_4'];;
 		    	} else if (site == "Sir Ernst Chain (Biochemistry)"){
 		    		for (var index=0; index < mins_channels_sir_ernst.length; index++){
 		    			result = result + all_channels[mins_channels_sir_ernst[index]];
