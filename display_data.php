@@ -408,7 +408,7 @@
 		        itemGap: 5,
 		        x:'center',
 	        	y:'bottom',
-	        	padding:[0,0,200,0],
+	        	padding:[0,0,100,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -635,7 +635,7 @@
 		        itemGap: 5,
 		        x:'center',
 	        	y:'bottom',
-	        	padding:[0,0,200,0],
+	        	padding:[0,0,100,0],
 		      },
 		      grid: {
 		        top: '12%',
