@@ -1264,6 +1264,9 @@
 
         var sites_channels = {};
 
+        // threshold for special meter error
+        var special_threshold = 900;
+
 
 
         // Read location file
@@ -1424,8 +1427,14 @@
         function sumOfLocation(elem, channels){
         	var sum = 0;
         	for (var e in elem){
+
         		let index = channels.indexOf(e);
         		if (index != -1){
+	        		if (e == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || e == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
+						if (parseFloat(elem[e]) > special_threshold){
+							continue;
+						}
+					}
         			sum = sum + parseFloat(elem[e]);
         		}
         	}
@@ -1553,7 +1562,7 @@
 	 	var threshold = 100000;
 
 
-	 	var special_threshold = 900;
+
 
 	 	// var all_campus_data;
 
@@ -1746,9 +1755,9 @@
 								float_num = parseFloat(float_num);
 								// Special error handling
 								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
-									// if (float_num > special_threshold){
-									// 	continue;
-									// }
+									if (float_num > special_threshold){
+										continue;
+									}
 								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_year[x] = all_channels_obj_year[x] + float_num;
@@ -1778,9 +1787,9 @@
 								float_num = parseFloat(float_num);
 								// Special error handling
 								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
-									// if (float_num > special_threshold){
-									// 	continue;
-									// }
+									if (float_num > special_threshold){
+										continue;
+									}
 								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last_year[x] = all_channels_obj_last_year[x] + float_num;
@@ -1810,9 +1819,9 @@
 								float_num = parseFloat(float_num);
 								// Special error handling
 								if (x == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || x == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
-									// if (float_num > special_threshold){
-									// 	continue;
-									// }
+									if (float_num > special_threshold){
+										continue;
+									}
 								}
 								if (float_num < threshold && float_num > -threshold){
 									all_channels_obj_last2_year[x] = all_channels_obj_last2_year[x] + float_num;
