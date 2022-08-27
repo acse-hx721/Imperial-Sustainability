@@ -645,17 +645,14 @@
 		        right: '10%',
 		        containLabel: true
 		      },
-		      xAxis: [
-		        {
+		      xAxis:{
 		          type: 'category',
 		          data: Object.keys(all_sites_obj)
-		        },
 		        axisLabel: {
 			      //  X 坐标轴标签相关设置
-			      interval: 0,
 			      rotate: '45'
 			    }
-		      ],
+			  },
 		      yAxis: {
 		      	name:'Energy Consumption',		    
 			  	axisLabel: 
