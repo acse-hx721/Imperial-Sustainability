@@ -18,7 +18,6 @@ Southside Hall;Transformer T21;sk-rsm-101-sip2.ad.ic.ac.uk_Device_18;Energy Cons
 City and Guilds;Transformer T22;sk-icsm-2-sip1.ad.ic.ac.uk_Device_76;Energy Consumption;kWh
 City and Guilds;Transformer T23;sk-icsm-2-sip1.ad.ic.ac.uk_Device_121;Energy Consumption;kWh
 City and Guilds;Transformer T24;sk-icsm-2-sip1.ad.ic.ac.uk_Device_91;Energy Consumption;kWh
-Weeks Hall;Transformer T25;sk-icsm-2-sip1.ad.ic.ac.uk_Device_136;Energy Consumption;kWh
 Sherfield;Transformer T31;sk-icsm-2-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Sherfield;Transformer T32;sk-icsm-2-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Huxley;Transformer T33;sk-icsm-2-sip1.ad.ic.ac.uk_Device_181;Energy Consumption;kWh
@@ -108,7 +107,6 @@ Bessemer;Transformer T16;sk-bes-102-sip1.ad.ic.ac.uk_Device_31;Energy Consumptio
 City and Guilds;Transformer T22;sk-mec-102-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 City and Guilds;Transformer T23;sk-mec-102-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 City and Guilds;Transformer T24;sk-mec-102-sip1.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
-Weeks Hall;Transformer T25;sk-nor-101-sip1.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 Sir Ernst Chain (Biochemistry);Transformer T27;sk-bio-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Sir Ernst Chain (Biochemistry);Transformer T28;sk-bio-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 ACE;Transformer T29;sk-ace-102-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
@@ -120,7 +118,6 @@ Bone and Roderic Hill;Transformer T34;sk-ace-102-sip1.ad.ic.ac.uk_Device_5;Energ
 Bessemer;Transformer T35;sk-bes-102-sip1.ad.ic.ac.uk_Device_16;Energy Consumption;kWh
 Chemistry 1 and 2;Transformer T37;sk-che-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Chemistry 1 and 2;Transformer T38;sk-che-101-sip1.ad.ic.ac.uk_Device_7;Energy Consumption;kWh
-Weeks Hall;Transformer T39;sk-nor-101-sip1.ad.ic.ac.uk_Device_4;Energy Consumption;kWh
 SAF;Transformer T41;sk-saf-101-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 SAF;Transformer T42;sk-saf-101-sip2.ad.ic.ac.uk_Device_2;Energy Consumption;kWh
 Data Centre;Transformer T43;sk-mec-104-sip1.ad.ic.ac.uk_Device_17;Energy Consumption;kWh
@@ -135,6 +132,5 @@ Data Centre;U1/A Board Feeder;sk-mec-104-sip1.ad.ic.ac.uk_Device_15;Energy Consu
 Data Centre;U1/B Board Feeder H2;sk-mec-104-sip2.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
 Weeks Hall;Weeks Hall;sk-nor-101-sip1.ad.ic.ac.uk_Device_12;Energy Consumption;kWh
 William Penney;William Penny Lab Elec;sk-she-101-sip1.ad.ic.ac.uk_Device_5;Energy Consumption;kWh
-Weeks Hall;ACB42;sk-nor-101-sip1.ad.ic.ac.uk_Device_6;Energy Consumption;kWh
 Energy Centre;Transformer T10;sk-ele-101-sip2.ad.ic.ac.uk_Device_3;Energy Consumption;kWh
 SAF;Transformer T40;sk-saf-101-sip1.ad.ic.ac.uk_Device_1;Energy Consumption;kWh
