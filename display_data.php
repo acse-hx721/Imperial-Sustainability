@@ -341,7 +341,7 @@
 
 			option = {
 			  title: {
-			    text: meter_type + 'Meter consumption over the past 7 days',
+			    text: meter_type + ' Meter consumption over the past 7 days',
 			    subtext: meter_type + "("+unit+")",
 			    left: 'center'
 			  },
@@ -422,7 +422,7 @@
 		        data: Object.keys(all_sites_obj),
 		        axisLabel: {
 			      //  X 坐标轴标签相关设置
-			      rotate: '45'
+			      rotate: '30'
 			    }
 			  },
 		      yAxis: {
@@ -502,7 +502,7 @@
 			    }
 			  },
 			  title: {
-			    text: meter_type + 'Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
+			    text: meter_type + ' Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
 			    // subtext:'This chart shows the data comparison of the latest week and the same week of the previous year in the form of a line chart. You can browse the data of different periods by dragging the slider below.',
 			  },
 			  toolbox: {
@@ -622,7 +622,7 @@
 		        }
 		      },
 		      title: {
-			    text: 'Buildings of the South Kensington Campus' + meter_type +  'Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			    text: 'Buildings of the South Kensington Campus ' + meter_type +  ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
 			    // subtext:'This chart shows the data comparison of the last 3 civil years for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
@@ -641,7 +641,7 @@
 		        itemGap: 5,
 		        x:'right',
 	        	y:'top',
-	        	padding:[0,180,0,0],
+	        	padding:[0,150,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -655,7 +655,7 @@
 		        data: Object.keys(all_sites_obj),
 		        axisLabel: {
 			      //  X 坐标轴标签相关设置
-			      rotate: '45'
+			      rotate: '30'
 			    }
 			  },
 		      yAxis: {
@@ -739,7 +739,7 @@
 			    }
 			  },
 			  title: {
-			    text: meter_type + 'Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			    text: meter_type + ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
 			   	// subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
 			  },
 			  toolbox: {
@@ -879,7 +879,7 @@
 			  },
 			  tooltip: {},
 			  title: {
-			    text: meter_type + 'Energy Consumption Yearly Chart by Month (compare the last 3 civil years)',
+			    text: meter_type + ' Energy Consumption Yearly Chart by Month (compare the last 3 civil years)',
 			    // subtext: 'This chart shows the data of the last 3 civil years in a bar chart, showing the accumulated data of each month in detail.',
 			  },
 			  xAxis: {
@@ -954,7 +954,7 @@
 			    position: 'top'
 			  },
 			  title: {
-			    text: meter_type + 'Energy Consumption Weekly Heat Map (30 mins interval)',
+			    text: meter_type + ' Energy Consumption Weekly Heat Map (30 mins interval)',
 			    subtext: 'This figure shows the data of the lastest week of existing data by color, and the usage of specific time can be observed by the depth of data. You can filter the range of data you want to display by using the slider below.',
 			  },
 			  grid: {
