@@ -492,8 +492,9 @@
 			}
 			option = {
 			  legend: {
-			  	x:'center',
+			  	x:'right',
 	        	y:'top',
+	        	padding:[0,150,0,0],
 	          },
 			  tooltip: {
 			    trigger: 'axis',
