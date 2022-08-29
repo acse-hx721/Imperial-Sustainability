@@ -187,7 +187,7 @@
 										</div>
 										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
-												Electricity is one of the most basic energy sources in the college. Every day, nearly 1 million KWH of electricity is used to maintain the daily operation of the college and the experimental consumption of campus research.
+												Electricity is one of the most basic energy sources in the college. Every day, more than 100,000 kWh of electricity is used to maintain the daily operation of the college and the experimental consumption of campus research.
 											</div>
 										</div>
 									</div>
