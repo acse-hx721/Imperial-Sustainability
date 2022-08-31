@@ -197,6 +197,11 @@
 
 
 		<script type="text/javascript">
+			// Control which to show
+			$("#electricity").hide();
+			$("#gas").hide();
+
+
 			// Meter channels in a building
 	        var location_file_name;
 	        // var meter_channels = [];
@@ -238,8 +243,8 @@
 					}else if (meter_type == "gas"){
 						str += "<th class='tg-0lax'><a href='display_data.php?id=gas,null,campus'><font size=5><b>South Kensington Campus</b></font></th>";
 					}
-					    str += "<th class='tg-0lax'></th>"
-					  str += "</tr>";
+					str += "<th class='tg-0lax'></th>"
+					str += "</tr>";
 					str += "</thead>";
 					str += "<tbody>";
 
@@ -265,9 +270,6 @@
 					str += "</table>";
 					// 注入html
 					document.getElementById('site_channel_table').innerHTML = str;
-					// Control which to show
-					$("#electricity").hide();
-					$("#gas").hide();
 					if (meter_type == "electricity") {
 						$("#electricity").show();
 					}
@@ -388,6 +390,8 @@
 
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="js/custom.js"></script>
+
+
 
 	</body>
 </html>
