@@ -27,13 +27,13 @@
 		<!-- <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
 
 		<!-- Plugins -->
-		<link href="css/animations.css" rel="stylesheet">
+		<!-- <link href="css/animations.css" rel="stylesheet"> -->
 
 		<!-- Worthy core CSS file -->
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- Custom css --> 
-		<link href="css/custom.css" rel="stylesheet">
+		<!-- <link href="css/custom.css" rel="stylesheet"> -->
 	</head>
 
 	<body class="no-trans">
@@ -309,7 +309,7 @@
 		================================================== -->
 		<!-- Jquery and Bootstap core js files -->
 		<!-- <script type="text/javascript" src="plugins/jquery.min.js"></script> -->
-		<!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> -->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 		<!-- Modernizr javascript -->
 		<!-- <script type="text/javascript" src="plugins/modernizr.js"></script> -->
