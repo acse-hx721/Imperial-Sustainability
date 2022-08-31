@@ -7,8 +7,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Imperial College London Sustainability</title>
-		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
-		<meta name="author" content="htmlcoder.me">
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +27,7 @@
 		<!-- Plugins -->
 		<link href="css/animations.css" rel="stylesheet">
 
-		<!-- Worthy core CSS file -->
+		<!-- Core CSS file -->
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- Custom css --> 
