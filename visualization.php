@@ -143,7 +143,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">This page is for <span>Visualization</span></h1>
-							<p class="lead text-center">Selection of data type to show the specific data.</p>
+							<p class="lead text-center">Select the South Kensington campus, building name or meter name to view the corresponding data.</p>
 						</div>
 					</div>
 				</div>
