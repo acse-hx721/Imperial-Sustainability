@@ -29,7 +29,7 @@
 		<!-- Plugins -->
 		<link href="css/animations.css" rel="stylesheet">
 
-		<!-- Worthy core CSS file -->
+		<!-- Core CSS file -->
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- Custom css --> 
