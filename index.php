@@ -27,13 +27,13 @@
 		<!-- <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
 
 		<!-- Plugins -->
-		<!-- <link href="css/animations.css" rel="stylesheet"> -->
+		<link href="css/animations.css" rel="stylesheet">
 
 		<!-- Worthy core CSS file -->
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- Custom css --> 
-		<!-- <link href="css/custom.css" rel="stylesheet"> -->
+		<link href="css/custom.css" rel="stylesheet">
 	</head>
 
 	<body class="no-trans">
