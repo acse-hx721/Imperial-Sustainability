@@ -244,27 +244,30 @@
 					str += "<tbody>";
 
 						
-					    for (var site in sites_channels){
-					    	var channels = sites_channels[site].split(",");
-					            for(var j = 1; j < channels.length; j++){
-					            	if (channels[j] == "undefined"){
-					            		break;
-					            	}
-					            	str += "<tr>";
-					            	if (j == 1){
-					            		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'><b>" + site + "</b></td>";
-					            	}else{
-					            		str += "<td class='tg-cly1'></td>";
-					            	}
-					            	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ",null'>" + channels[j] + "</td>";
-					            	str += "</tr>";
-					            }
-					    }
+				    for (var site in sites_channels){
+				    	var channels = sites_channels[site].split(",");
+				            for(var j = 1; j < channels.length; j++){
+				            	if (channels[j] == "undefined"){
+				            		break;
+				            	}
+				            	str += "<tr>";
+				            	if (j == 1){
+				            		str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +",null,"+ site +"'><b>" + site + "</b></td>";
+				            	}else{
+				            		str += "<td class='tg-cly1'></td>";
+				            	}
+				            	str += "<td class='tg-cly1'><a href='display_data.php?id=" + meter_type +"," + channels[j] + ",null'>" + channels[j] + "</td>";
+				            	str += "</tr>";
+				            }
+				    }
 					   
 					str += "</tbody>";
 					str += "</table>";
 					// 注入html
 					document.getElementById('site_channel_table').innerHTML = str;
+					// Control which to show
+					$("#electricity").hide();
+					$("#gas").hide();
 					if (meter_type == "electricity") {
 						$("#electricity").show();
 					}
@@ -385,20 +388,6 @@
 
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="js/custom.js"></script>
-
-		<!-- Control which to show -->
-		<script>
-			
-			$("#electricity").hide();
-			$("#gas").hide();
-
-			// if (meter_type == "electricity") {
-			// 	$("#electricity").show();
-			// }
-			// else if(meter_type == "gas"){
-			// 	$("#gas").show();
-			// }
-		</script>
 
 	</body>
 </html>
