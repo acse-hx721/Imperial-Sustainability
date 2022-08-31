@@ -1,3 +1,5 @@
+// Name: Hongcheng Xie 	GitHub username: acse-hx721
+// Get sum of array
 function sumArr(arr) {
 	var s = 0;
     for (var i = 0;i<arr.length;i++) {
@@ -6,6 +8,7 @@ function sumArr(arr) {
   	return s;
 }
 
+// Get the CO2e conversion factor of the energy
 function getCO2Factor(year){
 	var factor = 0.1;
 	if (meter_type == "electricity"){
@@ -64,6 +67,7 @@ function getCO2Factor(year){
 }
 
 
+// Get the Date type data
 function getDay(today_time, day){
     function doHandleMonth(month){
     　　var m = month;
@@ -83,7 +87,7 @@ function getDay(today_time, day){
     return new Date(targetday_milliseconds);
 }
 
-
+// Calculate how many days in that year
 function getDaysOfYear(t) {
     if (t==null)
     {
@@ -109,6 +113,7 @@ var mins_channels = ["sk-rcs-101-sip1.ad.ic.ac.uk_Device_3", "sk-bio-101-sip2.ad
 
 var mins_channels_sir_ernst = ["sk-bio-101-sip2.ad.ic.ac.uk_Device_18", "sk-bio-101-sip1.ad.ic.ac.uk_Device_17", "sk-bio-101-sip1.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_16", "sk-bio-101-sip2.ad.ic.ac.uk_Device_17", "sk-bio-101-sip2.ad.ic.ac.uk_Device_19", "sk-bio-101-sip1.ad.ic.ac.uk_Device_18"];
 
+// Handle the calculation equations of electricity for some building
 function handleBuildingEquation(meter_location, elem, num){
 	var result = num;
 
@@ -201,7 +206,7 @@ function sumOfLocation(elem, channels){
 }
 
 
-
+// Handle the calculation equations of electricity for some building, return the positive number
 function handleBuildingEquationForCampus_numberNeedMinus(site, all_channels){
 	var result = 0;
 	if (meter_type == "electricity"){
