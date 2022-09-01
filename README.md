@@ -39,7 +39,7 @@ Part of the appearance and layout references a free webpage template.
 Worthy - Free Bootstrap Template：<https://github.com/Html-Coder/Worthy>  
 
 
-### Data Visualization Framework
+### Data Visualization
 The visualisation in this project was achieved using the visualisation framework ECharts.
 
 ECharts: <https://github.com/apache/echarts>
