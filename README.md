@@ -28,14 +28,16 @@ The code for the tool will be automatically deployed to this server once it has 
 Imperial-Sustainability: <https://github.com/acse-hx721/Imperial-Sustainability>
 
 
-### Webpage Template Source
-This web-based tool was developed on the basis of a free webpage template.
-Worthy - Free Bootstrap Template：<https://github.com/Html-Coder/Worthy>
-
-The template relies on some libraries to implement its beautiful display :
+### Appearance and Layout
+The appearance and layout of this web-based tool was developed primarily using HTML and CSS and relying on some common libraries.  
 * Bootstrap
 * jQuery
 * Animate CSS
+
+Part of the appearance and layout references a free webpage template.   
+
+Worthy - Free Bootstrap Template：<https://github.com/Html-Coder/Worthy>  
+
 
 ### Data Visualization Framework
 The visualisation in this project was achieved using the visualisation framework ECharts.
