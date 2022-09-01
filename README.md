@@ -76,7 +76,7 @@ The following is the directory of this project's files:
 ```
 
 
-## Example screenshots
+## Example Screenshots of the Data Science Tool
 ### Website Home Page
 ![image](https://github.com/acse-hx721/Imperial-Sustainability/blob/main/images/index_page.png)
 
