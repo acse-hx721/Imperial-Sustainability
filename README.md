@@ -44,7 +44,7 @@ The visualisation in this project was achieved using the visualisation framework
 
 ECharts: <https://github.com/apache/echarts>
 
-This project uses Javascript to introduce the ECharts library, and uses it in the visualization page to generate a variety of charts, such as bar chart, line chart, map, heat maps, etc.
+This project uses Javascript to introduce the ECharts library, and uses it in the visualization page to generate a variety of charts, such as bar chart, line chart, map, heat map, etc.
 
 ## File Directory
 The following is the directory of this project's files:
