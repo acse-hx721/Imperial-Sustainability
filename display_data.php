@@ -143,10 +143,9 @@
 		<script type="text/javascript">
 		var a=GetRequest();
 		 
-		// console.log("id:"+a['id']) //打印出传过来的id
-		 
 		function GetRequest() {
-		var url = location.search; //获取url中"?"符后的字串
+		// Get the string in the url after the "?"
+		var url = location.search; 
 		var theRequest = new Object();
 		 if (url.indexOf("?") != -1) {
 		       var str = url.substr(1);
@@ -158,9 +157,11 @@
 		   return theRequest;
 		}
 		</script>
+
+		<!-- Title section -->
 		<h1 class="text-center" id="meter_type"></span></h1>
-		<!-- <h1 class="text-center" id="meter_location"></span></h1> -->
 		<h1 class="text-center" id="meter_id"></span></h1>
+		<!-- Loading instructions -->
 		<h1 class="text-center" id="loading">Loading, please wait...</h1>
 
 		<script>
@@ -229,9 +230,8 @@
 		var last_last2_year1;
 
 
-		// var sum1;
-		// var sum2;
 
+		// Update the CO2e calculation table
 		function calculateCO2(this_year, last_year, last_last_year, last_last2_year, sum_last_seven, sum_seven, sum_last_last2_year, sum_last_last_year, sum_last_year){
 			this_year1 = this_year;
 			last_year1 = last_year;
@@ -265,6 +265,7 @@
 
     	<div id="channelPieChartWeek" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+    	// Function to draw pie chart in building-level
     	function drawChannelPieChartWeek(this_site_channel_obj, unit){
 	        var channelPieChartWeek = echarts.init(document.getElementById('channelPieChartWeek'));
 
@@ -312,6 +313,7 @@
 
     	<div id="buildingChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+    	// Function to draw comparison of different buildings weekly in campus-level
     	function drawBuildingChart(all_sites_obj, all_sites_obj_week, unit){
 	        var buildingChart = echarts.init(document.getElementById('buildingChart'));
 
@@ -358,7 +360,7 @@
 		        type: 'category',
 		        data: Object.keys(all_sites_obj),
 		        axisLabel: {
-			      //  X 坐标轴标签相关设置
+			      // set for x axis
 			      rotate: '30'
 			    }
 			  },
@@ -412,6 +414,7 @@
 		<br><br>
     	<div id="elecWeeksChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+    	// Function to draw line chart weekly
     	function drawWeekLineChart(this_year_week_datetime, this_year_data, previous_year_data, unit){
 	        var elecWeeksChart = echarts.init(document.getElementById('elecWeeksChart'));
 	    	let baseTime = +new Date(this_year_week_datetime);
@@ -541,11 +544,13 @@
 			<button type="button" id="last_year_btn" style="width: 100px; height:30px; margin:0 auto;" onclick="drawSKMap_year(all_sites_obj_year, last_year1, unit)">Loading</button>
 		</div>
 
+		<!-- DIV used to draw the map -->
 		<div id="map_year" style="width: 100%; height:500px; float:center; "></div>
 
 		<br><br>
 		<div id="buildingChartYear" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+    	// Function to draw comparison of different buildings weekly in campus-level
     	function drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, all_sites_obj_last2_year, last_year, last_last_year, last_last2_year, unit){
 	        var buildingChartYear = echarts.init(document.getElementById('buildingChartYear'));
 
@@ -592,7 +597,7 @@
 		        type: 'category',
 		        data: Object.keys(all_sites_obj),
 		        axisLabel: {
-			      //  X 坐标轴标签相关设置
+			      // set for x axis
 			      rotate: '30'
 			    }
 			  },
@@ -655,7 +660,7 @@
 
 		<div id="elecDateChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
-
+    	// Function to draw line chart of whole year
     	function drawYearLineChart(last_year, last_last_year, last_last2_year, last_year_data, last_last_year_data, last_last2_year_data, unit){
 	        var elecDateChart = echarts.init(document.getElementById('elecDateChart'));
 	    	let base = +new Date(2020, 12, 0);
@@ -801,7 +806,7 @@
 		<div id="elecBarChart" style="width: 100%; height:500px; float:center; "></div>
 
     	<script type="text/javascript">
-
+    	// Function to draw bar chart for whole year in one month interval
     	function drawMonthBarChart(last_year, last_last_year, last_last2_year, last_year_month_data, last_last_year_month_data, last_last2_year_month_data, unit){
 	        var elecBarChart = echarts.init(document.getElementById('elecBarChart'));
 			option = {
@@ -863,6 +868,7 @@
 
 		<div id="elecHeatMap" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
+    	// Function to draw heat map of a week's data
     	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times){
 	    	var elecHeatMap = echarts.init(document.getElementById('elecHeatMap'));
 	    	// prettier-ignore
@@ -1146,21 +1152,21 @@
         }
 
 
-        var all_sites_obj = {}; //Obj类型
-	    var all_channels_obj = {}; //Obj类型
+        var all_sites_obj = {}; //Obj
+	    var all_channels_obj = {}; //Obj
 
-	    var all_sites_obj_week = {}; //Obj类型
-	    var all_channels_obj_week = {}; //Obj类型
+	    var all_sites_obj_week = {}; //Obj
+	    var all_channels_obj_week = {}; //Obj
 
-	    var all_sites_obj_year = {}; //Obj类型
-	    var all_channels_obj_year = {}; //Obj类型
+	    var all_sites_obj_year = {}; //Obj
+	    var all_channels_obj_year = {}; //Obj
 
-	   	var all_sites_obj_last_year = {}; //Obj类型
-	    var all_channels_obj_last_year = {}; //Obj类型
+	   	var all_sites_obj_last_year = {}; //Obj
+	    var all_channels_obj_last_year = {}; //Obj
 
-		// 前前年
-	    var all_sites_obj_last2_year = {}; //Obj类型
-	    var all_channels_obj_last2_year = {}; //Obj类型
+		// The year before last
+	    var all_sites_obj_last2_year = {}; //Obj
+	    var all_channels_obj_last2_year = {}; //Obj
 
 
         var all_sites = new Set();
@@ -1263,25 +1269,6 @@
 
 		<script type="text/javascript">
 		var elec_data = new Array();
-		// var elec_data_file = new File(["elec"], "data/all_elec_data.csv");
-
-		// Papa.parse(elec_data_file, {
-		//   header: true,
-		//   complete: function(results) {
-		//     console.log(results);
-		//     elec_data = results.data;
-		//   }
-		// });
-
-		// var csvfile = "data/all_elec_data.csv";
-
-	 //    $.get(csvfile, function (data) {
-	 //        var csvdata = Papa.parse(data, {
-	 			// header: true,
-
-	 	// });
-	 //        console.log(csvdata);
-	 //    });
 
 	 	const all_data = [];
 	 	var last_datetime;
@@ -1311,7 +1298,7 @@
 	 	var last_last_year_day_counter = 0;
 	 	var last_last_year_day_sum = 0;
 
-	 	// 前前年
+	 	// The year before last
 	 	var last_last2_year_day_counter = 0;
 	 	var last_last2_year_day_sum = 0;
 
@@ -1330,7 +1317,7 @@
 	 	var current_month2 = 0;
 	 	var month_last_loop2 = 0;
 
-	 	// 前前年
+	 	// The year before last
 	 	var current_month3 = 0;
 	 	var month_last_loop3 = 0;
 
@@ -1468,7 +1455,7 @@
 				var current_datetime = new Date(current_datetime_str);
 				if (current_datetime >= previous_year_week_datetime && previous_year_week_data.length <= 48 * 7){
 					previous_year_week_data.push(float_data);
-					// 累计计算去年这周的每个channel消耗
+					// Cumulative calculation of consumption per channel for the week last year
 					if (meter_location == "campus"){
 						for (var x in elem){
 							if (x != 'Date' && x != 'Time'){
@@ -1485,7 +1472,7 @@
 				}
 				if (current_datetime >= this_year_week_datetime && this_year_week_data.length <= 48 * 7){
 					this_year_week_data.push(float_data);
-					// 累计计算这周的每个channel消耗
+					// Cumulative calculation of consumption per channel for the most recent week
 					
 					for (var x in elem){
 						if (meter_location == "campus"){
@@ -1514,7 +1501,7 @@
 				}
 
 				// Store each day data of last year and last last year
-				// 去年
+				// last year
 				if (current_datetime >= start_of_last_year && last_year_data.length < 365){
 					last_year_day_sum = last_year_day_sum + float_data;
 					last_year_day_counter = last_year_day_counter + 1;
@@ -1526,7 +1513,7 @@
 					}
 				}
 				if (current_datetime >= start_of_last_year && sum_counter < 365 * 48 && meter_location == "campus"){
-					// 累计计算去年的每个channel消耗
+					// Cumulative calculation of per-channel consumption for the last year
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
@@ -1546,7 +1533,7 @@
 					}
 					sum_counter = sum_counter + 1;
 				}
-				// 前年
+				// Cumulative calculation of per-channel consumption for the year before last
 				if (current_datetime >= start_of_last_last_year && last_last_year_data.length < 365){
 					last_last_year_day_sum = last_last_year_day_sum + float_data;
 					last_last_year_day_counter = last_last_year_day_counter + 1;
@@ -1558,7 +1545,7 @@
 					}
 				}
 				if (current_datetime >= start_of_last_last_year && sum_counter_last_year < 365 * 48 && meter_location == "campus"){
-					// 累计计算前年的每个channel消耗
+					// Cumulative calculation of per-channel consumption for the previous year
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
@@ -1578,7 +1565,7 @@
 					}
 					sum_counter_last_year = sum_counter_last_year + 1;
 				}
-				// 前前年
+				// Year before last 2 years
 				if (current_datetime >= start_of_last_last2_year && last_last2_year_data.length < 365){
 					last_last2_year_day_sum = last_last2_year_day_sum + float_data;
 					last_last2_year_day_counter = last_last2_year_day_counter + 1;
@@ -1590,7 +1577,6 @@
 					}
 				}
 				if (current_datetime >= start_of_last_last2_year && sum_counter_last2_year < 365 * 48 && meter_location == "campus"){
-					// 累计计算前年的每个channel消耗
 					for (var x in elem){
 						if (x != 'Date' && x != 'Time'){
 							if (!isNaN(elem[x]) && parseFloat(elem[x]) > 0){
@@ -1714,7 +1700,7 @@
 					var channels = sites_channels[site].split(",");
 					// console.log(channels);
 
-					// 遍历每个site的所有channel
+					// Iterate through all channels of each site
 					for(var k = 1; k < channels.length; k++){
 						// console.log(channels[k]);
 						if (!isNaN(all_channels_obj[channels[k]])){
