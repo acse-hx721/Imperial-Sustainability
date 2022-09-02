@@ -1665,7 +1665,8 @@
 			var datetime1 = this_year_week_datetime;
 			for (var i = 0; i < 7; i++) {
 				var month = datetime1.getMonth() + 1;
-				var datetime_str = datetime1.getDate() + '/' + month + '/' + datetime1.getFullYear();
+				var day = datetime1.getDate() + 1;
+				var datetime_str = day + '/' + month + '/' + datetime1.getFullYear();
 				var week = datetime1.getDay();
 				if (week == 0) {  
 				    datetime_str = datetime_str + " Sunday";  
