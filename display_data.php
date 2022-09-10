@@ -191,6 +191,7 @@
 			.tg .tg-0lax{text-align:left;vertical-align:top}
 		</style>
 
+		<br>
 		<h3 class="text-center">Weekly</h3>
 		<table border='1' align='center' class='tg'>
 		<thead>
@@ -214,7 +215,6 @@
 			</tr>
 		</tbody>
 		</table>
-		<br><br>
 
 		<h3 class="text-center">Annual</h3>
 		<table border='1' align='center' class='tg'>
@@ -228,20 +228,20 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td class="tg-1wig" id="table_last_last2_year">Year X</td>
-			    <td class="tg-0lax" id="table_last_last2_year_consumption">Loading</td>
-			    <td class="tg-0lax" id="table_last_last2_year_emision">Loading</td>
-			</tr>
-			<tr>
+				<td class="tg-1wig" id="table_last_year">Year X</td>
+			    <td class="tg-0lax" id="table_last_year_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_last_year_emision">Loading</td>
+		  	</tr>
+		  	<tr>
 				<td class="tg-1wig" id="table_last_last_year">Year Y</td>
 			    <td class="tg-0lax" id="table_last_last_year_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_last_last_year_emision">Loading</td>
 			</tr>
 			<tr>
-				<td class="tg-1wig" id="table_last_year">Year Z</td>
-			    <td class="tg-0lax" id="table_last_year_consumption">Loading</td>
-			    <td class="tg-0lax" id="table_last_year_emision">Loading</td>
-		  	</tr>
+				<td class="tg-1wig" id="table_last_last2_year">Year Z</td>
+			    <td class="tg-0lax" id="table_last_last2_year_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_last_last2_year_emision">Loading</td>
+			</tr>
 		</tbody>
 		</table>
 
@@ -340,7 +340,7 @@
     	<div id="buildingChart" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	// Function to draw comparison of different buildings weekly in campus-level
-    	function drawBuildingChart(all_sites_obj, all_sites_obj_week, unit){
+    	function drawBuildingChart(all_sites_obj, all_sites_obj_week, unit, period_str){
 	        var buildingChart = echarts.init(document.getElementById('buildingChart'));
 
 	        option = {
@@ -354,7 +354,8 @@
 		        }
 		      },
 		      title: {
-			    text: 'Buildings of the South Kensington Campus Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
+			    // text: 'Buildings of the South Kensington Campus Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
+			    text: 'Weekly '  + meter_type + ' Consumption per Building (' + period_str + ')',
 			    // subtext:'This chart shows the data comparison of the latest week and the same week of the previous year for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
@@ -369,7 +370,7 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', "Last year's 7 Days Accumulated Consumption", 'Last 7 Days Accumulated Consumption'],
+		        data: ['Growth', "The same 7 days last year", period_str],
 		        itemGap: 5,
 		        x:'right',
 	        	y:'top',
@@ -420,12 +421,12 @@
 		      ],
 		      series: [
 		        {
-		          name: "Last year's 7 Days Accumulated Consumption",
+		          name: "The same 7 days last year",
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_week)
 		        },
 		        {
-		          name: 'Last 7 Days Accumulated Consumption',
+		          name: period_str,
 		          type: 'bar',
 		          data: Object.values(all_sites_obj)
 		        }
@@ -469,7 +470,9 @@
 			    }
 			  },
 			  title: {
-			    text: meter_type + ' Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
+			    // text: meter_type + ' Energy Consumption Weekly Chart (most recent week compared to the same week last year)',
+			    text: "Thirty-minute " + meter_type + " Consumption (most recent week compared to the same week last year)" 
+
 			    // subtext:'This chart shows the data comparison of the latest week and the same week of the previous year in the form of a line chart. You can browse the data of different periods by dragging the slider below.',
 			  },
 			  toolbox: {
@@ -511,7 +514,7 @@
 			  series: [
 
 			  	{
-			      name: previous_year + ' Data',
+			      name: previous_year,
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -534,7 +537,7 @@
 			      data: previous_year_data
 			    },
 			    {
-			      name: this_year + ' Data',
+			      name: this_year,
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -591,7 +594,8 @@
 		        }
 		      },
 		      title: {
-			    text: 'Buildings of the South Kensington Campus ' + meter_type +  ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			    // text: 'Buildings of the South Kensington Campus ' + meter_type +  ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			    text: 'Annual '  + meter_type + ' Consumption per Building (' + last_last2_year ' - ' + last_year + ')',
 			    // subtext:'This chart shows the data comparison of the last 3 civil years for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
@@ -606,7 +610,7 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', last_last2_year + " Accumulated Consumption", last_last_year + " Accumulated Consumption", last_year + " Accumulated Consumption"],
+		        data: ['Growth', last_last2_year, last_last_year, last_year],
 		        itemGap: 5,
 		        x:'right',
 	        	y:'top',
@@ -657,17 +661,17 @@
 		      ],
 		      series: [
 		      	{
-		          name: last_last2_year + " Accumulated Consumption",
+		          name: last_last2_year,
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_last2_year)
 		        },
 		        {
-		          name: last_last_year + " Accumulated Consumption",
+		          name: last_last_year,
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_last_year)
 		        },
 		        {
-		          name: last_year + " Accumulated Consumption",
+		          name: last_year,
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_year)
 		        }
@@ -709,6 +713,7 @@
 			  },
 			  title: {
 			    text: meter_type + ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
+			    text: 'Daily ' + meter_type + ' Consumption (' + last_last2_year ' - ' + last_year + ')',,
 			   	// subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
 			  },
 			  toolbox: {
@@ -748,7 +753,7 @@
 			  ],
 			  series: [
 			  	{
-			      name: last_last2_year + ' Data',
+			      name: last_last2_year,
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -771,7 +776,7 @@
 			      data: last_last2_year_data
 			    },
 			  	{
-			      name: last_last_year + ' Data',
+			      name: last_last_year,
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -794,7 +799,7 @@
 			      data: last_last_year_data
 			    },
 			    {
-			      name: last_year + ' Data',
+			      name: last_year,
 			      type: 'line',
 			      symbol: 'none',
 			      sampling: 'lttb',
@@ -1110,8 +1115,8 @@
 			    },
 			    visualMap: {
 			      left: 'right',
-			      min: Math.min.apply(null, Object.values(all_sites_obj_year)),
-			      max: Math.max.apply(null, Object.values(all_sites_obj_year)),
+			      min: Math.min.apply(null, Object.values(all_sites_obj_year)) + ' ' + unit,
+			      max: Math.max.apply(null, Object.values(all_sites_obj_year)) + ' ' + unit,
 			      inRange: {
 			        color: [
 			          '#313695',
@@ -1127,7 +1132,7 @@
 			          '#a50026'
 			        ]
 			      },
-			      text: ['High', 'Low'],
+			      text: ['Max', 'Min'],
 			      calculable: true
 			    },
 			    toolbox: {
@@ -1666,7 +1671,16 @@
 			}
 
 
+
+
 			// -----------------------------------------
+			var start_arr = heat_map_days[heat_map_days.length-1].split(" ");
+			var end_arr = heat_map_days[0].split(" ");
+			var start_date = start_arr[0];
+			var end_date = end_arr[0];
+
+			var period_str = start_date + " - " + end_date;
+
 			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data, unit);
 
 			drawYearLineChart(last_year, last_last_year, last_last2_year, last_year_data, last_last_year_data, last_last2_year_data, unit);
@@ -1754,7 +1768,7 @@
 
 				console.log(all_sites_obj);
 				console.log(all_sites_obj_year);
-				drawBuildingChart(all_sites_obj, all_sites_obj_week, unit);
+				drawBuildingChart(all_sites_obj, all_sites_obj_week, unit, period_str);
 
 
 				drawBuildingChartYear(all_sites_obj_year, all_sites_obj_last_year, all_sites_obj_last2_year, last_year, last_last_year, last_last2_year, unit);
@@ -1776,12 +1790,9 @@
 				drawChannelPieChartWeek(this_site_channel_obj, unit);
 			}
 
-			var start_arr = heat_map_days[heat_map_days.length-1].split(" ");
-			var end_arr = heat_map_days[0].split(" ");
-			var start_date = start_arr[0];
-			var end_date = end_arr[0];
 
-			document.getElementById("table_seven_date").innerHTML = start_date + " - " + end_date;
+
+			document.getElementById("table_seven_date").innerHTML = period_str;
 			calculateCO2(this_year_week_datetime.getFullYear(), last_year, last_last_year, last_last2_year, sumArr(previous_year_week_data), sumArr(this_year_week_data), sumArr(last_last2_year_data),sumArr(last_last_year_data), sumArr(last_year_data));
 
 
