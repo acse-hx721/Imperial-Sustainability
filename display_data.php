@@ -955,8 +955,8 @@
 			    }
 			  },
 			  visualMap: {
-			    min: Math.min.apply(null, this_year_week_data) + ' ' + unit,
-			    max: Math.max.apply(null, this_year_week_data) + ' ' + unit,
+			    min: Math.min.apply(null, this_year_week_data),
+			    max: Math.max.apply(null, this_year_week_data),
 			    calculable: true,
 			    orient: 'horizontal',
 			    left: 'center',
@@ -1119,8 +1119,8 @@
 			    },
 			    visualMap: {
 			      left: 'right',
-			      min: Math.min.apply(null, Object.values(all_sites_obj_year)) + ' ' + unit,
-			      max: Math.max.apply(null, Object.values(all_sites_obj_year)) + ' ' + unit,
+			      min: Math.min.apply(null, Object.values(all_sites_obj_year)),
+			      max: Math.max.apply(null, Object.values(all_sites_obj_year)),
 			      inRange: {
 			        color: [
 			          '#313695',
