@@ -375,7 +375,7 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', "The same 7 days last year", period_str],
+		        data: ["The same 7 days last year", period_str],
 		        itemGap: 5,
 		        x:'center',
 	        	y:'top',
@@ -615,11 +615,11 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', last_last2_year + "Annual", last_last_year, last_year],
+		        data: [last_last2_year, last_last_year, last_year],
 		        itemGap: 5,
-		        x:'right',
+		        x:'center',
 	        	y:'top',
-	        	padding:[0,300,0,0],
+	        	// padding:[0,300,0,0],
 		      },
 		      grid: {
 		        top: '12%',
