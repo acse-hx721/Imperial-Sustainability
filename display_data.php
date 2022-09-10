@@ -275,8 +275,8 @@
 		    str_5decimal = sum_seven * getCO2Factor(this_year) / 1000;
 		    document.getElementById("table_seven_emision").innerHTML = str_5decimal.toFixed(5);
 
-		    document.getElementById("table_last_seven_consumption").innerHTML = sum_last_seven.toFixed(5);
-		    document.getElementById("table_seven_consumption").innerHTML = sum_seven.toFixed(5);
+		    document.getElementById("table_last_seven_consumption").innerHTML = sum_last_seven;
+		    document.getElementById("table_seven_consumption").innerHTML = sum_seven;
 
 		    str_5decimal = sum_last_last2_year * getCO2Factor(last_last2_year) / 1000;
 		    document.getElementById("table_last_last2_year_emision").innerHTML = str_5decimal.toFixed(5);
@@ -285,9 +285,9 @@
 		    str_5decimal = sum_last_year * getCO2Factor(last_year) / 1000;
 		    document.getElementById("table_last_year_emision").innerHTML = str_5decimal.toFixed(5);
 
-		    document.getElementById("table_last_last2_year_consumption").innerHTML = sum_last_last2_year.toFixed(5);
-		    document.getElementById("table_last_last_year_consumption").innerHTML = sum_last_last_year.toFixed(5);
-		    document.getElementById("table_last_year_consumption").innerHTML = sum_last_year.toFixed(5);
+		    document.getElementById("table_last_last2_year_consumption").innerHTML = sum_last_last2_year;
+		    document.getElementById("table_last_last_year_consumption").innerHTML = sum_last_last_year;
+		    document.getElementById("table_last_year_consumption").innerHTML = sum_last_year;
 		}
 		</script>
 
@@ -377,9 +377,9 @@
 		      legend: {
 		        data: ['Growth', "The same 7 days last year", period_str],
 		        itemGap: 5,
-		        x:'right',
+		        x:'center',
 	        	y:'top',
-	        	padding:[0,300,0,0],
+	        	// padding:[0,300,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -617,9 +617,9 @@
 		      legend: {
 		        data: ['Growth', last_last2_year, last_last_year, last_year],
 		        itemGap: 5,
-		        x:'right',
+		        x:'center',
 	        	y:'top',
-	        	padding:[0,300,0,0],
+	        	// padding:[0,300,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -848,7 +848,7 @@
 			option = {
 			  legend: {
 			  	x:'center',
-	        	y:'bottom',
+	        	y:'top',
 	          },
 	          toolbox: {
 			    feature: {
