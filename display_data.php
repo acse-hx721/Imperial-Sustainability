@@ -960,7 +960,10 @@
 			    calculable: true,
 			    orient: 'horizontal',
 			    left: 'center',
-			    bottom: '0%'
+			    bottom: '0%',
+				formatter: function (value) {
+				    return value + ' ' + unit;
+				},
 			  },
 			  series: [
 			    {
@@ -1137,7 +1140,10 @@
 			        ]
 			      },
 			      text: ['Max', 'Min'],
-			      calculable: true
+			      calculable: true,
+			      formatter: function (value) {
+				    return value + ' ' + unit;
+				  },
 			    },
 			    toolbox: {
 			      show: true,
