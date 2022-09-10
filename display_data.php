@@ -854,6 +854,7 @@
 			  tooltip: {},
 			  title: {
 			    text: meter_type + ' Energy Consumption Yearly Chart by Month (compare the last 3 civil years)',
+			    text: 'Monthly' + meter_type + ' Consumption (' + last_last2_year + ' - ' + last_year + ')',
 			    // subtext: 'This chart shows the data of the last 3 civil years in a bar chart, showing the accumulated data of each month in detail.',
 			  },
 			  xAxis: {
@@ -872,17 +873,17 @@
 			  // to a column of dataset.source by default.
 			  series: [
 			  			{
-                            name: last_last2_year + ' Data',
+                            name: last_last2_year,
                             type: 'bar',
                             data: last_last2_year_month_data
                         },
                         {
-                            name: last_last_year + ' Data',
+                            name: last_last_year,
                             type: 'bar',
                             data: last_last_year_month_data
                         },
                         {
-                            name: last_year + ' Data',
+                            name: last_year,
                             type: 'bar',
                             data: last_year_month_data
                         }
@@ -900,7 +901,7 @@
 		<div id="elecHeatMap" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	// Function to draw heat map of a week's data
-    	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times){
+    	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times, period_str){
 	    	var elecHeatMap = echarts.init(document.getElementById('elecHeatMap'));
 	    	// prettier-ignore
 			// const hours = [
@@ -929,7 +930,8 @@
 			    position: 'top'
 			  },
 			  title: {
-			    text: meter_type + ' Energy Consumption Weekly Heat Map (30 mins interval)',
+			    // text: meter_type + ' Energy Consumption Weekly Heat Map (30 mins interval)',
+			    text: 'Thirty-minute' + meter_type + 'Consumption (' + unit + ') Heat Map during ' + period_str,
 			    subtext: 'This figure shows the data of the lastest week of existing data by color, and the usage of specific time can be observed by the depth of data. You can filter the range of data you want to display by using the slider below.',
 			  },
 			  grid: {
@@ -953,8 +955,8 @@
 			    }
 			  },
 			  visualMap: {
-			    min: Math.min.apply(null, this_year_week_data),
-			    max: Math.max.apply(null, this_year_week_data),
+			    min: Math.min.apply(null, this_year_week_data) + ' ' + unit,
+			    max: Math.max.apply(null, this_year_week_data) + ' ' + unit,
 			    calculable: true,
 			    orient: 'horizontal',
 			    left: 'center',
@@ -1107,7 +1109,7 @@
 			      // text: last_year + ' South Kensington Campus ' + meter_type + ' Usage Map',
 			      text: last_year + ' Annual ' + meter_type + ' Consumption Map ('+ unit + ')',
 
-			      subtext: 'Unit: ' + unit,
+			      // subtext: 'Unit: ' + unit,
 			      left: 'center'
 			    },
 			    tooltip: {
@@ -1731,7 +1733,7 @@
 				heat_map_data.push(heat_map_element);
 			} 
 
-			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit);
+			drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit, period_str);
 
 			// var channels = [];
 			if (meter_location == "campus"){
