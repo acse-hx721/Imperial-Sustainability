@@ -713,7 +713,7 @@
 			  },
 			  title: {
 			    text: meter_type + ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
-			    text: 'Daily ' + meter_type + ' Consumption (' + last_last2_year + ' - ' + last_year + ')',,
+			    text: 'Daily ' + meter_type + ' Consumption (' + last_last2_year + ' - ' + last_year + ')',
 			   	// subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
 			  },
 			  toolbox: {
