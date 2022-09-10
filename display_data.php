@@ -270,19 +270,24 @@
 			document.getElementById("table_last_last_year").innerHTML = 'Year ' + last_last_year;
 		    document.getElementById("table_last_year").innerHTML = 'Year ' + last_year;
 
-		    document.getElementById("table_last_seven_emision").innerHTML = sum_last_seven * getCO2Factor(last_year) / 1000;
-		    document.getElementById("table_seven_emision").innerHTML = sum_seven * getCO2Factor(this_year) / 1000;
+		    var str_5decimal = sum_last_seven * getCO2Factor(last_year) / 1000;
+		    document.getElementById("table_last_seven_emision").innerHTML = str_5decimal.toFixed(5);
+		    str_5decimal = sum_seven * getCO2Factor(this_year) / 1000;
+		    document.getElementById("table_seven_emision").innerHTML = str_5decimal.toFixed(5);
 
-		    document.getElementById("table_last_seven_consumption").innerHTML = sum_last_seven;
-		    document.getElementById("table_seven_consumption").innerHTML = sum_seven;
+		    document.getElementById("table_last_seven_consumption").innerHTML = sum_last_seven.toFixed(5);
+		    document.getElementById("table_seven_consumption").innerHTML = sum_seven.toFixed(5);
 
-		    document.getElementById("table_last_last2_year_emision").innerHTML = sum_last_last2_year * getCO2Factor(last_last2_year) / 1000;
-		    document.getElementById("table_last_last_year_emision").innerHTML = sum_last_last_year * getCO2Factor(last_last_year) / 1000;
-		    document.getElementById("table_last_year_emision").innerHTML = sum_last_year * getCO2Factor(last_year) / 1000;
+		    str_5decimal = sum_last_last2_year * getCO2Factor(last_last2_year) / 1000;
+		    document.getElementById("table_last_last2_year_emision").innerHTML = str_5decimal.toFixed(5);
+		    str_5decimal = sum_last_last_year * getCO2Factor(last_last_year) / 1000;
+		    document.getElementById("table_last_last_year_emision").innerHTML = str_5decimal.toFixed(5);
+		    str_5decimal = sum_last_year * getCO2Factor(last_year) / 1000;
+		    document.getElementById("table_last_year_emision").innerHTML = str_5decimal.toFixed(5);
 
-		    document.getElementById("table_last_last2_year_consumption").innerHTML = sum_last_last2_year;
-		    document.getElementById("table_last_last_year_consumption").innerHTML = sum_last_last_year;
-		    document.getElementById("table_last_year_consumption").innerHTML = sum_last_year;
+		    document.getElementById("table_last_last2_year_consumption").innerHTML = sum_last_last2_year.toFixed(5);
+		    document.getElementById("table_last_last_year_consumption").innerHTML = sum_last_last_year.toFixed(5);
+		    document.getElementById("table_last_year_consumption").innerHTML = sum_last_year.toFixed(5);
 		}
 		</script>
 
