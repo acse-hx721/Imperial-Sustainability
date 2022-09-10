@@ -376,7 +376,6 @@
 		      calculable: true,
 		      legend: {
 		        data: ["The same 7 days last year", period_str],
-		        itemGap: 5,
 		        x:'center',
 	        	y:'top',
 	        	// padding:[0,300,0,0],
@@ -616,7 +615,6 @@
 		      calculable: true,
 		      legend: {
 		        data: [last_last2_year + '', last_last_year + '', last_year + ''],
-		        itemGap: 5,
 		        x:'center',
 	        	y:'top',
 	        	// padding:[0,300,0,0],
