@@ -1678,12 +1678,7 @@
 
 
 			// -----------------------------------------
-			var start_arr = heat_map_days[heat_map_days.length-1].split(" ");
-			var end_arr = heat_map_days[0].split(" ");
-			var start_date = start_arr[0];
-			var end_date = end_arr[0];
 
-			var period_str = start_date + " - " + end_date;
 
 			drawWeekLineChart(this_year_week_datetime, this_year_week_data, previous_year_week_data, unit);
 
@@ -1718,6 +1713,13 @@
 			}
 
 			heat_map_days.reverse();
+
+			var start_arr = heat_map_days[heat_map_days.length-1].split(" ");
+			var end_arr = heat_map_days[0].split(" ");
+			var start_date = start_arr[0];
+			var end_date = end_arr[0];
+
+			var period_str = start_date + " - " + end_date;
 
 			let baseTime = +new Date(this_year_week_datetime);
 			var datetime2 = new Date(baseTime);
