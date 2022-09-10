@@ -374,7 +374,7 @@
 		        itemGap: 5,
 		        x:'right',
 	        	y:'top',
-	        	padding:[0,120,0,0],
+	        	padding:[0,300,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -614,7 +614,7 @@
 		        itemGap: 5,
 		        x:'right',
 	        	y:'top',
-	        	padding:[0,150,0,0],
+	        	padding:[0,300,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -854,7 +854,7 @@
 			  tooltip: {},
 			  title: {
 			    // text: meter_type + ' Energy Consumption Yearly Chart by Month (compare the last 3 civil years)',
-			    text: 'Monthly' + meter_type + ' Consumption (' + last_last2_year + ' - ' + last_year + ')',
+			    text: 'Monthly ' + meter_type + ' Consumption (' + last_last2_year + ' - ' + last_year + ')',
 			    // subtext: 'This chart shows the data of the last 3 civil years in a bar chart, showing the accumulated data of each month in detail.',
 			  },
 			  xAxis: {
@@ -931,7 +931,7 @@
 			  },
 			  title: {
 			    // text: meter_type + ' Energy Consumption Weekly Heat Map (30 mins interval)',
-			    text: 'Thirty-minute' + meter_type + 'Consumption (' + unit + ') Heat Map during ' + period_str,
+			    text: 'Thirty-minute ' + meter_type + ' Consumption (' + unit + ') Heat Map during ' + period_str,
 			    subtext: 'This figure shows the data of the lastest week of existing data by color, and the usage of specific time can be observed by the depth of data. You can filter the range of data you want to display by using the slider below.',
 			  },
 			  grid: {
