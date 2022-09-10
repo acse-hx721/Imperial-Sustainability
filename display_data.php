@@ -615,11 +615,11 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: ['Growth', last_last2_year, last_last_year, last_year],
+		        data: ['Growth', last_last2_year + "Annual", last_last_year, last_year],
 		        itemGap: 5,
-		        x:'center',
+		        x:'right',
 	        	y:'top',
-	        	// padding:[0,300,0,0],
+	        	padding:[0,300,0,0],
 		      },
 		      grid: {
 		        top: '12%',
@@ -906,7 +906,7 @@
 		<div id="elecHeatMap" style="width: 100%; height:500px; float:center; "></div>
     	<script type="text/javascript">
     	// Function to draw heat map of a week's data
-    	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times, period_str){
+    	function drawHeapMap(heat_map_data, heat_map_days, heat_map_times, unit, period_str){
 	    	var elecHeatMap = echarts.init(document.getElementById('elecHeatMap'));
 	    	// prettier-ignore
 			// const hours = [
