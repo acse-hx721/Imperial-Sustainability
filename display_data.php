@@ -190,36 +190,62 @@
 			.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
 			.tg .tg-0lax{text-align:left;vertical-align:top}
 		</style>
+
+		<h3 class="text-center">Weekly</h3>
 		<table border='1' align='center' class='tg'>
 		<thead>
 		  	<tr>
 			    <th class="tg-0lax"></th>
-			    <th class="tg-1wig">The same 7 days last year</th>
-			    <th class="tg-1wig">The last 7 days</th>
-			    <th class="tg-1wig" id="table_last_last2_year">Year X</th>
-			    <th class="tg-1wig" id="table_last_last_year">Year Y</th>
-			    <th class="tg-1wig" id="table_last_year">Year Z</th>
+			    <th class="tg-1wig">Energy consumption (unit: kWh)</th>
+			    <th class="tg-1wig">CO<sub>2</sub>e emission (unit: t)</th>
+
 		  	</tr>
 		</thead>
 		<tbody>
 			<tr>
-			    <td class="tg-1wig">Energy consumption (unit: kWh)</td>
-			    <td class="tg-0lax" id="table_last_seven_consumption">Loading</td>
+				<td class="tg-1wig" id="table_seven_date">Date Period</td>
 			    <td class="tg-0lax" id="table_seven_consumption">Loading</td>
-			    <td class="tg-0lax" id="table_last_last2_year_consumption">Loading</td>
-			    <td class="tg-0lax" id="table_last_last_year_consumption">Loading</td>
-			    <td class="tg-0lax" id="table_last_year_consumption">Loading</td>
-		  	</tr>
-		  	<tr>
-			    <td class="tg-1wig">CO<sub>2</sub>e emission (unit: t)</td>
-			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
 			    <td class="tg-0lax" id="table_seven_emision">Loading</td>
+			</tr>
+			<tr>
+				<td class="tg-1wig">The same 7 days last year</td>
+			    <td class="tg-0lax" id="table_last_seven_consumption">Loading</td>
+			    <td class="tg-0lax" id="table_last_seven_emision">Loading</td>
+			</tr>
+		</tbody>
+		</table>
+		<br><br>
+
+		<h3 class="text-center">Annual</h3>
+		<table border='1' align='center' class='tg'>
+		<thead>
+		  	<tr>
+			    <th class="tg-0lax"></th>
+			    <th class="tg-1wig">Energy consumption (unit: kWh)</th>
+			    <th class="tg-1wig">CO<sub>2</sub>e emission (unit: t)</th>
+
+		  	</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="tg-1wig" id="table_last_last2_year">Year X</td>
+			    <td class="tg-0lax" id="table_last_last2_year_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_last_last2_year_emision">Loading</td>
+			</tr>
+			<tr>
+				<td class="tg-1wig" id="table_last_last_year">Year Y</td>
+			    <td class="tg-0lax" id="table_last_last_year_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_last_last_year_emision">Loading</td>
+			</tr>
+			<tr>
+				<td class="tg-1wig" id="table_last_year">Year Z</td>
+			    <td class="tg-0lax" id="table_last_year_consumption">Loading</td>
 			    <td class="tg-0lax" id="table_last_year_emision">Loading</td>
 		  	</tr>
 		</tbody>
 		</table>
+
+
 		<br><br><br>
 
 		<script type="text/javascript">
@@ -1737,6 +1763,7 @@
 					document.getElementById("last_year_btn").innerHTML = last_year;
 					document.getElementById("last_last_year_btn").innerHTML = last_last_year;
 					document.getElementById("last_last2_year_btn").innerHTML = last_last2_year;
+					
 					drawSKMap_year(all_sites_obj_year, last_year, unit);
 					// $("btn_div").show();
 					document.getElementById("last_year_btn").style.display = "block";
@@ -1749,6 +1776,12 @@
 				drawChannelPieChartWeek(this_site_channel_obj, unit);
 			}
 
+			var start_arr = heat_map_days[heat_map_days.length-1].split(" ");
+			var end_arr = heat_map_days[0].split(" ");
+			var start_date = start_arr[0];
+			var end_date = end_arr[0];
+
+			document.getElementById("table_seven_date").innerHTML = start_date + " - " + end_date;
 			calculateCO2(this_year_week_datetime.getFullYear(), last_year, last_last_year, last_last2_year, sumArr(previous_year_week_data), sumArr(this_year_week_data), sumArr(last_last2_year_data),sumArr(last_last_year_data), sumArr(last_year_data));
 
 
