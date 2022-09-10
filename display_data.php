@@ -595,7 +595,7 @@
 		      },
 		      title: {
 			    // text: 'Buildings of the South Kensington Campus ' + meter_type +  ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
-			    text: 'Annual '  + meter_type + ' Consumption per Building (' + last_last2_year ' - ' + last_year + ')',
+			    text: 'Annual '  + meter_type + ' Consumption per Building (' + last_last2_year + ' - ' + last_year + ')',
 			    // subtext:'This chart shows the data comparison of the last 3 civil years for each building. You can browse the data of different buildings by dragging the slider below, and change the data scale by dragging the slider on the right hand side.\n\n',
 			  },
 		      toolbox: {
@@ -713,7 +713,7 @@
 			  },
 			  title: {
 			    text: meter_type + ' Energy Consumption Yearly Chart (compare the last 3 civil years)',
-			    text: 'Daily ' + meter_type + ' Consumption (' + last_last2_year ' - ' + last_year + ')',,
+			    text: 'Daily ' + meter_type + ' Consumption (' + last_last2_year + ' - ' + last_year + ')',,
 			   	// subtext:'This chart shows the last 3 civil years energy consumption data by way of a line graph.',
 			  },
 			  toolbox: {
@@ -1104,7 +1104,9 @@
 
 		    var option = {
 			    title: {
-			      text: last_year + ' South Kensington Campus ' + meter_type + ' Usage Map',
+			      // text: last_year + ' South Kensington Campus ' + meter_type + ' Usage Map',
+			      text: last_year + ' Annual ' + meter_type + ' Consumption Map ('+ unit + ')',
+
 			      subtext: 'Unit: ' + unit,
 			      left: 'center'
 			    },
