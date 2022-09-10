@@ -615,7 +615,7 @@
 		      },
 		      calculable: true,
 		      legend: {
-		        data: [last_last2_year, last_last_year, last_year],
+		        data: [last_last2_year + '', last_last_year + '', last_year + ''],
 		        itemGap: 5,
 		        x:'center',
 	        	y:'top',
@@ -666,17 +666,17 @@
 		      ],
 		      series: [
 		      	{
-		          name: last_last2_year,
+		          name: last_last2_year + '',
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_last2_year)
 		        },
 		        {
-		          name: last_last_year,
+		          name: last_last_year + '',
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_last_year)
 		        },
 		        {
-		          name: last_year,
+		          name: last_year + '',
 		          type: 'bar',
 		          data: Object.values(all_sites_obj_year)
 		        }
