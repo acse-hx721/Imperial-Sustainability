@@ -1699,7 +1699,7 @@
 			var datetime1 = this_year_week_datetime;
 			datetime1 = getDay(datetime1, 1);
 			for (var i = 0; i < 7; i++) {
-				var month = datetime1.getMonth() + 2;
+				var month = datetime1.getMonth() + 1;
 				var day = datetime1.getDate() + 1;
 				var datetime_str = day + '/' + month + '/' + datetime1.getFullYear();
 				var week = datetime1.getDay();
