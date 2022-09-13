@@ -1697,12 +1697,12 @@
 
 			// Draw the heat map
 			var datetime1 = this_year_week_datetime;
-			datetime1 = getDay(datetime1, 1);
 			for (var i = 0; i < 7; i++) {
-				var month = datetime1.getMonth();
-				var day = datetime1.getDate();
+				var month = datetime1.getMonth() + 1;
+				var day = datetime1.getDate() + 1;
 				var datetime_str = day + '/' + month + '/' + datetime1.getFullYear();
-				var week = datetime1.getDay();
+				var datetime1_new = new Date(datetime_str);
+				var week = datetime1_new.getDay();
 				if (week == 0) {  
 				    datetime_str = datetime_str + " Sunday";  
 				} else if (week == 1) {  
