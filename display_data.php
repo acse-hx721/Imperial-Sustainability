@@ -1422,7 +1422,7 @@
 $.get(filename, function(data) {
 		Papa.parse(data, {
 		  header: true,
-		  download: true,
+		  // download: true,
 		  // Do things after reading data
 		  complete: function(results) {
 		    console.log(results);
