@@ -1419,10 +1419,10 @@
 			$("#channelPieChartWeek").show();
 		}
 
-$.get(filename, function(data) {
-		Papa.parse(data, {
+
+		Papa.parse(filename, {
 		  header: true,
-		  // download: true,
+		  download: true,
 		  // Do things after reading data
 		  complete: function(results) {
 		    console.log(results);
@@ -1815,7 +1815,6 @@ $.get(filename, function(data) {
 
 		  },
 		});
-	});
 
 
 		// console.log(elec_data);
