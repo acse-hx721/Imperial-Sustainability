@@ -188,11 +188,11 @@ function sumOfLocation(elem, channels){
 
 		let index = channels.indexOf(e);
 		if (index != -1){
-    		if (e == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || e == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
-				if (parseFloat(elem[e]) > special_threshold){
-					continue;
-				}
-			}
+   //  		if (e == 'sk-she-101-sip1.ad.ic.ac.uk_Device_5' || e == 'sk-nor-101-sip1.ad.ic.ac.uk_Device_12'){
+			// 	if (parseFloat(elem[e]) > special_threshold){
+			// 		continue;
+			// 	}
+			// }
 			sum = sum + parseFloat(elem[e]);
 		}
 	}
