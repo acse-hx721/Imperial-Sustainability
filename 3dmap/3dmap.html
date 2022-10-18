@@ -1,0 +1,150 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Imperial College Maps</title> 
+    <link rel="stylesheet" type="text/css" href="./styles.css" />   
+     <script src="https://unpkg.com/@googlemaps/js-api-loader@1.0.0/dist/index.min.js"></script>
+     
+  </head>
+  <body>
+    <div id="map"></div>  
+    
+    <script> 
+
+    //Email:  likai.wei21@imperial.ac.uk
+    //GitHub username: lw521
+    //Repository:  https://github.com/ese-msc-2021/irp-lw521
+    
+    const apiOptions = {
+      "apiKey": 'AIzaSyAZ3o-gVvZZxdVWCuP9L-oeUWpWq-UicAE',
+      "version": "beta"
+    };
+
+    const mapOptions = {
+      "zoom": 18,
+      "center": { lat: 51.498418515039596, lng: -0.1768205974512273},
+      "mapId": 'f5b5f87dfcbfe4a1'
+    };
+    async function initMap() {    
+        const mapDiv = document.getElementById("map");
+        //const apiLoader = new Loader(apiOptions);
+        const apiLoader = new google.maps.plugins.loader.Loader(apiOptions);
+        await apiLoader.load()      
+        return new google.maps.Map(mapDiv, mapOptions);
+      };
+
+
+      function addMarkers(map) {
+        const locations = {
+          BlackettLaboratory:{ lat: 51.4995577791325,lng:  -0.17920322317924928},
+          CentralLibrary:{lat: 51.49832584051167, lng: -0.1782042203151025},
+          HuxleyBuilding:{lat:51.498858279508035,lng: -0.17921866436122708},
+          RodericHillBuilding:{lat:51.49956017027434, lng: -0.1782330919213068},
+          BoneBuilding:{lat:51.4995443771668, lng: -0.1777700965618363},
+          ACEXBuilding:{lat:51.49907615891157, lng:-0.1776481160174891},
+          WilliamPenneyLaboratory:{lat:51.49896726215838, lng: -0.17706078021277},
+          SherfieldBuilding:{lat:51.49867542668378, lng:-0.17771708456633323},
+          ElectricalandElectronicEngineeringBuilding:{lat:51.49917615376051, lng:-0.1763600641774113},
+          FacultyBuilding:{lat:51.498776801320545,lng: -0.17570869438426642},
+          BessemerBuilding:{lat:51.49941576355269, lng:-0.17561493664255098},
+          RoyalSchoolofMines:{lat:51.4997997509629, lng:-0.17509680161546284},
+          BusinessSchool:{lat:51.49936354101498, lng:-0.1747957898378211},
+          CityandGuildsBuilding:{lat:51.49852182831728, lng:-0.1747957898629122},
+          DysonBuildingofDesignEngineering:{lat:51.497973359260754, lng:-0.17455247649481456},
+          RCS1Building:{lat:51.49778767499277, lng:-0.17578362149153853},
+          SirAlexanderFlemingBuilding:{lat:51.497696807947655, lng:-0.17644996285574482},
+          ChemistryBuilding:{lat:51.49771261092503, lng:-0.17724322638456186},
+          SirErnstChainBuilding:{lat:51.49770537007068, lng:-0.1782120454726246},
+          SkemptonBuilding:{lat:51.49822807894454, lng:-0.17598392109281225},
+          FolwersBuilding:{lat:51.497467773150056,lng: -0.17805211485778794},
+          EthosSportsCentre:{lat:51.500119885411095, lng:-0.17338561040691536},
+          WeeksHall:{lat:51.50017566461342, lng:-0.17191525911711944},
+          SouthsideHall:{lat:51.49867530604303, lng: -0.17238163898841463},
+          BeitQuad:{lat:51.49998715644174, lng:-0.17801453346028737},
+          EastsideHall:{lat:51.49932652262534, lng:-0.1720412642186568},
+          GardenHall:{lat:51.50019267907692, lng: -0.1725561752190418}
+        }
+        const information ={
+          BlackettLaboratory:"Blackett Laboratory " ,
+          CentralLibrary:'<div id="content">' +
+                          '<div id="siteNotice">' +
+                          "</div>" +
+                          '<h1 id="firstHeading" class="firstHeading">Central library</h1>' +
+                          '<div id="bodyContent">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          "click for eletricity data</a></p>"+
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          "click for Gas data</a></p>"+
+                          "</div>" +
+                          "</div>", 
+          HuxleyBuilding:" Huxley Building",
+          RodericHillBuilding:"Roderic Hill Building",
+          BoneBuilding:"Bone Building",
+          ACEXBuilding:"ACEX Building",
+          WilliamPenneyLaboratory:"William Penney Laboratory:",
+          SherfieldBuilding:"Sherfield Building",
+          ElectricalandElectronicEngineeringBuilding:" Electrical and Electronic Engineering Building",
+          SkemptonBuilding:"Skempton Building",
+          FacultyBuilding:"Faculty Building",
+          BessemerBuilding:"Bessemer Building",
+          RoyalSchoolofMines:'<div id="content">' +
+                          '<div id="siteNotice">' +
+                          "</div>" +
+                          '<h1 id="firstHeading" class="firstHeading">Royal School Of Mines</h1>' +
+                          '<div id="bodyContent">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          "click for eletricity data</a></p>"+
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          "click for Gas data</a></p>"+
+                          '<h2 id="firstHeading" class="firstHeading">Meter 1： link</h2>'+
+                          '<h2 id="firstHeading" class="firstHeading">Meter 2： link</h2>'+
+
+                          "</div>" +
+                          "</div>",
+          BusinessSchool:"Business School",
+          CityandGuildsBuilding:"City and Guilds Building",
+          DysonBuildingofDesignEngineering:"Dyson Building of Design Engineering",
+          RCS1Building:"RCS1 Building",
+          SirAlexanderFlemingBuilding:" Sir Alexander Fleming Building",
+          ChemistryBuilding:"Chemistry Building",
+          SirErnstChainBuilding:"Sir Ernst Chain Building",
+          FolwersBuilding:"Folwers Building",
+          EthosSportsCentre:"Ethos Sports Centre",
+          WeeksHall:"Weeks Hall",
+          SouthsideHall:"Southside Hall",
+          BeitQuad:"Beit Quad",
+          EastsideHall:"Eastside Hall",
+          GardenHall:" Garden Hall"
+        }
+        const markers = [];
+        for (const location in locations) {
+          const markerOptions = {
+            map: map,
+            position: locations[location],
+            icon: './custom_pin.png'
+          }
+          const marker = new google.maps.Marker(markerOptions);
+          markers.push(marker);
+
+          const infowindow = new google.maps.InfoWindow({
+            content: information[location],
+          });
+          marker.addListener("click", () => {
+            infowindow.open({
+              anchor: marker,
+              map,
+              shouldFocus: false,
+            });
+          });
+        }
+        return markers;
+      }
+      (async () => {        
+        const map = await initMap();
+        const markers = addMarkers(map);
+      })();
+    
+    </script>
+  </body>›
+</html>

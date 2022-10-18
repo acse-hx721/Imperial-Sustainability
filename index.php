@@ -107,6 +107,7 @@
 
 												</li>
 												<li><a href="download_data.php">Download Data</a></li>
+												<li><a href="3dmap/3dmap.html">3D Map</a></li>
 												<!-- <li><a href="#clients">Clients</a></li> -->
 												<li><a href="#contact">Contact</a></li>
 											</ul>
