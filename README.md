@@ -23,7 +23,7 @@ This project uses several programming languages for web development, data visual
 ### Server
 The project rents a Microsoft Azure server to allow this tool to be accessed via the URL.
 
-The code for the tool will be automatically deployed to this server once it has been uploaded to the repository:
+The code for the tool will be automatically deployed to this server once it has been uploaded to the repository:  
 
 Imperial-Sustainability: <https://github.com/acse-hx721/Imperial-Sustainability>
 
@@ -56,8 +56,15 @@ The following is the directory of this project's files:
 │  index.php
 │  my_functions.js
 │  upload_file.php
+│  User_Manual.pdf
 │  visualization.php
 │  web.config
+├─3dmap
+│      3dmap.html
+│      custom_pin.png
+│      pin.gltf
+│      style.css
+│
 ├─bootstrap
 ├─css
 ├─data
@@ -69,11 +76,23 @@ The following is the directory of this project's files:
 ├─images
 │      banner.jpg
 │      ic_logo.png
+│      index_page.png
+│      visualization_campus_whole.png
 │
 ├─js
 └─plugins
 
 ```
+
+**Note:** Files `all_elec_data.csv` and `all_gas_data.csv` are stored in `data` folder in the Azure server, which cannot be accessed directly through this repository. If you want to update the data, upload the corresponding named files to the website. For details, please check the user manual.
+
+## Contact Information
+If you have any problems using the tool or would like to make a suggestion, please feel free to contact the developer using the details below. I will get back to you as soon as possible and will be more than happy to help.  
+
+**Email Address: ** hongcheng.xie21@imperial.ac.uk
+
+## User Manual
+Please refer to `User_Manual.pdf` file for more information.  
 
 
 ## Example Screenshots of the Data Science Tool
