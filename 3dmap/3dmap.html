@@ -73,7 +73,7 @@ function initWebGLOverlayView(map) {
     loader.load(
       source,
       gltf => {      
-        gltf.scene.scale.set(20,20,20);
+        gltf.scene.scale.set(10,10,30);
         gltf.scene.rotation.x = 180 * Math.PI/180; // rotations are in radians
         scene.add(gltf.scene);           
       }
@@ -167,10 +167,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Blackett Laborator</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Blackett">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+  
                           "</div>" +
                           "</div>", 
           CentralLibrary:'<div id="content">' +
@@ -178,9 +177,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Central library</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Library">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Library">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -189,9 +188,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Huxley Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Huxley">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Huxley">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -200,9 +199,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Roderic Hill Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Bone%20and%20Roderic%20Hill">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Bone%20and%20Roderic%20Hill">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -211,9 +210,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Bone Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Bone%20and%20Roderic%20Hill">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Bone%20and%20Roderic%20Hill">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -222,9 +221,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">ACEX Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,ACE">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,ACE">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -233,9 +232,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">William Penney Laboratory</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,William%20Penney">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,William%20Penney">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -244,9 +243,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Sherfield Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Sherfield">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Sherfield">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -255,9 +254,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Electricaland Electronic Engineering Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Electrical%20Engineering">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Electrical%20Engineering">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -266,9 +265,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Skempton Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Skempton">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Skempton">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -277,9 +276,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading"> Faculty Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Faculty">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Faculty">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -288,9 +287,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Bessemer Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Bessemer">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Bessemer">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -299,13 +298,10 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Royal School Of Mines</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,RSM">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,RSM">' +
                           "click for Gas data</a></p>"+
-                          '<h2 id="firstHeading" class="firstHeading">Meter 1： link</h2>'+
-                          '<h2 id="firstHeading" class="firstHeading">Meter 2： link</h2>'+
-
                           "</div>" +
                           "</div>",
           BusinessSchool:'<div id="content">' +
@@ -313,9 +309,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Business School:</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Business%20School">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Business%20School">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -324,9 +320,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading"> City and Guilds Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,City%20and%20Guilds">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,City%20and%20Guilds">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -335,9 +331,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Dyson Building of Design Engineerin</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Dyson%20SoE">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Dyson%20SoE">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -346,9 +342,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">RCS1 Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,RCS1">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,RCS1">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -357,10 +353,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">SirAlexander Fleming Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,SAF">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+                          
                           "</div>" +
                           "</div>", 
           ChemistryBuilding:'<div id="content">' +
@@ -368,10 +363,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Chemistry Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Chemistry%201%20and%202">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+                          
                           "</div>" +
                           "</div>", 
           SirErnstChainBuilding:'<div id="content">' +
@@ -379,10 +373,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading"Sir Ernst Chain Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Sir%20Ernst%20Chain%20(Biochemistry)">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+                          
                           "</div>" +
                           "</div>", 
           FolwersBuilding:'<div id="content">' +
@@ -390,10 +383,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Folwers Building</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Flowers">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+                          
                           "</div>" +
                           "</div>", 
           EthosSportsCentre:'<div id="content">' +
@@ -401,10 +393,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Ethos Sports Centre</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Ethos%20Sports%20Centre">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+                          
                           "</div>" +
                           "</div>", 
           WeeksHall:'<div id="content">' +
@@ -412,9 +403,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">Weeks Hall</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Weeks%20Hall">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Weeks%20Hall">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -423,9 +414,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading"Southside Hall</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Southside%20Hall">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Southside%20Hall">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -434,10 +425,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading"> BeitQuad</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Beit%20Quad">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
-                          "click for Gas data</a></p>"+
+                          
                           "</div>" +
                           "</div>", 
           EastsideHall:'<div id="content">' +
@@ -445,9 +435,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading"Eastside Hall</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,Eastside%20Hall">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,Eastside%20Hall">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
@@ -456,9 +446,9 @@ function addMarkers(map) {
                           "</div>" +
                           '<h1 id="firstHeading" class="firstHeading">GardenHal</h1>' +
                           '<div id="bodyContent">' +
-                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,sk-ele-101-sip1.ad.ic.ac.uk_Device_1,null">' +
+                          '<p><b>Eletricity</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=electricity,null,8-15%20Princes%20Gardens%20(inc%20Garden%20Hall)">' +
                           "click for eletricity data</a></p>"+
-                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,sk-58pg-101-sip1.ad.ic.ac.uk_Device_3">' +
+                          '<p><b>Gas</b>,<a href="https://imperialsustainability.azurewebsites.net/display_data.php?id=gas,null,8-15%20Princes%20Gardens%20(inc%20Garden%20Hall)">' +
                           "click for Gas data</a></p>"+
                           "</div>" +
                           "</div>", 
